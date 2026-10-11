@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - College Feedback System</title>
+<link href="style.css" rel="stylesheet"/><link href="admin-patch.css" rel="stylesheet"/>
+</head>
+<body class="master-page setting-page"><header class="common-navbar"><div class="common-college-info"><div class="common-college-logo"><img alt="College Logo" src="collegelogo.png"/></div><div class="common-college-name"><div class="common-small-name">SPES's Shri Gopal Gaonkar Memorial</div><strong>Goa Multi Faculty College</strong><div class="common-location">Dharbandhora-Goa</div></div></div><div class="common-admin-area"><div class="common-admin-circle">A</div><div class="common-admin-name">Admin</div></div></header><aside class="common-sidebar"><div class="common-menu-main"><a class="common-menu-item" href="dashboard.html"><span class="common-menu-icon">⌂</span><span>Dashboard</span></a><a class="common-menu-item" href="feedbackform.html"><span class="common-menu-icon">▣</span><span>Feedback Forms</span></a><a class="common-menu-item" href="createform.html"><span class="common-menu-icon">⊕</span><span>Create Form</span></a><a class="common-menu-item" href="responses.html"><span class="common-menu-icon">▥</span><span>Responses</span></a><a class="common-menu-item" href="studentform.html"><span class="common-menu-icon">♙</span><span>Students</span></a><a class="common-menu-item" href="facultyform.html"><span class="common-menu-icon">♟</span><span>Faculty</span></a><a class="common-menu-item" href="staffform.html"><span class="common-menu-icon">♟</span><span>Staff</span></a><a class="common-menu-item" href="analytics.html"><span class="common-menu-icon">◔</span><span>Analytics</span></a></div><div class="common-menu-bottom"><a class="common-menu-item" href="master.html"><span class="common-menu-icon">☰</span><span>Master Data</span></a><a class="common-menu-item" href="setting.html"><span class="common-menu-icon">⚙</span><span>Settings</span></a><a class="common-menu-item common-logout" href="/login"><span class="common-menu-icon">↪</span><span>Logout</span></a></div></aside>
+<div class="app">
+<!-- =====================================================
+         TOP NAVBAR
+    ====================================================== -->
+<header class="topbar">
+<!-- COLLEGE BRAND -->
+<div class="brand">
+<!-- Use your existing logo file -->
+<img alt="College Logo" class="brand-logo" src="collegelogo.png"/>
+<div class="brand-text">
+<div class="brand-small">
+                    SPES'S   Shri Gopal Gaonkar Memorial
+                </div>
+<div class="brand-name">
+                    Goa Multi-Faculty College
+                </div>
+<div class="brand-location">
+                    Dharbandora-Goa
+                </div>
+</div>
+</div>
+<!-- ADMIN -->
+<div class="admin-box">
+<div class="admin-circle">
+                A
+            </div>
+<span>Admin</span>
+</div>
+</header>
+<!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+<!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+<main class="main"><div class="content"><div class="page-header"><h1>Master Data</h1><p>Departments, programmes, faculty, students, batches, courses and more. Changes appear instantly across the whole system.</p></div>
+<div class="tabs" id="entTabs"></div><section class="card mt-toolbar"><div class="mt-head"><div class="mt-title"><div class="card-header-icon">☰</div><div><div class="card-title" id="entTitle"></div><div class="card-subtitle" id="entCount">Loading…</div></div></div><button id="openAdd" class="mt-add" type="button">＋ Add</button></div></section>
+<section class="card"><div class="mt-wrap"><table class="mt-table"><thead id="entHead"></thead><tbody id="entBody"></tbody></table></div></section></div></main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="live.js"></script>
+</body>
+</html>

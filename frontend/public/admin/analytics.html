@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Analytics - College Feedback System</title>
+<link href="style.css" rel="stylesheet"/><link href="admin-patch.css" rel="stylesheet"/>
+</head>
+<body class="analytics-page"><header class="common-navbar"><div class="common-college-info"><div class="common-college-logo"><img alt="College Logo" src="collegelogo.png"/></div><div class="common-college-name"><div class="common-small-name">SPES's Shri Gopal Gaonkar Memorial</div><strong>Goa Multi Faculty College</strong><div class="common-location">Dharbandhora-Goa</div></div></div><div class="common-admin-area"><div class="common-admin-circle">A</div><div class="common-admin-name">Admin</div></div></header><aside class="common-sidebar"><div class="common-menu-main"><a class="common-menu-item" href="dashboard.html"><span class="common-menu-icon">⌂</span><span>Dashboard</span></a><a class="common-menu-item" href="feedbackform.html"><span class="common-menu-icon">▣</span><span>Feedback Forms</span></a><a class="common-menu-item" href="createform.html"><span class="common-menu-icon">⊕</span><span>Create Form</span></a><a class="common-menu-item" href="responses.html"><span class="common-menu-icon">▥</span><span>Responses</span></a><a class="common-menu-item" href="studentform.html"><span class="common-menu-icon">♙</span><span>Students</span></a><a class="common-menu-item" href="facultyform.html"><span class="common-menu-icon">♟</span><span>Faculty</span></a><a class="common-menu-item" href="staffform.html"><span class="common-menu-icon">♟</span><span>Staff</span></a><a class="common-menu-item active" href="analytics.html"><span class="common-menu-icon">◔</span><span>Analytics</span></a></div><div class="common-menu-bottom"><a class="common-menu-item" href="master.html"><span class="common-menu-icon">☰</span><span>Master Data</span></a><a class="common-menu-item" href="setting.html"><span class="common-menu-icon">⚙</span><span>Settings</span></a><a class="common-menu-item common-logout" href="/login"><span class="common-menu-icon">↪</span><span>Logout</span></a></div></aside>
+<!-- =====================================================
+     TOP NAVBAR
+===================================================== -->
+<!-- =====================================================
+     MOBILE MENU
+===================================================== -->
+<button class="mobile-menu" onclick="toggleMenu()">
+    ☰
+</button>
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+<main class="main">
+<div class="content">
+<!-- =================================================
+         PAGE HEADER
+    ================================================= -->
+<div class="page-header">
+<h1 class="page-title">
+            Analytics
+        </h1>
+<div class="header-actions">
+<!-- =========================================
+                 NEW DATE PICKER
+            ========================================== -->
+<div class="date-picker">
+<button class="date-picker-button" onclick="toggleDatePicker()" type="button">
+<span class="calendar-icon">
+                        ▣
+                    </span>
+<span id="dateRange">
+                        1 Aug 2026 - 31 Aug 2026
+                    </span>
+<span class="date-arrow">
+                        ⌄
+                    </span>
+</button>
+<!-- DATE OPTIONS -->
+<div class="date-menu" id="dateMenu">
+<div class="date-option" onclick="selectMonth('January', this)">
+                        1 Jan 2026 - 31 Jan 2026
+                    </div>
+<div class="date-option" onclick="selectMonth('February', this)">
+                        1 Feb 2026 - 28 Feb 2026
+                    </div>
+<div class="date-option" onclick="selectMonth('March', this)">
+                        1 Mar 2026 - 31 Mar 2026
+                    </div>
+<div class="date-option" onclick="selectMonth('April', this)">
+                        1 Apr 2026 - 30 Apr 2026
+                    </div>
+<div class="date-option" onclick="selectMonth('May', this)">
+                        1 May 2026 - 31 May 2026
+                    </div>
+<div class="date-option" onclick="selectMonth('June', this)">
+                        1 Jun 2026 - 30 Jun 2026
+                    </div>
+<div class="date-option" onclick="selectMonth('July', this)">
+                        1 Jul 2026 - 31 Jul 2026
+                    </div>
+<div class="date-option selected" onclick="selectMonth('August', this)">
+                        1 Aug 2026 - 31 Aug 2026
+                    </div>
+<div class="date-option" onclick="selectMonth('September', this)">
+                        1 Sep 2026 - 30 Sep 2026
+                    </div>
+<div class="date-option" onclick="selectMonth('October', this)">
+                        1 Oct 2026 - 31 Oct 2026
+                    </div>
+<div class="date-option" onclick="selectMonth('November', this)">
+                        1 Nov 2026 - 30 Nov 2026
+                    </div>
+<div class="date-option" onclick="selectMonth('December', this)">
+                        1 Dec 2026 - 31 Dec 2026
+                    </div>
+</div>
+</div>
+<!-- EXPORT -->
+<button class="export-btn" onclick="exportReport()">
+                ⇩  Export Report
+            </button>
+</div>
+</div>
+<!-- =================================================
+         SUMMARY CARDS
+    ================================================= -->
+<div class="summary-cards">
+<div class="summary-card blue">
+<div class="summary-icon">
+                ▣
+            </div>
+<div>
+<div class="summary-number">
+                    1248
+                </div>
+<div class="summary-label">
+                    Total Responses
+                </div>
+</div>
+</div>
+<div class="summary-card green">
+<div class="summary-icon">
+                ●
+            </div>
+<div>
+<div class="summary-number">
+                    248
+                </div>
+<div class="summary-label">
+                    Total Students
+                </div>
+</div>
+</div>
+<div class="summary-card purple">
+<div class="summary-icon">
+                ▣
+            </div>
+<div>
+<div class="summary-number">
+                    48
+                </div>
+<div class="summary-label">
+                    Total Faculty
+                </div>
+</div>
+</div>
+<div class="summary-card orange">
+<div class="summary-icon">
+                ★
+            </div>
+<div>
+<div class="summary-number">
+                    4.2
+                </div>
+<div class="summary-label">
+                    Avg. Rating
+                </div>
+</div>
+</div>
+<div class="summary-card blue">
+<div class="summary-icon">
+                ♟
+            </div>
+<div>
+<div class="summary-number">
+                    48
+                </div>
+<div class="summary-label">
+                    Total Staff
+                </div>
+</div>
+</div>
+</div>
+<!-- =================================================
+         ANALYTICS GRID
+    ================================================= -->
+<div class="analytics-grid">
+<!-- =============================================
+             FEEDBACK TREND
+        ============================================== -->
+<section class="trend-section">
+<div class="section-title">
+                Feedback Trend
+            </div>
+<div class="chart-card">
+<div class="chart-grid"></div>
+<div class="y-labels">
+<span>200</span>
+<span>150</span>
+<span>100</span>
+<span>50</span>
+<span>0</span>
+</div>
+<svg class="line-chart" preserveaspectratio="none" viewbox="0 0 500 130">
+<defs>
+<lineargradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#63b4ff" stop-opacity=".35"></stop>
+<stop offset="100%" stop-color="#63b4ff" stop-opacity=".03"></stop>
+</lineargradient>
+</defs>
+<polygon fill="url(#areaGradient)" points="
+                        0,105
+                        85,92
+                        170,73
+                        255,61
+                        340,44
+                        425,23
+                        500,31
+                        500,130
+                        0,130
+                        "></polygon>
+<polyline fill="none" points="
+                        0,105
+                        85,92
+                        170,73
+                        255,61
+                        340,44
+                        425,23
+                        500,31
+                        " stroke="#2687ed" stroke-width="2.5"></polyline>
+<circle cx="0" cy="105" fill="#2687ed" r="4"></circle>
+<circle cx="85" cy="92" fill="#2687ed" r="4"></circle>
+<circle cx="170" cy="73" fill="#2687ed" r="4"></circle>
+<circle cx="255" cy="61" fill="#2687ed" r="4"></circle>
+<circle cx="340" cy="44" fill="#2687ed" r="4"></circle>
+<circle cx="425" cy="23" fill="#2687ed" r="4"></circle>
+</svg>
+<div class="months">
+<span>Jan</span>
+<span>Feb</span>
+<span>Mar</span>
+<span>Apr</span>
+<span>May</span>
+<span>Jun</span>
+</div>
+<span style="
+                    position:absolute;
+                    left:42px;
+                    top:58px;
+                    font-size:8px;
+                ">
+                    72
+                </span>
+<span style="
+                    position:absolute;
+                    left:18%;
+                    top:45px;
+                    font-size:8px;
+                ">
+                    89
+                </span>
+<span style="
+                    position:absolute;
+                    left:35%;
+                    top:31px;
+                    font-size:8px;
+                ">
+                    110
+                </span>
+<span style="
+                    position:absolute;
+                    left:51%;
+                    top:25px;
+                    font-size:8px;
+                ">
+                    125
+                </span>
+<span style="
+                    position:absolute;
+                    left:67%;
+                    top:9px;
+                    font-size:8px;
+                ">
+                    142
+                </span>
+<span style="
+                    position:absolute;
+                    left:82%;
+                    top:0;
+                    font-size:8px;
+                ">
+                    160
+                </span>
+</div>
+</section>
+<!-- =============================================
+             FEEDBACK CATEGORY
+        ============================================== -->
+<section class="category-section">
+<div class="category-card">
+<div class="section-title">
+                    Feedback By Category
+                </div>
+<div class="category-content">
+<div class="category-donut"></div>
+<div class="category-legend">
+<div class="legend-line">
+<span class="legend-dot"></span>
+<span>
+                                Academic
+                            </span>
+<span class="legend-percent">
+                                30%
+                            </span>
+</div>
+<div class="legend-line">
+<span class="legend-dot two"></span>
+<span>
+                                Facilities
+                            </span>
+<span class="legend-percent">
+                                20%
+                            </span>
+</div>
+<div class="legend-line">
+<span class="legend-dot three"></span>
+<span>
+                                Non-teaching
+                            </span>
+<span class="legend-percent">
+                                20%
+                            </span>
+</div>
+<div class="legend-line">
+<span class="legend-dot four"></span>
+<span>
+                                Others
+                            </span>
+<span class="legend-percent">
+                                10%
+                            </span>
+</div>
+<div class="legend-line">
+<span class="legend-dot five"></span>
+<span>
+                                Library
+                            </span>
+<span class="legend-percent">
+                                10%
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =============================================
+             RECENT ACTIVITIES
+        ============================================== -->
+<section class="recent-section">
+<div class="recent-card">
+<div class="recent-header">
+<div class="recent-title">
+                        Recent Activities
+                    </div>
+<div class="view-all" onclick="showToast('Showing all activities')">
+                        View All
+                    </div>
+</div>
+<div class="activity">
+<div class="activity-icon">
+                        ▣
+                    </div>
+<div class="activity-info">
+<div class="activity-name">
+                            New responses submitted
+                        </div>
+<div class="activity-time">
+                            2 hours ago
+                        </div>
+</div>
+</div>
+<div class="activity">
+<div class="activity-icon">
+                        ▣
+                    </div>
+<div class="activity-info">
+<div class="activity-name">
+                            New form created
+                        </div>
+<div class="activity-time">
+                            4 hours ago
+                        </div>
+</div>
+</div>
+<div class="activity">
+<div class="activity-icon">
+                        ▣
+                    </div>
+<div class="activity-info">
+<div class="activity-name">
+                            Form closed
+                        </div>
+<div class="activity-time">
+                            5 hours ago
+                        </div>
+</div>
+</div>
+<div class="activity">
+<div class="activity-icon">
+                        ▣
+                    </div>
+<div class="activity-info">
+<div class="activity-name">
+                            New student registered
+                        </div>
+<div class="activity-time">
+                            4 hours ago
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- =============================================
+             DEPARTMENT RESPONSE
+        ============================================== -->
+<section class="department-section">
+<div class="section-title">
+                Department-wise Response Count
+            </div>
+<div class="department-card">
+<div class="bar-chart">
+<div class="bar-y-axis">
+<span>300</span>
+<span>200</span>
+<span>100</span>
+<span>0</span>
+</div>
+<div class="bar-area">
+<div class="bar" style="height:45%;">
+<span class="bar-value">
+                                150
+                            </span>
+</div>
+<div class="bar" style="height:92%;">
+<span class="bar-value">
+                                360
+                            </span>
+</div>
+<div class="bar" style="height:70%;">
+<span class="bar-value">
+                                260
+                            </span>
+</div>
+</div>
+<div class="bar-labels">
+<span>
+                            BCA
+                        </span>
+<span>
+                            B.COM
+                        </span>
+<span>
+                            BBA
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<!-- =============================================
+             TOP FEEDBACK AREAS
+        ============================================== -->
+<section class="feedback-section">
+<div class="section-title">
+                Top Feedback Areas
+            </div>
+<div class="feedback-card">
+<div class="feedback-row">
+<div class="feedback-name">
+                        Academics
+                    </div>
+<div class="progress">
+<div class="progress-fill" style="width:82%;"></div>
+</div>
+<div class="feedback-value">
+                        82%
+                    </div>
+</div>
+<div class="feedback-row">
+<div class="feedback-name">
+                        Facilities
+                    </div>
+<div class="progress">
+<div class="progress-fill blue" style="width:50%;"></div>
+</div>
+<div class="feedback-value">
+                        50%
+                    </div>
+</div>
+<div class="feedback-row">
+<div class="feedback-name">
+                        Library
+                    </div>
+<div class="progress">
+<div class="progress-fill yellow" style="width:15%;"></div>
+</div>
+<div class="feedback-value">
+                        15%
+                    </div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="live.js"></script>
+</body>
+</html>

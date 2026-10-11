@@ -1,0 +1,9406 @@
+/* College Feedback System - consolidated stylesheet */
+/* Generated from the original page styles without changing their visual rules. */
+
+/* ============================================================
+   ANALYTICS PAGE STYLES
+   Original inline CSS moved here; selectors are page-scoped.
+============================================================ */
+
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+.analytics-page, .analytics-page *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.analytics-page, .analytics-page{
+    width: 100%;
+    min-height: 100%;
+}
+
+.analytics-page{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e9e9e9;
+    color: #111;
+}
+
+
+/* =====================================================
+   TOP NAVBAR
+   DO NOT CHANGE
+===================================================== */
+
+.analytics-page .topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 112px;
+
+    background: #073f50;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    z-index: 1000;
+}
+
+
+/* =====================================================
+   COLLEGE HEADER
+===================================================== */
+
+.analytics-page .college-header{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.analytics-page .header-logo{
+    width: 72px;
+    height: 72px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.analytics-page .header-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.analytics-page .college-info{
+    color: #fff;
+    line-height: 1.15;
+}
+
+.analytics-page .college-line-one{
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.analytics-page .college-name{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.analytics-page .college-location{
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   ADMIN
+===================================================== */
+
+.analytics-page .admin-profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.analytics-page .admin-avatar{
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #fff;
+    color: #073f50;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.analytics-page .admin-name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.analytics-page .sidebar{
+    position: fixed;
+
+    top: 112px;
+    left: 0;
+
+    width: 192px;
+    height: calc(100vh - 112px);
+
+    background: #052f3b;
+
+    z-index: 900;
+
+    padding-top: 28px;
+}
+
+.analytics-page .nav-item{
+    height: 48px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 15px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: .2s;
+
+    cursor: pointer;
+}
+
+.analytics-page .nav-item:hover{
+    background: #0b5265;
+}
+
+.analytics-page .nav-item.active{
+    background: #0b6078;
+    border-radius: 0 9px 9px 0;
+}
+
+.analytics-page .nav-icon{
+    width: 20px;
+    min-width: 20px;
+
+    font-size: 20px;
+
+    text-align: center;
+}
+
+.analytics-page .nav-text{
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.analytics-page .main{
+    margin-left: 192px;
+
+    padding-top: 112px;
+
+    min-height: 100vh;
+
+    background: #e9e9e9;
+
+    overflow-x: hidden;
+}
+
+.analytics-page .content{
+    padding: 12px 18px 25px 18px;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.analytics-page .page-header{
+    min-height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+
+    padding: 0 4px;
+}
+
+.analytics-page .page-title{
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.analytics-page .header-actions{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* =====================================================
+   DATE PICKER
+===================================================== */
+
+.analytics-page .date-picker{
+    position: relative;
+    width: 240px;
+}
+
+.analytics-page .date-picker-button{
+    width: 100%;
+    height: 44px;
+
+    background: #fff;
+
+    border: 1px solid #d9dfe3;
+
+    border-radius: 8px;
+
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #111;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.analytics-page .date-picker-button:hover{
+    border-color: #b8c4ca;
+}
+
+.analytics-page .calendar-icon{
+    width: 17px;
+    min-width: 17px;
+
+    font-size: 14px;
+
+    color: #073f50;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.analytics-page #dateRange{
+    flex: 1;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+.analytics-page .date-arrow{
+    font-size: 18px;
+
+    color: #555;
+
+    line-height: 1;
+
+    margin-left: auto;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   DATE DROPDOWN
+===================================================== */
+
+.analytics-page .date-menu{
+    position: absolute;
+
+    top: calc(100% + 5px);
+
+    left: 0;
+
+    width: 100%;
+
+    max-height: 280px;
+
+    overflow-y: auto;
+
+    background: #fff;
+
+    border: 1px solid #d9dfe3;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, .12);
+
+    padding: 5px;
+
+    z-index: 2000;
+
+    display: none;
+}
+
+.analytics-page .date-menu.show{
+    display: block;
+}
+
+.analytics-page .date-option{
+    padding: 9px 10px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    color: #222;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.analytics-page .date-option:hover{
+    background: #f0f5f7;
+}
+
+.analytics-page .date-option.selected{
+    background: #e8f3f6;
+
+    color: #073f50;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   EXPORT BUTTON
+===================================================== */
+
+.analytics-page .export-btn{
+    height: 35px;
+
+    padding: 0 13px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #073f50;
+
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.analytics-page .export-btn:hover{
+    background: #0b6178;
+}
+
+
+/* =====================================================
+   SUMMARY CARDS
+===================================================== */
+
+.analytics-page .summary-cards{
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin: 0 20px 18px 20px;
+}
+
+.analytics-page .summary-card{
+    min-height: 90px;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 15px;
+
+    gap: 15px;
+}
+
+.analytics-page .summary-card.blue{
+    background: #bde5e7;
+}
+
+.analytics-page .summary-card.green{
+    background: #a7dda0;
+}
+
+.analytics-page .summary-card.purple{
+    background: #a9a7d6;
+}
+
+.analytics-page .summary-card.orange{
+    background: #ebc08d;
+}
+
+.analytics-page .summary-icon{
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+}
+
+.analytics-page .blue .summary-icon{
+    background: #154e86;
+}
+
+.analytics-page .green .summary-icon{
+    background: #55a33c;
+}
+
+.analytics-page .purple .summary-icon{
+    background: #56588f;
+}
+
+.analytics-page .orange .summary-icon{
+    background: #df7132;
+}
+
+.analytics-page .summary-number{
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 3px;
+}
+
+.analytics-page .summary-label{
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   MAIN ANALYTICS GRID
+===================================================== */
+
+.analytics-page .analytics-grid{
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(0, .92fr)
+        minmax(270px, .85fr);
+
+    grid-template-rows:
+        175px
+        185px;
+
+    column-gap: 18px;
+    row-gap: 16px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    align-items: stretch;
+}
+
+
+/* =====================================================
+   COMMON BOX TITLE
+===================================================== */
+
+.analytics-page .section-title{
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+
+/* =====================================================
+   FEEDBACK TREND BOX
+===================================================== */
+
+.analytics-page .trend-section{
+    grid-column: 1;
+    grid-row: 1;
+
+    min-width: 0;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    padding: 14px;
+}
+
+.analytics-page .trend-section .section-title{
+    margin-bottom: 10px;
+}
+
+.analytics-page .chart-card{
+    height: 119px;
+
+    background: #fff;
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 4px;
+}
+
+.analytics-page .chart-grid{
+    position: absolute;
+
+    left: 39px;
+    right: 9px;
+    top: 10px;
+    bottom: 27px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #e5e5e5 1px,
+            transparent 1px
+        );
+
+    background-size: 100% 25%;
+}
+
+.analytics-page .y-labels{
+    position: absolute;
+
+    left: 8px;
+    top: 7px;
+    bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-size: 8px;
+
+    color: #555;
+}
+
+.analytics-page .line-chart{
+    position: absolute;
+
+    left: 40px;
+    right: 10px;
+    top: 8px;
+    bottom: 26px;
+
+    width: calc(100% - 50px);
+    height: calc(100% - 34px);
+}
+
+.analytics-page .months{
+    position: absolute;
+
+    left: 42px;
+    right: 9px;
+    bottom: 7px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 8px;
+
+    color: #555;
+}
+
+
+/* =====================================================
+   CATEGORY BOX
+===================================================== */
+
+.analytics-page .category-section{
+    grid-column: 2;
+    grid-row: 1;
+
+    min-width: 0;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    padding: 14px;
+}
+
+.analytics-page .category-card{
+    height: 100%;
+
+    background: #fff;
+
+    border: none;
+
+    padding: 0;
+}
+
+.analytics-page .category-content{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    height: 106px;
+
+    margin-top: 5px;
+}
+
+.analytics-page .category-donut{
+    width: 85px;
+    height: 85px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #4c2683 0deg 108deg,
+            #8062b2 108deg 180deg,
+            #aaa0c7 180deg 252deg,
+            #b98439 252deg 288deg,
+            #f0bc58 288deg 360deg
+        );
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+.analytics-page .category-donut::after{
+    content: "";
+
+    position: absolute;
+
+    width: 43px;
+    height: 43px;
+
+    background: #fff;
+
+    border-radius: 50%;
+
+    left: 21px;
+    top: 21px;
+}
+
+.analytics-page .category-legend{
+    font-size: 8px;
+    line-height: 2.25;
+}
+
+.analytics-page .legend-line{
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.analytics-page .legend-dot{
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #4c2683;
+}
+
+.analytics-page .legend-dot.two{
+    background: #8062b2;
+}
+
+.analytics-page .legend-dot.three{
+    background: #aaa0c7;
+}
+
+.analytics-page .legend-dot.four{
+    background: #b98439;
+}
+
+.analytics-page .legend-dot.five{
+    background: #f0bc58;
+}
+
+.analytics-page .legend-percent{
+    margin-left: 7px;
+}
+
+
+/* =====================================================
+   RECENT ACTIVITIES BOX
+===================================================== */
+
+.analytics-page .recent-section{
+    grid-column: 3;
+    grid-row: 1 / span 2;
+
+    min-width: 0;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    padding: 15px;
+}
+
+.analytics-page .recent-card{
+    height: 100%;
+
+    background: #fff;
+
+    border: none;
+
+    padding: 0;
+}
+
+.analytics-page .recent-header{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+.analytics-page .recent-title{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.analytics-page .view-all{
+    color: #28acd1;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+.analytics-page .activity{
+    min-height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    position: relative;
+
+    padding: 5px 0;
+}
+
+.analytics-page .activity:not(:last-child)::after{
+    content: "";
+
+    position: absolute;
+
+    left: 7px;
+
+    bottom: -2px;
+
+    height: 9px;
+
+    border-left: 2px dotted #cfcfcf;
+}
+
+.analytics-page .activity-icon{
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #315e22;
+
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+
+    z-index: 2;
+}
+
+.analytics-page .activity-info{
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 8px;
+
+    padding-left: 2px;
+}
+
+.analytics-page .activity-name{
+    font-size: 11px;
+    font-weight: bold;
+
+    margin-bottom: 3px;
+}
+
+.analytics-page .activity-time{
+    font-size: 8px;
+    color: #777;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   DEPARTMENT RESPONSE BOX
+===================================================== */
+
+.analytics-page .department-section{
+    grid-column: 1;
+    grid-row: 2;
+
+    min-width: 0;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    padding: 14px;
+}
+
+.analytics-page .department-card{
+    height: 118px;
+
+    background: #fff;
+
+    border: none;
+
+    padding: 0;
+
+    margin-top: 5px;
+}
+
+.analytics-page .bar-chart{
+    height: 115px;
+
+    position: relative;
+
+    padding-left: 42px;
+    padding-bottom: 22px;
+}
+
+.analytics-page .bar-y-axis{
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    font-size: 9px;
+
+    color: #555;
+}
+
+.analytics-page .bar-area{
+    position: absolute;
+
+    left: 42px;
+    right: 12px;
+    top: 8px;
+    bottom: 20px;
+
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-around;
+}
+
+.analytics-page .bar{
+    width: 18%;
+
+    background: #45b6d8;
+
+    position: relative;
+}
+
+.analytics-page .bar-value{
+    position: absolute;
+
+    top: -14px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 8px;
+}
+
+.analytics-page .bar-labels{
+    position: absolute;
+
+    left: 42px;
+    right: 12px;
+    bottom: 1px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   TOP FEEDBACK AREAS BOX
+===================================================== */
+
+.analytics-page .feedback-section{
+    grid-column: 2;
+    grid-row: 2;
+
+    min-width: 0;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    padding: 14px;
+}
+
+.analytics-page .feedback-card{
+    height: 118px;
+
+    background: #fff;
+
+    border: none;
+
+    padding: 0;
+
+    margin-top: 5px;
+}
+
+.analytics-page .feedback-row{
+    display: grid;
+
+    grid-template-columns:
+        78px
+        1fr
+        30px;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 20px;
+}
+
+.analytics-page .feedback-name{
+    font-size: 10px;
+}
+
+.analytics-page .progress{
+    height: 9px;
+
+    background: #d8d8d8;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.analytics-page .progress-fill{
+    height: 100%;
+
+    border-radius: 10px;
+
+    background: #d52424;
+}
+
+.analytics-page .progress-fill.blue{
+    background: #145d68;
+}
+
+.analytics-page .progress-fill.yellow{
+    background: #f1b400;
+}
+
+.analytics-page .feedback-value{
+    font-size: 9px;
+
+    text-align: right;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.analytics-page .mobile-menu{
+    display: none;
+
+    position: fixed;
+
+    left: 10px;
+    top: 16px;
+
+    width: 38px;
+    height: 38px;
+
+    border: 0;
+
+    border-radius: 5px;
+
+    background: #073f50;
+
+    color: #fff;
+
+    z-index: 3000;
+
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+.analytics-page .toast{
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    padding: 11px 17px;
+
+    background: #073f50;
+
+    color: #fff;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    opacity: 0;
+
+    transform: translateY(15px);
+
+    transition: .25s;
+
+    pointer-events: none;
+
+    z-index: 5000;
+}
+
+.analytics-page .toast.show{
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   RESPONSIVE - 1100px
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .analytics-page .content{
+        padding: 12px 15px 25px 15px;
+    }
+
+    .analytics-page .college-info{
+        display: block;
+    }
+
+    .analytics-page .summary-cards{
+        gap: 15px;
+
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .analytics-page .analytics-grid{
+        grid-template-columns:
+            minmax(0, 1.25fr)
+            minmax(0, .9fr)
+            270px;
+
+        column-gap: 15px;
+        row-gap: 15px;
+
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - 900px
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .analytics-page .summary-cards{
+        gap: 15px;
+
+        margin-bottom: 15px;
+    }
+
+    .analytics-page .analytics-grid{
+
+        grid-template-columns:
+            1fr 1fr;
+
+        grid-template-rows:
+            175px
+            185px
+            329px;
+
+        column-gap: 15px;
+        row-gap: 15px;
+
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .analytics-page .trend-section{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .analytics-page .category-section{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .analytics-page .department-section{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .analytics-page .feedback-section{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .analytics-page .recent-section{
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - 700px
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .analytics-page .topbar{
+        height: 80px;
+
+        padding-left: 60px;
+        padding-right: 15px;
+    }
+
+    .analytics-page .sidebar{
+        top: 80px;
+
+        left: -192px;
+
+        transition: .25s;
+    }
+
+    .analytics-page.menu-open .sidebar{
+        left: 0;
+    }
+
+    .analytics-page .main{
+        margin-left: 0;
+
+        padding-top: 80px;
+    }
+
+    .analytics-page .mobile-menu{
+        display: block;
+    }
+
+    .analytics-page .college-info{
+        display: block;
+    }
+
+    .analytics-page .college-line-one, .analytics-page .college-location{
+        font-size: 10px;
+    }
+
+    .analytics-page .college-name{
+        font-size: 14px;
+    }
+
+    .analytics-page .header-logo{
+        width: 52px;
+        height: 52px;
+    }
+
+    .analytics-page .admin-name{
+        display: none;
+    }
+
+    .analytics-page .content{
+        padding: 10px 12px 20px 12px;
+    }
+
+    .analytics-page .page-header{
+        flex-wrap: wrap;
+
+        height: auto;
+
+        gap: 7px;
+
+        margin-bottom: 12px;
+    }
+
+    .analytics-page .header-actions{
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+    .analytics-page .date-picker{
+        flex: 1;
+        width: auto;
+    }
+
+    .analytics-page .date-picker-button{
+        width: 100%;
+    }
+
+    .analytics-page .summary-cards{
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 12px;
+
+        margin-left: 0;
+        margin-right: 0;
+
+        margin-bottom: 15px;
+    }
+
+    .analytics-page .analytics-grid{
+
+        margin-left: 0;
+        margin-right: 0;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows:
+            auto
+            auto
+            auto
+            auto
+            auto;
+
+        gap: 15px;
+    }
+
+    .analytics-page .trend-section{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .analytics-page .category-section{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .analytics-page .department-section{
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .analytics-page .feedback-section{
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .analytics-page .recent-section{
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    .analytics-page .trend-section, .analytics-page .category-section, .analytics-page .recent-section, .analytics-page .department-section, .analytics-page .feedback-section{
+        padding: 13px;
+    }
+
+    .analytics-page .activity{
+        min-height: 68px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - 450px
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .analytics-page .summary-cards{
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .analytics-page .analytics-grid{
+        gap: 12px;
+    }
+
+    .analytics-page .date-picker{
+        flex: 1;
+    }
+
+    .analytics-page .date-picker-button{
+        font-size: 10px;
+    }
+
+    .analytics-page .date-arrow{
+        font-size: 16px;
+    }
+
+    .analytics-page .export-btn{
+        font-size: 10px;
+    }
+
+    .analytics-page .college-info{
+        display: none;
+    }
+}
+
+
+
+/* ============================================================
+   CREATEFORM PAGE STYLES
+   Original inline CSS moved here; selectors are page-scoped.
+============================================================ */
+
+
+
+/* =========================
+   RESET
+========================= */
+
+.createform-page, .createform-page *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.createform-page, .createform-page{
+    width:100%;
+    min-height:100%;
+}
+
+.createform-page{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7f9fa;
+    color:#111;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.createform-page .dashboard{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+    background:#f7f9fa;
+}
+
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+
+.createform-page .header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:115px;
+
+    background:linear-gradient(
+        135deg,
+        #06344b 0%,
+        #0b6075 100%
+    );
+
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    z-index:1000;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+
+/* =========================
+   COLLEGE HEADER
+========================= */
+
+.createform-page .header-left{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    min-width:0;
+}
+
+
+/* =========================
+   COLLEGE LOGO
+========================= */
+
+.createform-page .college-logo{
+    width:94px;
+    height:94px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+    flex-shrink:0;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.18);
+}
+
+.createform-page .college-logo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+
+/* =========================
+   COLLEGE NAME
+   MATCHING PROVIDED IMAGE
+========================= */
+
+.createform-page .college-info{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    line-height:1.12;
+    min-width:0;
+}
+
+.createform-page .college-info .college-line-one{
+    font-size:21px;
+    font-weight:500;
+    color:#fff;
+    margin-bottom:3px;
+    white-space:nowrap;
+}
+
+.createform-page .college-info .college-line-two{
+    font-size:31px;
+    font-weight:700;
+    color:#fff;
+    margin-bottom:5px;
+    white-space:nowrap;
+}
+
+.createform-page .college-info .location{
+    font-size:24px;
+    font-weight:400;
+    color:#fff;
+    white-space:nowrap;
+}
+
+
+/* =========================
+   ADMIN
+========================= */
+
+.createform-page .admin-profile{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    flex-shrink:0;
+    cursor:pointer;
+}
+
+.createform-page .admin-avatar{
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    background:#fff;
+    color:#07556c;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:20px;
+    font-weight:700;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+
+.createform-page .admin-name{
+    font-size:14px;
+    font-weight:700;
+    color:#fff;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.createform-page .sidebar{
+    position:fixed;
+
+    top:115px;
+    left:0;
+    bottom:0;
+
+    width:202px;
+
+    background:#022c38;
+    color:white;
+
+    padding-top:35px;
+
+    z-index:900;
+
+    overflow-y:auto;
+}
+
+.createform-page .menu-item{
+    height:42px;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:20px;
+
+    margin:2px 5px;
+
+    border-radius:7px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    color:white;
+    text-decoration:none;
+}
+
+.createform-page .menu-item i{
+    width:30px;
+    font-size:20px;
+}
+
+.createform-page .menu-item:hover{
+    background:#07556c;
+}
+
+.createform-page .menu-item.active{
+    background:linear-gradient(
+        90deg,
+        #07556c,
+        #0b7187
+    );
+
+    box-shadow:inset 3px 0 0 #36b9c7;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.createform-page .content{
+    margin-left:202px;
+
+    padding-top:115px;
+
+    min-height:100vh;
+
+    background:#f7f9fa;
+
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:40px;
+}
+
+
+/* =========================
+   PAGE TOP
+========================= */
+
+.createform-page .page-top{
+    min-height:65px;
+
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+
+    padding:12px 12px 5px;
+}
+
+.createform-page .date-time{
+    text-align:right;
+}
+
+.createform-page .date-time .time{
+    font-size:18px;
+    font-weight:700;
+    color:#111;
+}
+
+.createform-page .date-time .date{
+    font-size:13px;
+    margin-top:3px;
+    color:#555;
+}
+
+
+/* =========================
+   FORM INTRO
+========================= */
+
+.createform-page .form-intro{
+    background:linear-gradient(
+        135deg,
+        #063b4a,
+        #07556c,
+        #1590a5
+    );
+
+    border-radius:8px;
+
+    padding:24px 28px;
+
+    color:white;
+
+    margin:0 12px 18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    position:relative;
+    overflow:hidden;
+}
+
+.createform-page .form-intro::after{
+    content:"";
+
+    position:absolute;
+
+    width:200px;
+    height:200px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    right:-50px;
+    top:-90px;
+}
+
+.createform-page .form-intro h2{
+    font-size:24px;
+    margin-bottom:6px;
+
+    position:relative;
+    z-index:2;
+}
+
+.createform-page .form-intro p{
+    font-size:13px;
+    color:#d9f1f5;
+
+    position:relative;
+    z-index:2;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.createform-page .card{
+    background:white;
+
+    border:1px solid #ddd;
+
+    border-radius:6px;
+
+    margin:0 12px 18px;
+
+    overflow:hidden;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+
+.createform-page .card-header{
+    padding:16px 20px;
+
+    border-bottom:1px solid #e2e7e9;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#fff;
+}
+
+.createform-page .card-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.createform-page .card-title .icon{
+    width:36px;
+    height:36px;
+
+    border-radius:8px;
+
+    background:#e3f4f7;
+    color:#07556c;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:17px;
+}
+
+.createform-page .card-title h3{
+    font-size:16px;
+    color:#063b4a;
+}
+
+.createform-page .card-title p{
+    color:#71818a;
+    font-size:12px;
+    margin-top:2px;
+}
+
+.createform-page .card-body{
+    padding:22px;
+}
+
+
+/* =========================
+   FORM GRID
+========================= */
+
+.createform-page .form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.createform-page .form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.createform-page .form-group.full{
+    grid-column:1/-1;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.createform-page label{
+    font-size:13px;
+    font-weight:700;
+    color:#294652;
+    margin-bottom:7px;
+}
+
+.createform-page .required{
+    color:#e05252;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.createform-page input, .createform-page select, .createform-page textarea{
+    width:100%;
+
+    border:1px solid #cfdde2;
+
+    border-radius:7px;
+
+    padding:11px 12px;
+
+    font-size:14px;
+    font-family:inherit;
+
+    color:#18323f;
+    background:white;
+
+    outline:none;
+
+    transition:.2s;
+}
+
+.createform-page input, .createform-page select{
+    height:43px;
+}
+
+.createform-page textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+.createform-page input:focus, .createform-page select:focus, .createform-page textarea:focus{
+    border-color:#4d8fc9;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(77,143,201,.12);
+}
+
+.createform-page input::placeholder, .createform-page textarea::placeholder{
+    color:#a3afb4;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.createform-page input[type="date"]{
+    cursor:pointer;
+    color:#18323f;
+}
+
+.createform-page input[type="date"]::-webkit-calendar-picker-indicator{
+    cursor:pointer;
+    opacity:.75;
+}
+
+.createform-page .date-help{
+    font-size:11px;
+    color:#8a989e;
+    margin-top:5px;
+}
+
+
+/* =========================
+   TARGET AUDIENCE
+========================= */
+
+.createform-page .target-audience-box{
+    border:1px solid #cfdde2;
+
+    border-radius:7px;
+
+    padding:10px 12px;
+
+    background:white;
+
+    min-height:43px;
+
+    display:flex;
+    align-items:center;
+
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.createform-page .audience-option{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+
+    gap:7px;
+
+    margin:0;
+
+    font-size:13px;
+    font-weight:600;
+
+    color:#294652;
+
+    cursor:pointer;
+}
+
+.createform-page .audience-option input[type="checkbox"]{
+    width:17px;
+    height:17px;
+
+    margin:0;
+    padding:0;
+
+    accent-color:#087184;
+
+    cursor:pointer;
+}
+
+.createform-page .audience-option:hover{
+    color:#07556c;
+}
+
+
+/* =========================
+   QUESTIONS
+========================= */
+
+.createform-page .question-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.createform-page .question-card{
+    border:1px solid #d9e5e9;
+
+    border-radius:10px;
+
+    background:#fbfdfe;
+
+    overflow:hidden;
+
+    transition:.2s;
+}
+
+.createform-page .question-card:hover{
+    border-color:#9fcbd7;
+
+    box-shadow:
+        0 4px 12px
+        rgba(6,52,75,.06);
+}
+
+.createform-page .question-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#f0f8fa;
+
+    padding:10px 14px;
+
+    border-bottom:1px solid #dce9ed;
+}
+
+.createform-page .question-number{
+    display:flex;
+    align-items:center;
+
+    gap:9px;
+
+    font-weight:700;
+    color:#063b4a;
+    font-size:14px;
+}
+
+.createform-page .q-badge{
+    width:28px;
+    height:28px;
+
+    background:linear-gradient(
+        135deg,
+        #4d8fc9,
+        #36b9c7
+    );
+
+    color:white;
+
+    border-radius:7px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:11px;
+}
+
+.createform-page .delete-question{
+    border:none;
+
+    background:#fff0f0;
+
+    color:#e05252;
+
+    padding:7px 10px;
+
+    border-radius:7px;
+
+    cursor:pointer;
+
+    font-size:12px;
+    font-weight:600;
+}
+
+.createform-page .delete-question:hover{
+    background:#ffe0e0;
+}
+
+.createform-page .question-body{
+    padding:17px;
+}
+
+.createform-page .question-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:16px;
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.createform-page .options-area{
+    margin-top:16px;
+
+    padding:14px;
+
+    border-radius:9px;
+
+    background:#f3fafb;
+
+    border:1px dashed #b8d6dd;
+}
+
+.createform-page .options-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:10px;
+}
+
+.createform-page .options-title strong{
+    font-size:13px;
+    color:#063b4a;
+}
+
+.createform-page .add-option{
+    border:none;
+
+    background:#e2f4f6;
+    color:#087184;
+
+    padding:7px 10px;
+
+    border-radius:7px;
+
+    cursor:pointer;
+
+    font-size:12px;
+    font-weight:600;
+}
+
+.createform-page .option-row{
+    display:flex;
+    gap:8px;
+    margin-bottom:8px;
+}
+
+.createform-page .option-row input{
+    height:40px;
+}
+
+.createform-page .remove-option{
+    width:40px;
+
+    border:none;
+
+    background:#ffecec;
+    color:#e05252;
+
+    border-radius:7px;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+
+/* =========================
+   ANSWER PREVIEW
+========================= */
+
+.createform-page .answer-preview{
+    margin-top:16px;
+
+    padding:14px;
+
+    border:1px dashed #b8d6dd;
+
+    background:#f8fcfd;
+
+    border-radius:9px;
+}
+
+.createform-page .answer-preview-title{
+    font-size:12px;
+    font-weight:700;
+
+    color:#063b4a;
+
+    margin-bottom:9px;
+}
+
+.createform-page .short-preview{
+    height:70px;
+
+    border:1px solid #d4e1e5;
+
+    border-radius:8px;
+
+    background:white;
+}
+
+.createform-page .rating-box{
+    width:38px;
+    height:38px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #d5e2e6;
+
+    border-radius:8px;
+
+    background:white;
+
+    font-weight:600;
+}
+
+
+/* =========================
+   ADD QUESTION
+========================= */
+
+.createform-page .add-question-wrapper{
+    text-align:center;
+    padding:20px 10px 5px;
+}
+
+.createform-page .add-question{
+    border:2px dashed #8fc7d2;
+
+    background:#f3fbfc;
+
+    color:#087184;
+
+    padding:11px 24px;
+
+    border-radius:9px;
+
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:700;
+}
+
+.createform-page .add-question:hover{
+    background:#e4f7f9;
+    border-color:#36b9c7;
+}
+
+
+/* =========================
+   FORM ACTIONS
+========================= */
+
+.createform-page .form-actions{
+    background:white;
+
+    border:1px solid #ddd;
+
+    border-radius:6px;
+
+    padding:15px 20px;
+
+    display:flex;
+    justify-content:flex-end;
+
+    gap:10px;
+
+    margin:0 12px 30px;
+}
+
+.createform-page .btn{
+    border:none;
+
+    border-radius:7px;
+
+    padding:11px 22px;
+
+    font-size:14px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.createform-page .btn:hover{
+    transform:translateY(-1px);
+}
+
+.createform-page .btn-cancel{
+    background:#edf2f4;
+    color:#53656d;
+}
+
+.createform-page .btn-cancel:hover{
+    background:#e0e8eb;
+}
+
+.createform-page .btn-create{
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #0b7187,
+        #36b9c7
+    );
+
+    box-shadow:
+        0 4px 12px
+        rgba(54,185,199,.25);
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+.createform-page .toast{
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    background:#06344b;
+    color:white;
+
+    padding:14px 19px;
+
+    border-radius:8px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,.18);
+
+    font-size:14px;
+
+    transform:translateY(100px);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.3s;
+
+    z-index:1500;
+}
+
+.createform-page .toast.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+    .createform-page .header{
+        padding:0 20px;
+    }
+
+    .createform-page .college-logo{
+        width:82px;
+        height:82px;
+    }
+
+    .createform-page .college-info .college-line-one{
+        font-size:18px;
+    }
+
+    .createform-page .college-info .college-line-two{
+        font-size:26px;
+    }
+
+    .createform-page .college-info .location{
+        font-size:20px;
+    }
+}
+
+@media(max-width:900px){
+
+    .createform-page .sidebar{
+        width:180px;
+    }
+
+    .createform-page .content{
+        margin-left:180px;
+    }
+
+    .createform-page .form-grid, .createform-page .question-grid{
+        grid-template-columns:1fr;
+    }
+
+    .createform-page .college-logo{
+        width:72px;
+        height:72px;
+    }
+
+    .createform-page .college-info .college-line-one{
+        font-size:16px;
+    }
+
+    .createform-page .college-info .college-line-two{
+        font-size:22px;
+    }
+
+    .createform-page .college-info .location{
+        font-size:17px;
+    }
+}
+
+@media(max-width:1100px){.facultyform-page .stats{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:700px){.facultyform-page .stats{grid-template-columns:1fr 1fr;}
+
+    .createform-page .header{
+        height:90px;
+        padding:0 15px;
+    }
+
+    .createform-page .header-left{
+        gap:12px;
+    }
+
+    .createform-page .college-logo{
+        width:58px;
+        height:58px;
+    }
+
+    .createform-page .college-info .college-line-one{
+        font-size:12px;
+        margin-bottom:2px;
+    }
+
+    .createform-page .college-info .college-line-two{
+        font-size:17px;
+        margin-bottom:3px;
+    }
+
+    .createform-page .college-info .location{
+        font-size:13px;
+    }
+
+    .createform-page .admin-name{
+        display:none;
+    }
+
+    .createform-page .admin-avatar{
+        width:42px;
+        height:42px;
+        font-size:16px;
+    }
+
+    .createform-page .sidebar{
+        top:90px;
+        width:65px;
+        padding-top:20px;
+    }
+
+    .createform-page .menu-item{
+        justify-content:center;
+        padding-left:0;
+    }
+
+    .createform-page .menu-item span{
+        display:none;
+    }
+
+    .createform-page .menu-item i{
+        width:auto;
+    }
+
+    .createform-page .content{
+        margin-left:65px;
+
+        padding-top:90px;
+
+        padding-left:5px;
+        padding-right:5px;
+    }
+
+    .createform-page .page-top{
+        min-height:55px;
+        padding:8px;
+    }
+
+    .createform-page .date-time .time{
+        font-size:13px;
+    }
+
+    .createform-page .date-time .date{
+        font-size:10px;
+    }
+
+    .createform-page .form-intro{
+        margin-left:5px;
+        margin-right:5px;
+    }
+
+    .createform-page .card{
+        margin-left:5px;
+        margin-right:5px;
+    }
+
+    .createform-page .card-body{
+        padding:15px;
+    }
+
+    .createform-page .form-actions{
+        margin-left:5px;
+        margin-right:5px;
+
+        flex-direction:column-reverse;
+    }
+
+    .createform-page .btn{
+        width:100%;
+    }
+
+    .createform-page .target-audience-box{
+        gap:12px;
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .createform-page .question-top{
+        padding:9px 10px;
+    }
+
+    .createform-page .question-body{
+        padding:12px;
+    }
+}
+
+@media(max-width:480px){
+
+    .createform-page .header{
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .createform-page .header-left{
+        gap:8px;
+    }
+
+    .createform-page .college-logo{
+        width:50px;
+        height:50px;
+    }
+
+    .createform-page .college-info .college-line-one{
+        font-size:9px;
+    }
+
+    .createform-page .college-info .college-line-two{
+        font-size:13px;
+    }
+
+    .createform-page .college-info .location{
+        font-size:10px;
+    }
+
+    .createform-page .admin-avatar{
+        width:38px;
+        height:38px;
+        font-size:14px;
+    }
+
+    .createform-page .date-time{
+        display:none;
+    }
+
+    .createform-page .form-intro{
+        padding:20px;
+    }
+
+    .createform-page .form-intro h2{
+        font-size:21px;
+    }
+
+    .createform-page .form-intro p{
+        font-size:12px;
+    }
+
+    .createform-page .card-header{
+        padding:13px;
+    }
+
+    .createform-page .card-body{
+        padding:12px;
+    }
+
+    .createform-page .question-grid{
+        gap:12px;
+    }
+}
+
+
+
+/* ============================================================
+   DASHBOARD PAGE STYLES
+   Original inline CSS moved here; selectors are page-scoped.
+============================================================ */
+
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+.dashboard-page, .dashboard-page *{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+.dashboard-page{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f3f7fa;
+    color:#17232b;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.dashboard-page .header{
+    height:115px;
+    background:linear-gradient(135deg,#06344b,#0b6075);
+    color:white;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:25px;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+
+/* =========================
+   COLLEGE LOGO
+========================= */
+
+.dashboard-page .logo{
+    width:74px;
+    height:74px;
+
+    border-radius:50%;
+    overflow:hidden;
+
+    background:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-right:18px;
+
+    border:4px solid rgba(255,255,255,.35);
+
+    box-shadow:0 4px 12px rgba(0,0,0,.18);
+
+    flex-shrink:0;
+}
+
+.dashboard-page .logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+
+/* =========================
+   COLLEGE NAME
+========================= */
+
+.dashboard-page .college-info{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    line-height:1.15;
+}
+
+/* SMALL COLLEGE NAME */
+
+.dashboard-page .college-info .college-name{
+    font-size:17px;
+    font-weight:500;
+    color:#ffffff;
+    margin-bottom:3px;
+}
+
+/* MAIN COLLEGE NAME */
+
+.dashboard-page .college-info h1{
+    font-size:25px;
+    font-weight:700;
+    color:#ffffff;
+    margin-bottom:2px;
+    letter-spacing:.1px;
+}
+
+/* LOCATION */
+
+.dashboard-page .college-info .location{
+    font-size:20px;
+    font-weight:400;
+    color:#ffffff;
+}
+
+
+/* =========================
+   ADMIN PROFILE
+========================= */
+
+.dashboard-page .admin-profile{
+    position:absolute;
+    right:30px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    display:flex;
+    align-items:center;
+
+    gap:11px;
+
+    color:white;
+}
+
+.dashboard-page .admin-avatar{
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    background:white;
+    color:#063b4a;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:20px;
+    font-weight:700;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.dashboard-page .admin-name{
+    font-size:17px;
+    font-weight:700;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.dashboard-page .sidebar{
+    position:fixed;
+
+    left:0;
+    top:115px;
+    bottom:0;
+
+    width:202px;
+
+    background:linear-gradient(180deg,#073b4c,#052d3b);
+
+    padding-top:18px;
+
+    z-index:900;
+
+    box-shadow:3px 0 12px rgba(0,0,0,.10);
+}
+
+.dashboard-page .sidebar a{
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 20px;
+
+    color:#dbe7eb;
+
+    text-decoration:none;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:.25s;
+
+    margin:4px 9px;
+
+    border-radius:8px;
+}
+
+.dashboard-page .sidebar a:hover{
+    background:rgba(255,255,255,.10);
+    color:white;
+
+    transform:translateX(3px);
+}
+
+.dashboard-page .sidebar a.active{
+    background:linear-gradient(135deg,#0b718a,#168cab);
+
+    color:white;
+
+    border-left:4px solid #8ce7f7;
+
+    padding-left:16px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.dashboard-page .icon{
+    width:22px;
+
+    text-align:center;
+
+    font-size:18px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.dashboard-page .main{
+    margin-left:202px;
+
+    padding:135px 28px 35px;
+}
+
+
+/* =========================
+   GREETING
+========================= */
+
+.dashboard-page .top-row{
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:22px;
+}
+
+.dashboard-page .greeting h2{
+    font-size:24px;
+
+    color:#123e50;
+
+    margin-bottom:5px;
+}
+
+.dashboard-page .greeting p{
+    color:#687981;
+
+    font-size:14px;
+}
+
+.dashboard-page .date-time{
+    text-align:right;
+
+    color:#66747b;
+
+    font-size:13px;
+
+    background:white;
+
+    padding:10px 15px;
+
+    border-radius:8px;
+
+    border:1px solid #dce7eb;
+
+    box-shadow:0 2px 7px rgba(0,0,0,.04);
+}
+
+.dashboard-page .date-time strong{
+    display:block;
+
+    color:#123e50;
+
+    font-size:15px;
+
+    margin-bottom:4px;
+}
+
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.dashboard-page .stats{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+    margin-bottom:23px;
+}
+
+.dashboard-page .stat-card{
+    background:white;
+
+    border:1px solid #dfe7ea;
+
+    border-radius:12px;
+
+    min-height:112px;
+
+    padding:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    box-shadow:0 4px 12px rgba(20,70,85,.07);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.25s;
+}
+
+.dashboard-page .stat-card:hover{
+    transform:translateY(-3px);
+
+    box-shadow:0 7px 18px rgba(20,70,85,.12);
+}
+
+.dashboard-page .stat-card::after{
+    content:"";
+
+    position:absolute;
+
+    right:-20px;
+    top:-25px;
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    background:rgba(13,143,169,.08);
+}
+
+.dashboard-page .stat-card:nth-child(1){
+    border-top:4px solid #168cab;
+}
+
+.dashboard-page .stat-card:nth-child(2){
+    border-top:4px solid #5b8fd1;
+}
+
+.dashboard-page .stat-card:nth-child(3){
+    border-top:4px solid #36a875;
+}
+
+.dashboard-page .stat-card:nth-child(4){
+    border-top:4px solid #e0a52f;
+}
+
+.dashboard-page .stat-icon{
+    width:48px;
+    height:48px;
+
+    border-radius:12px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:22px;
+
+    flex-shrink:0;
+}
+
+.dashboard-page .stat-card:nth-child(1) .stat-icon{
+    background:#e2f5f8;
+    color:#08728a;
+}
+
+.dashboard-page .stat-card:nth-child(2) .stat-icon{
+    background:#e9effb;
+    color:#4b75b5;
+}
+
+.dashboard-page .stat-card:nth-child(3) .stat-icon{
+    background:#e4f6ed;
+    color:#26865d;
+}
+
+.dashboard-page .stat-card:nth-child(4) .stat-icon{
+    background:#fff4dc;
+    color:#b57b17;
+}
+
+.dashboard-page .stat-card h3{
+    font-size:26px;
+
+    color:#173d4b;
+
+    margin-bottom:4px;
+}
+
+.dashboard-page .stat-card p{
+    color:#748087;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   DASHBOARD GRID
+========================= */
+
+.dashboard-page .dashboard-grid{
+    display:grid;
+
+    grid-template-columns:2.15fr .85fr;
+
+    gap:22px;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.dashboard-page .section{
+    background:white;
+
+    border:1px solid #d9e4e8;
+
+    border-radius:10px;
+
+    padding:18px;
+
+    box-shadow:0 3px 10px rgba(20,70,85,.05);
+}
+
+.dashboard-page .section-title{
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#173e4c;
+
+    margin-bottom:15px;
+
+    padding-left:10px;
+
+    border-left:4px solid #168cab;
+}
+
+
+/* =========================
+   CHART
+========================= */
+
+.dashboard-page .chart-container{
+    height:295px;
+
+    position:relative;
+}
+
+.dashboard-page .chart-container canvas{
+    width:100% !important;
+    height:100% !important;
+}
+
+
+/* =========================
+   RESPONSES BY PROGRAM
+========================= */
+
+.dashboard-page .program-section{
+    position:relative;
+
+    padding:17px 16px;
+
+    border:1px solid #d7e3e7;
+
+    border-radius:10px;
+
+    background:linear-gradient(145deg,#ffffff,#f8fcfd);
+
+    min-height:153px;
+
+    box-shadow:0 3px 10px rgba(20,70,85,.06);
+}
+
+.dashboard-page .program-title{
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#173e4c;
+
+    margin-bottom:13px;
+
+    padding-left:9px;
+
+    border-left:4px solid #4d91c8;
+}
+
+.dashboard-page .program-content{
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+}
+
+.dashboard-page .donut{
+    width:95px;
+    height:95px;
+
+    border-radius:50%;
+
+    background:
+    conic-gradient(
+        #087b96 0deg 126deg,
+        #4d91c8 126deg 230deg,
+        #6bb6a4 230deg 360deg
+    );
+
+    position:relative;
+
+    flex-shrink:0;
+
+    box-shadow:0 3px 9px rgba(0,0,0,.10);
+}
+
+.dashboard-page .donut::after{
+    content:"";
+
+    position:absolute;
+
+    width:53px;
+    height:53px;
+
+    background:white;
+
+    border-radius:50%;
+
+    top:21px;
+    left:21px;
+}
+
+.dashboard-page .legend{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    font-size:12px;
+
+    color:#647178;
+}
+
+.dashboard-page .legend-item{
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+}
+
+.dashboard-page .dot{
+    width:9px;
+    height:9px;
+
+    border-radius:50%;
+}
+
+.dashboard-page .dot.one{
+    background:#087b96;
+}
+
+.dashboard-page .dot.two{
+    background:#4d91c8;
+}
+
+.dashboard-page .dot.three{
+    background:#6bb6a4;
+}
+
+.dashboard-page .dot.four{
+    background:#e2b34a;
+}
+
+
+/* =========================
+   RECENT ACTIVITIES
+========================= */
+
+.dashboard-page .activities{
+    position:relative;
+
+    border:1px solid #d7e3e7;
+
+    border-radius:10px;
+
+    background:linear-gradient(145deg,#ffffff,#f8fcfd);
+
+    min-height:293px;
+
+    height:auto;
+
+    margin-top:17px;
+
+    padding:18px 15px;
+
+    box-shadow:0 3px 10px rgba(20,70,85,.06);
+}
+
+.dashboard-page .activities-title{
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#173e4c;
+
+    margin-bottom:15px;
+
+    padding-left:9px;
+
+    border-left:4px solid #6bb6a4;
+}
+
+.dashboard-page .activity{
+    display:flex;
+
+    gap:12px;
+
+    padding:11px 0;
+
+    border-bottom:1px solid #edf0f1;
+}
+
+.dashboard-page .activity:last-child{
+    border-bottom:none;
+}
+
+.dashboard-page .activity-icon{
+    width:34px;
+    height:34px;
+
+    border-radius:50%;
+
+    background:#e3f4f5;
+
+    color:#08738b;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    font-size:15px;
+}
+
+.dashboard-page .activity:nth-child(3) .activity-icon{
+    background:#eaf0fb;
+    color:#4d78ba;
+}
+
+.dashboard-page .activity:nth-child(4) .activity-icon{
+    background:#fff3db;
+    color:#b47c1c;
+}
+
+.dashboard-page .activity:nth-child(5) .activity-icon{
+    background:#e5f6ec;
+    color:#29865c;
+}
+
+.dashboard-page .activity-text{
+    font-size:12px;
+
+    color:#56646b;
+
+    line-height:1.45;
+}
+
+.dashboard-page .activity-text strong{
+    display:block;
+
+    color:#233e48;
+
+    font-size:13px;
+
+    margin-bottom:2px;
+}
+
+.dashboard-page .activity-time{
+    font-size:10px;
+
+    color:#929da2;
+
+    margin-top:2px;
+}
+
+
+/* =========================
+   RECENT FEEDBACK FORMS
+========================= */
+
+.dashboard-page .table-section{
+    margin-top:40px;
+
+    background:white;
+
+    border:1px solid #d7e3e7;
+
+    border-radius:10px;
+
+    padding:18px;
+
+    box-shadow:0 3px 10px rgba(20,70,85,.06);
+}
+
+.dashboard-page .table-title{
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#173e4c;
+
+    margin-bottom:14px;
+
+    padding-left:10px;
+
+    border-left:4px solid #5b8fd1;
+}
+
+.dashboard-page .table-wrapper{
+    overflow-x:auto;
+}
+
+.dashboard-page table{
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+.dashboard-page thead th{
+    background:linear-gradient(135deg,#e8f4f7,#edf4fb);
+
+    color:#38545e;
+
+    font-size:12px;
+
+    text-align:left;
+
+    padding:12px 10px;
+
+    border-bottom:1px solid #d9e1e4;
+}
+
+.dashboard-page tbody td{
+    padding:12px 10px;
+
+    border-bottom:1px solid #edf0f1;
+
+    font-size:12px;
+
+    color:#59686e;
+}
+
+.dashboard-page tbody tr:hover{
+    background:#f5fafb;
+}
+
+.dashboard-page tbody tr:last-child td{
+    border-bottom:none;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.dashboard-page .status{
+    display:inline-block;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:11px;
+
+    font-weight:600;
+}
+
+.dashboard-page .status.active{
+    background:#dff4e8;
+
+    color:#287747;
+}
+
+.dashboard-page .status.pending{
+    background:#fff1d8;
+
+    color:#9a6818;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+    .dashboard-page .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .dashboard-page .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-page .admin-profile{
+        right:18px;
+    }
+
+    .dashboard-page .college-info{
+        padding-right:130px;
+    }
+}
+
+
+@media(max-width:750px){
+
+    .dashboard-page .header{
+        height:90px;
+
+        padding-left:15px;
+    }
+
+    .dashboard-page .logo{
+        width:56px;
+        height:56px;
+
+        margin-right:10px;
+    }
+
+    .dashboard-page .college-info .college-name{
+        font-size:12px;
+    }
+
+    .dashboard-page .college-info h1{
+        font-size:18px;
+    }
+
+    .dashboard-page .college-info .location{
+        font-size:13px;
+    }
+
+    .dashboard-page .admin-name{
+        display:none;
+    }
+
+    .dashboard-page .admin-avatar{
+        width:42px;
+        height:42px;
+    }
+
+    .dashboard-page .sidebar{
+        top:90px;
+
+        width:65px;
+    }
+
+    .dashboard-page .sidebar a{
+        justify-content:center;
+
+        padding:16px 5px;
+    }
+
+    .dashboard-page .sidebar a span:not(.icon){
+        display:none;
+    }
+
+    .dashboard-page .sidebar a.active{
+        padding-left:5px;
+    }
+
+    .dashboard-page .main{
+        margin-left:65px;
+
+        padding:110px 15px 25px;
+    }
+
+    .dashboard-page .top-row{
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        gap:10px;
+    }
+
+    .dashboard-page .date-time{
+        text-align:left;
+    }
+
+    .dashboard-page .stats{
+        grid-template-columns:1fr;
+    }
+}
+
+
+@media(max-width:500px){
+
+    .dashboard-page .dashboard-grid{
+        gap:15px;
+    }
+
+    .dashboard-page .section{
+        padding:14px;
+    }
+
+    .dashboard-page .chart-container{
+        height:250px;
+    }
+
+    .dashboard-page .program-content{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .dashboard-page .table-section{
+        margin-top:30px;
+    }
+
+    .dashboard-page .college-info .college-name{
+        font-size:10px;
+    }
+
+    .dashboard-page .college-info h1{
+        font-size:15px;
+    }
+
+    .dashboard-page .college-info .location{
+        font-size:11px;
+    }
+}
+
+
+
+/* ============================================================
+   FACULTYFORM PAGE STYLES
+   Original inline CSS moved here; selectors are page-scoped.
+============================================================ */
+
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+.facultyform-page, .facultyform-page *{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+.facultyform-page{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f3f7fa;
+    color:#17232b;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.facultyform-page .header{
+    height:115px;
+
+    background:linear-gradient(135deg,#06344b,#0b6075);
+
+    color:white;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-left:25px;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+
+/* =========================
+   COLLEGE LOGO
+========================= */
+
+.facultyform-page .logo{
+    width:74px;
+    height:74px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    margin-right:18px;
+
+    border:4px solid rgba(255,255,255,.35);
+
+    box-shadow:0 4px 12px rgba(0,0,0,.18);
+
+    flex-shrink:0;
+}
+
+.facultyform-page .logo img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+
+/* =========================
+   COLLEGE NAME
+========================= */
+
+.facultyform-page .college-info{
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    line-height:1.15;
+}
+
+.facultyform-page .college-info .college-name{
+    font-size:17px;
+
+    font-weight:500;
+
+    color:#ffffff;
+
+    margin-bottom:3px;
+}
+
+.facultyform-page .college-info h1{
+    font-size:25px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    margin-bottom:2px;
+
+    letter-spacing:.1px;
+}
+
+.facultyform-page .college-info .location{
+    font-size:20px;
+
+    font-weight:400;
+
+    color:#ffffff;
+}
+
+
+/* =========================
+   ADMIN PROFILE
+========================= */
+
+.facultyform-page .admin-profile{
+    position:absolute;
+
+    right:30px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    color:white;
+}
+
+.facultyform-page .admin-avatar{
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#063b4a;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.facultyform-page .admin-name{
+    font-size:17px;
+
+    font-weight:700;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.facultyform-page .sidebar{
+    position:fixed;
+
+    left:0;
+
+    top:115px;
+
+    bottom:0;
+
+    width:202px;
+
+    background:linear-gradient(180deg,#073b4c,#052d3b);
+
+    padding-top:18px;
+
+    z-index:900;
+
+    box-shadow:3px 0 12px rgba(0,0,0,.10);
+}
+
+.facultyform-page .sidebar a{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 20px;
+
+    color:#dbe7eb;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+    margin:4px 9px;
+
+    border-radius:8px;
+}
+
+.facultyform-page .sidebar a:hover{
+    background:rgba(255,255,255,.10);
+
+    color:white;
+
+    transform:translateX(3px);
+}
+
+.facultyform-page .sidebar a.active{
+    background:linear-gradient(135deg,#0b718a,#168cab);
+
+    color:white;
+
+    border-left:4px solid #8ce7f7;
+
+    padding-left:16px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.facultyform-page .icon{
+    width:22px;
+
+    text-align:center;
+
+    font-size:18px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.facultyform-page .main{
+    margin-left:202px;
+
+    padding:135px 28px 35px;
+}
+
+
+/* =========================
+   TOP ROW
+========================= */
+
+.facultyform-page .top-row{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+}
+
+.facultyform-page .greeting h2{
+    font-size:24px;
+
+    color:#123e50;
+
+    margin-bottom:5px;
+}
+
+.facultyform-page .greeting p{
+    color:#687981;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   TOP RIGHT ACTIONS
+========================= */
+
+.facultyform-page .top-actions{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:12px;
+}
+
+
+/* =========================
+   DATE & TIME
+========================= */
+
+.facultyform-page .date-time{
+    text-align:right;
+
+    color:#66747b;
+
+    font-size:13px;
+
+    background:white;
+
+    padding:10px 15px;
+
+    border-radius:8px;
+
+    border:1px solid #dce7eb;
+
+    box-shadow:0 2px 7px rgba(0,0,0,.04);
+
+    white-space:nowrap;
+}
+
+.facultyform-page .date-time strong{
+    display:block;
+
+    color:#123e50;
+
+    font-size:15px;
+
+    margin-bottom:4px;
+}
+
+
+/* =========================
+   EXPORT REPORT BUTTON
+========================= */
+
+.facultyform-page .export-btn{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:7px;
+
+    height:38px;
+
+    padding:0 14px;
+
+    background:#073f50;
+
+    color:#ffffff;
+
+    border:1px solid #0b5365;
+
+    border-radius:5px;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:0 2px 5px rgba(0,0,0,.15);
+
+    transition:.2s ease;
+
+    white-space:nowrap;
+}
+
+.facultyform-page .export-btn:hover{
+    background:#0b6075;
+
+    transform:translateY(-1px);
+
+    box-shadow:0 4px 8px rgba(0,0,0,.18);
+}
+
+.facultyform-page .export-btn:active{
+    transform:translateY(0);
+
+    box-shadow:0 2px 4px rgba(0,0,0,.15);
+}
+
+
+/* =========================
+   DOWNLOAD ICON
+========================= */
+
+.facultyform-page .download-icon{
+    width:17px;
+
+    height:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    line-height:1;
+
+    position:relative;
+}
+
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.facultyform-page .stats{
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:18px;
+
+    margin-bottom:23px;
+}
+
+.facultyform-page .stat-card{
+    background:white;
+
+    border:1px solid #dfe7ea;
+
+    border-radius:12px;
+
+    min-height:112px;
+
+    padding:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    box-shadow:0 4px 12px rgba(20,70,85,.07);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.25s;
+}
+
+.facultyform-page .stat-card:hover{
+    transform:translateY(-3px);
+
+    box-shadow:0 7px 18px rgba(20,70,85,.12);
+}
+
+.facultyform-page .stat-card::after{
+    content:"";
+
+    position:absolute;
+
+    right:-20px;
+
+    top:-25px;
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    background:rgba(13,143,169,.08);
+}
+
+
+/* =========================
+   CARD COLORS
+========================= */
+
+.facultyform-page .stat-card:nth-child(1){
+    border-top:4px solid #168cab;
+}
+
+.facultyform-page .stat-card:nth-child(2){
+    border-top:4px solid #36a875;
+}
+
+.facultyform-page .stat-card:nth-child(3){
+    border-top:4px solid #e05b5b;
+}
+
+.facultyform-page .stat-card:nth-child(4){
+    border-top:4px solid #e0a52f;
+}
+
+
+/* =========================
+   ICONS
+========================= */
+
+.facultyform-page .stat-icon{
+    width:48px;
+
+    height:48px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    flex-shrink:0;
+}
+
+.facultyform-page .stat-card:nth-child(1) .stat-icon{
+    background:#e2f5f8;
+
+    color:#08728a;
+}
+
+.facultyform-page .stat-card:nth-child(2) .stat-icon{
+    background:#e4f6ed;
+
+    color:#26865d;
+}
+
+.facultyform-page .stat-card:nth-child(3) .stat-icon{
+    background:#fde8e8;
+
+    color:#c54d4d;
+}
+
+.facultyform-page .stat-card:nth-child(4) .stat-icon{
+    background:#fff4dc;
+
+    color:#b57b17;
+}
+
+
+.facultyform-page .stat-card h3{
+    font-size:26px;
+
+    color:#173d4b;
+
+    margin-bottom:4px;
+}
+
+.facultyform-page .stat-card p{
+    color:#748087;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   DASHBOARD GRID
+========================= */
+
+.facultyform-page .dashboard-grid{
+    display:grid;
+
+    grid-template-columns:2.15fr .85fr;
+
+    gap:22px;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.facultyform-page .section{
+    background:white;
+
+    border:1px solid #d9e4e8;
+
+    border-radius:10px;
+
+    padding:18px;
+
+    box-shadow:0 3px 10px rgba(20,70,85,.05);
+}
+
+.facultyform-page .section-title{
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#173e4c;
+
+    margin-bottom:15px;
+
+    padding-left:10px;
+
+    border-left:4px solid #168cab;
+}
+
+
+/* =========================
+   FACULTY FEEDBACK FORM TABLE
+========================= */
+
+.facultyform-page .table-section{
+    background:white;
+
+    border:1px solid #d7e3e7;
+
+    border-radius:10px;
+
+    padding:18px;
+
+    box-shadow:0 3px 10px rgba(20,70,85,.06);
+}
+
+.facultyform-page .table-title{
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#173e4c;
+
+    margin-bottom:14px;
+
+    padding-left:10px;
+
+    border-left:4px solid #5b8fd1;
+}
+
+.facultyform-page .table-wrapper{
+    overflow-x:auto;
+}
+
+.facultyform-page table{
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:750px;
+}
+
+.facultyform-page thead th{
+    background:linear-gradient(135deg,#e8f4f7,#edf4fb);
+
+    color:#38545e;
+
+    font-size:12px;
+
+    text-align:left;
+
+    padding:12px 10px;
+
+    border-bottom:1px solid #d9e1e4;
+
+    white-space:nowrap;
+}
+
+.facultyform-page tbody td{
+    padding:13px 10px;
+
+    border-bottom:1px solid #edf0f1;
+
+    font-size:12px;
+
+    color:#59686e;
+
+    white-space:nowrap;
+}
+
+.facultyform-page tbody tr:hover{
+    background:#f5fafb;
+}
+
+.facultyform-page tbody tr:last-child td{
+    border-bottom:none;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.facultyform-page .status{
+    display:inline-block;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:11px;
+
+    font-weight:600;
+}
+
+.facultyform-page .status.active{
+    background:#dff4e8;
+
+    color:#287747;
+}
+
+.facultyform-page .status.inactive{
+    background:#fde5e5;
+
+    color:#a74444;
+}
+
+.facultyform-page .status.pending{
+    background:#fff1d8;
+
+    color:#9a6818;
+}
+
+
+/* =========================
+   FACULTY OVERVIEW
+========================= */
+
+.facultyform-page .program-section{
+    position:relative;
+
+    padding:17px 16px;
+
+    border:1px solid #d7e3e7;
+
+    border-radius:10px;
+
+    background:linear-gradient(145deg,#ffffff,#f8fcfd);
+
+    min-height:200px;
+
+    box-shadow:0 3px 10px rgba(20,70,85,.06);
+}
+
+.facultyform-page .program-title{
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#173e4c;
+
+    margin-bottom:13px;
+
+    padding-left:9px;
+
+    border-left:4px solid #4d91c8;
+}
+
+.facultyform-page .program-content{
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+}
+
+
+/* =========================
+   FACULTY DONUT
+========================= */
+
+.facultyform-page .faculty-chart{
+    width:125px;
+
+    height:125px;
+
+    position:relative;
+
+    flex-shrink:0;
+}
+
+.facultyform-page .faculty-chart canvas{
+    width:125px !important;
+
+    height:125px !important;
+}
+
+
+/* =========================
+   DONUT CENTER
+========================= */
+
+.facultyform-page .chart-center{
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    width:85px;
+
+    pointer-events:none;
+}
+
+.facultyform-page .chart-center strong{
+    display:block;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#173e4c;
+
+    line-height:1.1;
+}
+
+.facultyform-page .chart-center span{
+    display:block;
+
+    margin-top:4px;
+
+    font-size:9px;
+
+    color:#718087;
+
+    line-height:1.2;
+}
+
+
+/* =========================
+   FACULTY LEGEND
+========================= */
+
+.facultyform-page .legend{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:11px;
+
+    font-size:12px;
+
+    color:#647178;
+
+    flex:1;
+}
+
+.facultyform-page .legend-item{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+    min-width:110px;
+}
+
+.facultyform-page .legend-left{
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+}
+
+.facultyform-page .dot{
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    flex-shrink:0;
+}
+
+.facultyform-page .dot.bba{
+    background:#087b96;
+}
+
+.facultyform-page .dot.bca{
+    background:#4d91c8;
+}
+
+.facultyform-page .dot.bcom{
+    background:#6bb6a4;
+}
+
+.facultyform-page .percentage{
+    font-weight:700;
+
+    color:#173e4c;
+}
+
+
+/* =========================
+   RECENT ACTIVITIES
+========================= */
+
+.facultyform-page .activities{
+    position:relative;
+
+    border:1px solid #d7e3e7;
+
+    border-radius:10px;
+
+    background:linear-gradient(145deg,#ffffff,#f8fcfd);
+
+    min-height:293px;
+
+    height:auto;
+
+    margin-top:17px;
+
+    padding:18px 15px;
+
+    box-shadow:0 3px 10px rgba(20,70,85,.06);
+}
+
+.facultyform-page .activities-title{
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#173e4c;
+
+    margin-bottom:15px;
+
+    padding-left:9px;
+
+    border-left:4px solid #6bb6a4;
+}
+
+.facultyform-page .activity{
+    display:flex;
+
+    gap:12px;
+
+    padding:11px 0;
+
+    border-bottom:1px solid #edf0f1;
+}
+
+.facultyform-page .activity:last-child{
+    border-bottom:none;
+}
+
+.facultyform-page .activity-icon{
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    background:#e3f4f5;
+
+    color:#08738b;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    font-size:15px;
+}
+
+.facultyform-page .activity:nth-child(3) .activity-icon{
+    background:#eaf0fb;
+
+    color:#4d78ba;
+}
+
+.facultyform-page .activity:nth-child(4) .activity-icon{
+    background:#fff3db;
+
+    color:#b47c1c;
+}
+
+.facultyform-page .activity:nth-child(5) .activity-icon{
+    background:#e5f6ec;
+
+    color:#29865c;
+}
+
+.facultyform-page .activity-text{
+    font-size:12px;
+
+    color:#56646b;
+
+    line-height:1.45;
+}
+
+.facultyform-page .activity-text strong{
+    display:block;
+
+    color:#233e48;
+
+    font-size:13px;
+
+    margin-bottom:2px;
+}
+
+.facultyform-page .activity-time{
+    font-size:10px;
+
+    color:#929da2;
+
+    margin-top:2px;
+}
+
+
+/* =========================
+   PRINT / PDF EXPORT
+========================= */
+
+@media print{
+
+    .facultyform-page .header, .facultyform-page .sidebar, .facultyform-page .export-btn{
+        display:none !important;
+    }
+
+    .facultyform-page .main{
+        margin-left:0;
+
+        padding:20px;
+    }
+
+    .facultyform-page{
+        background:white;
+    }
+
+    .facultyform-page .stat-card, .facultyform-page .table-section, .facultyform-page .program-section, .facultyform-page .activities{
+        box-shadow:none;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - 1100px
+========================= */
+
+@media(max-width:1100px){
+
+    .facultyform-page .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .facultyform-page .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
+    .facultyform-page .admin-profile{
+        right:18px;
+    }
+
+    .facultyform-page .college-info{
+        padding-right:130px;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - 750px
+========================= */
+
+@media(max-width:750px){
+
+    .facultyform-page .header{
+        height:90px;
+
+        padding-left:15px;
+    }
+
+    .facultyform-page .logo{
+        width:56px;
+
+        height:56px;
+
+        margin-right:10px;
+    }
+
+    .facultyform-page .college-info .college-name{
+        font-size:12px;
+    }
+
+    .facultyform-page .college-info h1{
+        font-size:18px;
+    }
+
+    .facultyform-page .college-info .location{
+        font-size:13px;
+    }
+
+    .facultyform-page .admin-name{
+        display:none;
+    }
+
+    .facultyform-page .admin-avatar{
+        width:42px;
+
+        height:42px;
+    }
+
+
+    /* SIDEBAR */
+
+    .facultyform-page .sidebar{
+        top:90px;
+
+        width:65px;
+    }
+
+    .facultyform-page .sidebar a{
+        justify-content:center;
+
+        padding:16px 5px;
+    }
+
+    .facultyform-page .sidebar a span:not(.icon){
+        display:none;
+    }
+
+    .facultyform-page .sidebar a.active{
+        padding-left:5px;
+    }
+
+
+    /* MAIN */
+
+    .facultyform-page .main{
+        margin-left:65px;
+
+        padding:110px 15px 25px;
+    }
+
+
+    /* TOP ROW */
+
+    .facultyform-page .top-row{
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        gap:10px;
+    }
+
+
+    /* DATE + EXPORT */
+
+    .facultyform-page .top-actions{
+        width:100%;
+
+        justify-content:flex-end;
+
+        flex-wrap:wrap;
+    }
+
+
+    /* STATS */
+
+    .facultyform-page .stats{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE - 500px
+========================= */
+
+@media(max-width:500px){
+
+    .facultyform-page .dashboard-grid{
+        gap:15px;
+    }
+
+    .facultyform-page .section, .facultyform-page .table-section{
+        padding:14px;
+    }
+
+    .facultyform-page .program-content{
+        flex-direction:column;
+
+        align-items:center;
+    }
+
+    .facultyform-page .legend{
+        width:100%;
+    }
+
+    .facultyform-page .college-info .college-name{
+        font-size:10px;
+    }
+
+    .facultyform-page .college-info h1{
+        font-size:15px;
+    }
+
+    .facultyform-page .college-info .location{
+        font-size:11px;
+    }
+
+
+    /* STACK DATE AND BUTTON */
+
+    .facultyform-page .top-actions{
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+    .facultyform-page .date-time{
+        width:100%;
+
+        text-align:left;
+    }
+
+    .facultyform-page .export-btn{
+        width:100%;
+    }
+
+}
+
+
+
+/* ============================================================
+   FEEDBACKFORM PAGE STYLES
+   Original inline CSS moved here; selectors are page-scoped.
+============================================================ */
+
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+.feedbackform-page, .feedbackform-page *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.feedbackform-page{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f3f7fa;
+    color:#17232b;
+}
+
+
+/* =====================================================
+   TOP NAVBAR
+===================================================== */
+
+.feedbackform-page .top-navbar{
+    height:115px;
+
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+
+    z-index:1000;
+
+    background:linear-gradient(
+        135deg,
+        #06344b,
+        #0b6075
+    );
+
+    color:white;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:25px;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.feedbackform-page .logo{
+    width:74px;
+    height:74px;
+
+    border-radius:50%;
+
+    background:white;
+
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-right:18px;
+
+    border:4px solid rgba(255,255,255,.35);
+
+    box-shadow:0 4px 12px rgba(0,0,0,.18);
+
+    flex-shrink:0;
+}
+
+.feedbackform-page .logo img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+
+/* =====================================================
+   COLLEGE INFORMATION
+===================================================== */
+
+.feedbackform-page .college-info{
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+
+    line-height:1.15;
+}
+
+
+/* SMALL NAME */
+
+.feedbackform-page .college-info .college-small{
+    font-size:17px;
+
+    font-weight:500;
+
+    color:#ffffff;
+
+    margin-bottom:3px;
+}
+
+
+/* MAIN NAME */
+
+.feedbackform-page .college-info h1{
+    font-size:25px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    margin-bottom:2px;
+
+    letter-spacing:.1px;
+}
+
+
+/* LOCATION */
+
+.feedbackform-page .college-info .location{
+    font-size:20px;
+
+    font-weight:400;
+
+    color:#ffffff;
+}
+
+
+/* =====================================================
+   ADMIN PROFILE
+===================================================== */
+
+.feedbackform-page .admin-profile{
+    position:absolute;
+
+    right:30px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    color:white;
+}
+
+.feedbackform-page .admin-avatar{
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#063b4a;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.feedbackform-page .admin-name{
+    font-size:17px;
+
+    font-weight:700;
+}
+
+
+/* =====================================================
+   MAIN PAGE LAYOUT
+===================================================== */
+
+.feedbackform-page .dashboard{
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.feedbackform-page .sidebar{
+    width:202px;
+
+    position:fixed;
+
+    left:0;
+    top:115px;
+    bottom:0;
+
+    background:linear-gradient(
+        180deg,
+        #073b4c,
+        #052d3b
+    );
+
+    color:white;
+
+    z-index:900;
+
+    padding-top:18px;
+
+    box-shadow:3px 0 12px rgba(0,0,0,.10);
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.feedbackform-page .nav{
+    width:100%;
+}
+
+.feedbackform-page .nav-item{
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 20px;
+
+    gap:12px;
+
+    color:#dbe7eb;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    margin:4px 9px;
+
+    width:calc(100% - 18px);
+
+    border-radius:8px;
+
+    transition:.25s;
+}
+
+.feedbackform-page .nav-item:hover{
+    background:rgba(255,255,255,.10);
+
+    color:white;
+
+    transform:translateX(3px);
+}
+
+.feedbackform-page .nav-item.active{
+    background:linear-gradient(
+        135deg,
+        #0b718a,
+        #168cab
+    );
+
+    color:white;
+
+    border-left:4px solid #8ce7f7;
+
+    padding-left:16px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.feedbackform-page .nav-icon{
+    width:22px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    flex-shrink:0;
+}
+
+
+/* =====================================================
+   MAIN AREA
+===================================================== */
+
+.feedbackform-page .main{
+    margin-left:202px;
+
+    width:calc(100% - 202px);
+
+    padding-top:115px;
+
+    min-width:0;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.feedbackform-page .content{
+    background:#f3f7fa;
+
+    min-height:calc(100vh - 115px);
+
+    padding:30px 28px 35px;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.feedbackform-page .title-row{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.feedbackform-page .title-row h1{
+    font-size:32px;
+
+    color:#123e50;
+}
+
+
+/* =====================================================
+   CREATE BUTTON
+===================================================== */
+
+.feedbackform-page .create-btn{
+    background:linear-gradient(
+        135deg,
+        #063b4d,
+        #0b718a
+    );
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:12px 19px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 4px 10px rgba(6,59,77,.18);
+
+    transition:.25s;
+}
+
+.feedbackform-page .create-btn:hover{
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 14px rgba(6,59,77,.25);
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.feedbackform-page .stats{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+    margin-bottom:20px;
+}
+
+.feedbackform-page .stat-card{
+    min-height:100px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:16px;
+
+    border:1px solid rgba(0,0,0,.05);
+
+    box-shadow:0 4px 12px rgba(20,70,85,.07);
+
+    transition:.25s;
+}
+
+.feedbackform-page .stat-card:hover{
+    transform:translateY(-3px);
+
+    box-shadow:0 7px 18px rgba(20,70,85,.12);
+}
+
+
+/* =====================================================
+   STAT COLORS
+===================================================== */
+
+.feedbackform-page .stat-card.blue{
+    background:#dff4f6;
+
+    border-top:4px solid #168cab;
+}
+
+.feedbackform-page .stat-card.green{
+    background:#e1f6e7;
+
+    border-top:4px solid #36a875;
+}
+
+.feedbackform-page .stat-card.purple{
+    background:#e9e9f8;
+
+    border-top:4px solid #6968ad;
+}
+
+.feedbackform-page .stat-card.orange{
+    background:#fff0dc;
+
+    border-top:4px solid #e0a52f;
+}
+
+
+/* =====================================================
+   STAT ICON
+===================================================== */
+
+.feedbackform-page .stat-icon{
+    width:46px;
+    height:46px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:20px;
+
+    margin-right:13px;
+
+    flex-shrink:0;
+}
+
+.feedbackform-page .blue .stat-icon{
+    background:#08728a;
+}
+
+.feedbackform-page .green .stat-icon{
+    background:#36a875;
+}
+
+.feedbackform-page .purple .stat-icon{
+    background:#6968ad;
+}
+
+.feedbackform-page .orange .stat-icon{
+    background:#d58b20;
+}
+
+
+/* =====================================================
+   STAT TEXT
+===================================================== */
+
+.feedbackform-page .stat-text{
+    font-size:13px;
+
+    color:#5d6c72;
+
+    line-height:1.4;
+}
+
+.feedbackform-page .stat-text strong{
+    display:block;
+
+    color:#173d4b;
+
+    font-size:23px;
+
+    margin-bottom:2px;
+}
+
+
+/* =====================================================
+   LOWER CONTENT
+===================================================== */
+
+.feedbackform-page .lower{
+    display:grid;
+
+    grid-template-columns:minmax(500px,1fr) 285px;
+
+    gap:20px;
+
+    align-items:start;
+}
+
+
+/* =====================================================
+   FORMS
+===================================================== */
+
+.feedbackform-page .forms{
+    min-width:0;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.feedbackform-page .section-title{
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#173e4c;
+
+    margin:8px 0 10px 3px;
+
+    padding-left:10px;
+
+    border-left:4px solid #168cab;
+}
+
+
+/* =====================================================
+   FILTERS
+===================================================== */
+
+.feedbackform-page .filters{
+    display:grid;
+
+    grid-template-columns:1fr 120px 120px 125px;
+
+    gap:8px;
+
+    margin-bottom:10px;
+}
+
+.feedbackform-page .filter, .feedbackform-page .search-box{
+    height:36px;
+
+    border:1px solid #d5e0e4;
+
+    border-radius:6px;
+
+    background:white;
+
+    font-size:11px;
+
+    padding:0 9px;
+
+    box-shadow:0 2px 6px rgba(20,70,85,.03);
+}
+
+.feedbackform-page .search-box{
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+.feedbackform-page .search-box span{
+    font-size:18px;
+
+    color:#60747d;
+}
+
+.feedbackform-page .search-box input{
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    font-size:11px;
+}
+
+.feedbackform-page .filter{
+    outline:none;
+
+    color:#586970;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.feedbackform-page .table-container{
+    border:1px solid #d7e3e7;
+
+    background:white;
+
+    border-radius:9px;
+
+    overflow-x:auto;
+
+    box-shadow:0 3px 10px rgba(20,70,85,.05);
+}
+
+.feedbackform-page table{
+    width:100%;
+
+    border-collapse:collapse;
+
+    font-size:11px;
+}
+
+.feedbackform-page thead{
+    background:linear-gradient(
+        135deg,
+        #e8f4f7,
+        #edf4fb
+    );
+}
+
+.feedbackform-page th{
+    height:42px;
+
+    text-align:left;
+
+    padding:0 10px;
+
+    font-weight:700;
+
+    color:#38545e;
+}
+
+.feedbackform-page td{
+    height:46px;
+
+    padding:0 10px;
+
+    border-top:1px solid #edf0f1;
+
+    color:#59686e;
+}
+
+.feedbackform-page tbody tr:hover{
+    background:#f5fafb;
+}
+
+.feedbackform-page tr.selected{
+    outline:2px solid #168be4;
+
+    outline-offset:-2px;
+}
+
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+.feedbackform-page .pagination{
+    height:48px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    gap:5px;
+
+    padding-right:10px;
+}
+
+.feedbackform-page .page{
+    width:25px;
+    height:25px;
+
+    border:1px solid #d8e0e3;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:11px;
+
+    border-radius:4px;
+
+    color:#59686e;
+}
+
+.feedbackform-page .page.active{
+    background:#063b4d;
+
+    color:white;
+
+    border-color:#063b4d;
+}
+
+
+/* =====================================================
+   RIGHT COLUMN
+===================================================== */
+
+.feedbackform-page .right-column{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+
+/* =====================================================
+   SIDE CARDS
+===================================================== */
+
+.feedbackform-page .side-card{
+    border:1px solid #d7e3e7;
+
+    border-radius:10px;
+
+    background:white;
+
+    padding:16px;
+
+    box-shadow:0 3px 10px rgba(20,70,85,.06);
+}
+
+.feedbackform-page .side-card h2{
+    font-size:17px;
+
+    color:#173e4c;
+
+    margin-bottom:13px;
+
+    padding-left:9px;
+
+    border-left:4px solid #4d91c8;
+}
+
+
+/* =====================================================
+   DONUT
+===================================================== */
+
+.feedbackform-page .chart-area{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-around;
+
+    min-height:125px;
+}
+
+.feedbackform-page .donut{
+    width:95px;
+    height:95px;
+
+    border-radius:50%;
+
+    background:
+        conic-gradient(
+            #4e278c 0deg 125deg,
+            #8071ad 125deg 205deg,
+            #8d82bd 205deg 260deg,
+            #ad772b 260deg 315deg,
+            #d59f4e 315deg 360deg
+        );
+
+    position:relative;
+
+    flex-shrink:0;
+
+    box-shadow:0 3px 9px rgba(0,0,0,.10);
+}
+
+.feedbackform-page .donut::after{
+    content:"";
+
+    position:absolute;
+
+    width:47px;
+    height:47px;
+
+    background:white;
+
+    border-radius:50%;
+
+    top:24px;
+    left:24px;
+}
+
+
+/* =====================================================
+   LEGEND
+===================================================== */
+
+.feedbackform-page .legend{
+    font-size:10px;
+
+    line-height:20px;
+
+    color:#647178;
+}
+
+.feedbackform-page .legend div{
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+}
+
+.feedbackform-page .dot{
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    flex-shrink:0;
+}
+
+.feedbackform-page .dot.a{
+    background:#4e278c;
+}
+
+.feedbackform-page .dot.b{
+    background:#8071ad;
+}
+
+.feedbackform-page .dot.c{
+    background:#8d82bd;
+}
+
+.feedbackform-page .dot.d{
+    background:#ad772b;
+}
+
+.feedbackform-page .dot.e{
+    background:#d59f4e;
+}
+
+
+/* =====================================================
+   RECENT ACTIVITIES
+===================================================== */
+
+.feedbackform-page .activity-card{
+    min-height:310px;
+}
+
+.feedbackform-page .view-all{
+    float:right;
+
+    color:#4d91c8;
+
+    font-size:11px;
+
+    font-weight:bold;
+}
+
+.feedbackform-page .activity{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:17px 0;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid #edf0f1;
+}
+
+.feedbackform-page .activity:last-child{
+    border-bottom:none;
+}
+
+.feedbackform-page .activity-icon{
+    width:36px;
+    height:36px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:17px;
+
+    flex-shrink:0;
+}
+
+.feedbackform-page .green-icon{
+    background:#55b629;
+}
+
+.feedbackform-page .blue-icon{
+    background:#3e5db0;
+}
+
+.feedbackform-page .yellow-icon{
+    background:#b48a22;
+}
+
+.feedbackform-page .darkgreen-icon{
+    background:#28734d;
+}
+
+.feedbackform-page .activity-text{
+    font-size:12px;
+
+    font-weight:bold;
+
+    color:#344b55;
+
+    flex:1;
+
+    line-height:1.3;
+}
+
+.feedbackform-page .activity-time{
+    font-size:9px;
+
+    color:#7b878c;
+
+    white-space:nowrap;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1100px){
+
+    .feedbackform-page .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .feedbackform-page .lower{
+        grid-template-columns:1fr;
+    }
+
+    .feedbackform-page .right-column{
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+    }
+
+    .feedbackform-page .admin-profile{
+        right:18px;
+    }
+
+    .feedbackform-page .college-info{
+        padding-right:130px;
+    }
+}
+
+
+@media(max-width:750px){
+
+    .feedbackform-page .top-navbar{
+        height:90px;
+
+        padding-left:15px;
+    }
+
+    .feedbackform-page .logo{
+        width:56px;
+        height:56px;
+
+        margin-right:10px;
+    }
+
+    .feedbackform-page .college-info .college-small{
+        font-size:12px;
+    }
+
+    .feedbackform-page .college-info h1{
+        font-size:18px;
+    }
+
+    .feedbackform-page .college-info .location{
+        font-size:13px;
+    }
+
+    .feedbackform-page .admin-name{
+        display:none;
+    }
+
+    .feedbackform-page .admin-avatar{
+        width:42px;
+        height:42px;
+    }
+
+
+    /* SIDEBAR */
+
+    .feedbackform-page .sidebar{
+        top:90px;
+
+        width:65px;
+    }
+
+    .feedbackform-page .nav-item{
+        justify-content:center;
+
+        padding:0;
+
+        margin:4px 7px;
+
+        width:calc(100% - 14px);
+    }
+
+    .feedbackform-page .nav-item span:not(.nav-icon){
+        display:none;
+    }
+
+    .feedbackform-page .nav-item.active{
+        padding-left:0;
+    }
+
+
+    /* MAIN */
+
+    .feedbackform-page .main{
+        margin-left:65px;
+
+        width:calc(100% - 65px);
+
+        padding-top:90px;
+    }
+
+    .feedbackform-page .content{
+        padding:20px 15px 25px;
+    }
+
+
+    .feedbackform-page .title-row{
+        align-items:flex-start;
+
+        gap:12px;
+    }
+
+    .feedbackform-page .title-row h1{
+        font-size:27px;
+    }
+
+
+    .feedbackform-page .stats{
+        grid-template-columns:1fr;
+    }
+
+
+    .feedbackform-page .lower{
+        grid-template-columns:1fr;
+    }
+
+
+    .feedbackform-page .right-column{
+        grid-template-columns:1fr;
+    }
+
+
+    .feedbackform-page .filters{
+        grid-template-columns:1fr;
+    }
+}
+
+
+@media(max-width:500px){
+
+    .feedbackform-page .college-info .college-small{
+        font-size:10px;
+    }
+
+    .feedbackform-page .college-info h1{
+        font-size:15px;
+    }
+
+    .feedbackform-page .college-info .location{
+        font-size:11px;
+    }
+
+    .feedbackform-page .admin-avatar{
+        width:38px;
+        height:38px;
+
+        font-size:17px;
+    }
+
+    .feedbackform-page .content{
+        padding:18px 10px 25px;
+    }
+
+    .feedbackform-page .title-row{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .feedbackform-page .create-btn{
+        width:100%;
+    }
+
+    .feedbackform-page .chart-area{
+        justify-content:space-evenly;
+    }
+}
+
+
+
+/* ============================================================
+   RESPONSES PAGE STYLES
+   Original inline CSS moved here; selectors are page-scoped.
+============================================================ */
+
+
+
+.responses-page, .responses-page *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.responses-page, .responses-page{
+    width:100%;
+    min-height:100%;
+}
+
+.responses-page{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f6f8;
+    color:#17232b;
+}
+
+
+/* =========================================================
+   TOP NAVBAR
+========================================================= */
+
+.responses-page .topbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:115px;
+    background:linear-gradient(135deg,#06344b 0%,#0b6075 100%);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(0,0,0,.14);
+}
+
+.responses-page .college-header{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    min-width:0;
+}
+
+.responses-page .header-logo{
+    width:92px;
+    height:92px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    flex-shrink:0;
+    box-shadow:0 3px 12px rgba(0,0,0,.20);
+}
+
+.responses-page .header-logo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+.responses-page .college-info{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    line-height:1.15;
+    min-width:0;
+}
+
+.responses-page .college-line-one{
+    font-size:20px;
+    font-weight:500;
+    color:#fff;
+    margin-bottom:4px;
+    white-space:nowrap;
+}
+
+.responses-page .college-name{
+    font-size:31px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:.2px;
+    margin-bottom:5px;
+    white-space:nowrap;
+}
+
+.responses-page .college-location{
+    font-size:24px;
+    font-weight:500;
+    color:#fff;
+    white-space:nowrap;
+}
+
+.responses-page .admin-profile{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    flex-shrink:0;
+}
+
+.responses-page .admin-avatar{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#fff;
+    color:#07556c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    font-weight:700;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+.responses-page .admin-name{
+    color:#fff;
+    font-size:15px;
+    font-weight:700;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.responses-page .sidebar{
+    position:fixed;
+    top:115px;
+    left:0;
+    width:202px;
+    height:calc(100vh - 115px);
+    background:linear-gradient(180deg,#052f3b,#063d4c);
+    padding-top:27px;
+    z-index:900;
+    box-shadow:2px 0 8px rgba(0,0,0,.08);
+}
+
+.responses-page .nav-item{
+    width:100%;
+    height:48px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:0 17px;
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.responses-page .nav-item:hover{
+    background:#0b5265;
+}
+
+.responses-page .nav-item.active{
+    background:linear-gradient(90deg,#0b6078,#0c7188);
+    border-radius:0 10px 10px 0;
+    box-shadow:inset 3px 0 0 #69d4dc;
+}
+
+.responses-page .nav-icon{
+    width:22px;
+    min-width:22px;
+    text-align:center;
+    font-size:20px;
+}
+
+.responses-page .nav-text{
+    white-space:nowrap;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.responses-page .main{
+    margin-left:202px;
+    padding-top:115px;
+    min-height:100vh;
+    background:#f4f6f8;
+}
+
+.responses-page .content{
+    padding:14px 16px 25px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.responses-page .page-header{
+    min-height:54px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding-bottom:8px;
+}
+
+.responses-page .page-title{
+    font-size:27px;
+    font-weight:700;
+    margin-bottom:4px;
+    color:#17232b;
+}
+
+.responses-page .page-description{
+    font-size:11px;
+    color:#59666d;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.responses-page .header-actions{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.responses-page .date-dropdown{
+    position:relative;
+}
+
+.responses-page .date-box{
+    height:36px;
+    min-width:190px;
+    background:#fff;
+    border:1px solid #d8dde0;
+    padding:0 12px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:11px;
+    border-radius:6px;
+    white-space:nowrap;
+    cursor:pointer;
+    user-select:none;
+}
+
+.responses-page .date-box:hover{
+    border-color:#0b6075;
+    box-shadow:0 2px 7px rgba(6,52,75,.10);
+}
+
+.responses-page .date-arrow{
+    margin-left:auto;
+    font-size:12px;
+    color:#40545d;
+    transition:.2s;
+}
+
+.responses-page .date-dropdown.open .date-arrow{
+    transform:rotate(180deg);
+}
+
+
+/* =========================================================
+   MONTH DROPDOWN
+========================================================= */
+
+.responses-page .month-menu{
+    position:absolute;
+    top:43px;
+    right:0;
+    width:190px;
+    background:#fff;
+    border:1px solid #d8dde0;
+    border-radius:7px;
+    box-shadow:0 8px 22px rgba(0,0,0,.15);
+    padding:6px;
+    display:none;
+    z-index:2000;
+    max-height:300px;
+    overflow-y:auto;
+}
+
+.responses-page .date-dropdown.open .month-menu{
+    display:block;
+}
+
+.responses-page .month-option{
+    width:100%;
+    height:32px;
+    border:0;
+    background:#fff;
+    color:#24343c;
+    text-align:left;
+    padding:0 11px;
+    border-radius:5px;
+    font-size:11px;
+    cursor:pointer;
+    transition:.15s;
+}
+
+.responses-page .month-option:hover{
+    background:#edf7fa;
+    color:#07556c;
+}
+
+.responses-page .month-option.active{
+    background:#0b6075;
+    color:#fff;
+    font-weight:bold;
+}
+
+
+/* =========================================================
+   EXPORT BUTTON
+========================================================= */
+
+.responses-page .export-btn{
+    height:36px;
+    padding:0 15px;
+    border:0;
+    border-radius:6px;
+    background:linear-gradient(135deg,#06344b,#0b6075);
+    color:#fff;
+    font-size:12px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 2px 6px rgba(6,52,75,.18);
+}
+
+.responses-page .export-btn:hover{
+    transform:translateY(-1px);
+    background:#0a6078;
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.responses-page .summary-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:13px;
+    margin:7px 0 15px;
+}
+
+.responses-page .summary-card{
+    min-height:78px;
+    border-radius:9px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:11px 14px;
+    box-shadow:0 3px 10px rgba(30,70,80,.07);
+}
+
+.responses-page .card-blue{
+    background:linear-gradient(135deg,#c2e8ea,#d8f3f4);
+}
+
+.responses-page .card-green{
+    background:linear-gradient(135deg,#a9dfa4,#d2efd0);
+}
+
+.responses-page .card-purple{
+    background:linear-gradient(135deg,#b1aedc,#d9d8f0);
+}
+
+.responses-page .card-orange{
+    background:linear-gradient(135deg,#edc28e,#f6d9ae);
+}
+
+.responses-page .summary-icon{
+    width:43px;
+    height:43px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:20px;
+    flex-shrink:0;
+}
+
+.responses-page .card-blue .summary-icon{
+    background:#195a91;
+}
+
+.responses-page .card-green .summary-icon{
+    background:#4a9c40;
+}
+
+.responses-page .card-purple .summary-icon{
+    background:#64629c;
+}
+
+.responses-page .card-orange .summary-icon{
+    background:#e27b35;
+}
+
+.responses-page .summary-number{
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:2px;
+}
+
+.responses-page .summary-label{
+    font-size:11px;
+    font-weight:bold;
+}
+
+.responses-page .summary-change{
+    font-size:8px;
+    margin-top:3px;
+}
+
+.responses-page .green-text{
+    color:#249b47;
+}
+
+.responses-page .orange-text{
+    color:#e18a18;
+}
+
+.responses-page .red-text{
+    color:#e32626;
+}
+
+
+/* =========================================================
+   RESPONSE LAYOUT
+========================================================= */
+
+.responses-page .response-layout{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 395px;
+    gap:14px;
+    align-items:start;
+}
+
+.responses-page .left-content{
+    min-width:0;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.responses-page .filter-bar{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:9px;
+    flex-wrap:wrap;
+}
+
+.responses-page .search-box{
+    height:35px;
+    width:260px;
+    background:#fff;
+    border:1px solid #d5dadd;
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    padding:0 10px;
+    gap:8px;
+}
+
+.responses-page .search-box span{
+    font-size:17px;
+    color:#123f4e;
+}
+
+.responses-page .search-box input{
+    border:0;
+    outline:0;
+    width:100%;
+    font-size:10px;
+    background:transparent;
+}
+
+
+/* =========================================================
+   RESPONSE TABLE
+========================================================= */
+
+.responses-page .response-box{
+    background:#fff;
+    border:1px solid #d9dfe2;
+    border-radius:7px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(30,70,80,.05);
+}
+
+.responses-page .response-heading{
+    height:42px;
+    display:flex;
+    align-items:center;
+    padding:0 13px;
+    font-size:13px;
+    font-weight:bold;
+    border-bottom:1px solid #ddd;
+    color:#172e38;
+}
+
+.responses-page .table-wrapper{
+    overflow-x:auto;
+}
+
+.responses-page .response-table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+    min-width:650px;
+}
+
+.responses-page .response-table th{
+    height:36px;
+    background:#edf6fb;
+    color:#173d4c;
+    font-size:9px;
+    text-align:left;
+    padding:0 8px;
+    border-bottom:1px solid #ddd;
+}
+
+.responses-page .response-table td{
+    height:42px;
+    padding:0 8px;
+    border-bottom:1px solid #e6e9ea;
+    font-size:9px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.responses-page .response-table tbody tr:hover{
+    background:#f7fbfd;
+}
+
+.responses-page .response-table th:nth-child(1), .responses-page .response-table td:nth-child(1){
+    width:38px;
+    text-align:center;
+}
+
+.responses-page .response-table th:nth-child(2), .responses-page .response-table td:nth-child(2){
+    width:150px;
+}
+
+.responses-page .response-table th:nth-child(3), .responses-page .response-table td:nth-child(3){
+    width:100px;
+}
+
+.responses-page .response-table th:nth-child(4), .responses-page .response-table td:nth-child(4){
+    width:165px;
+}
+
+.responses-page .response-table th:nth-child(5), .responses-page .response-table td:nth-child(5){
+    width:155px;
+}
+
+.responses-page .response-table th:nth-child(6), .responses-page .response-table td:nth-child(6){
+    width:105px;
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.responses-page .category, .responses-page .status{
+    display:inline-block;
+    padding:4px 9px;
+    border-radius:12px;
+    font-size:8px;
+    font-weight:bold;
+}
+
+.responses-page .category.academic{
+    background:#dceeff;
+    color:#2381c4;
+}
+
+.responses-page .category.facilities{
+    background:#eee8ff;
+    color:#7452c7;
+}
+
+.responses-page .status.completed{
+    background:#d9f1df;
+    color:#29904d;
+}
+
+.responses-page .status.progress{
+    background:#ffebc8;
+    color:#db8a16;
+}
+
+.responses-page .status.not-submitted{
+    background:#ffe1e1;
+    color:#dd3333;
+}
+
+
+/* =========================================================
+   RIGHT COLUMN
+========================================================= */
+
+.responses-page .right-column{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    min-width:0;
+}
+
+.responses-page .right-card{
+    background:#fff;
+    border:1px solid #d9dfe2;
+    border-radius:8px;
+    padding:13px;
+    box-shadow:0 3px 10px rgba(30,70,80,.05);
+    overflow:hidden;
+}
+
+.responses-page .right-card-title{
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:10px;
+    color:#172e38;
+}
+
+
+/* =========================================================
+   RESPONSE OVERVIEW
+========================================================= */
+
+.responses-page .overview-content{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    min-height:195px;
+    width:100%;
+}
+
+.responses-page .donut-wrapper{
+    width:180px;
+    height:180px;
+    position:relative;
+    flex:0 0 180px;
+}
+
+.responses-page .donut{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    position:absolute;
+    left:5px;
+    top:5px;
+
+    background:conic-gradient(
+        #572a8d 0deg 144deg,
+        #8175b1 144deg 252deg,
+        #aaa7d0 252deg 273.6deg,
+        #e58a10 273.6deg 324deg,
+        #ffb95d 324deg 360deg
+    );
+
+    box-shadow:0 2px 6px rgba(0,0,0,.10);
+}
+
+.responses-page .donut::after{
+    content:"";
+    position:absolute;
+    width:82px;
+    height:82px;
+    background:#fff;
+    border-radius:50%;
+    top:44px;
+    left:44px;
+}
+
+.responses-page .donut-center{
+    position:absolute;
+    top:65px;
+    left:0;
+    width:100%;
+    text-align:center;
+    z-index:5;
+    font-size:17px;
+    font-weight:bold;
+    color:#173d4c;
+}
+
+.responses-page .donut-center span{
+    display:block;
+    font-size:8px;
+    line-height:1.35;
+    font-weight:normal;
+    margin-top:3px;
+    color:#555;
+}
+
+
+/* =========================================================
+   LEGEND
+========================================================= */
+
+.responses-page .legend{
+    width:145px;
+    flex:0 0 145px;
+    font-size:9px;
+    line-height:2.25;
+}
+
+.responses-page .legend-item{
+    display:grid;
+    grid-template-columns:9px minmax(0,1fr) auto;
+    align-items:center;
+    column-gap:6px;
+}
+
+.responses-page .legend-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    display:block;
+}
+
+.responses-page .legend-purple-dark{
+    background:#572a8d;
+}
+
+.responses-page .legend-purple{
+    background:#8175b1;
+}
+
+.responses-page .legend-light-purple{
+    background:#aaa7d0;
+}
+
+.responses-page .legend-orange{
+    background:#e58a10;
+}
+
+.responses-page .legend-yellow{
+    background:#ffb95d;
+}
+
+.responses-page .legend-value{
+    color:#333;
+    font-size:8px;
+    font-weight:bold;
+}
+
+
+/* =========================================================
+   RESPONSE STATUS
+========================================================= */
+
+.responses-page .status-row{
+    display:grid;
+    grid-template-columns:82px minmax(70px,1fr) 68px;
+    gap:8px;
+    align-items:center;
+    margin:14px 0;
+}
+
+.responses-page .status-name{
+    font-size:9px;
+}
+
+.responses-page .status-progress{
+    height:7px;
+    background:#e0e2e3;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.responses-page .status-fill{
+    height:100%;
+    border-radius:10px;
+}
+
+.responses-page .fill-green{
+    background:#4ba66a;
+}
+
+.responses-page .fill-orange{
+    background:#f3aa1c;
+}
+
+.responses-page .fill-red{
+    background:#e92c3b;
+}
+
+.responses-page .status-value{
+    text-align:right;
+    font-size:8px;
+}
+
+
+/* =========================================================
+   FORM WISE
+========================================================= */
+
+.responses-page .form-item{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    min-height:34px;
+    font-size:9px;
+}
+
+.responses-page .form-icon{
+    width:21px;
+    height:21px;
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:10px;
+    flex-shrink:0;
+}
+
+.responses-page .form-icon.blue{
+    background:#438dc4;
+}
+
+.responses-page .form-icon.purple{
+    background:#8063cf;
+}
+
+.responses-page .form-icon.green{
+    background:#3a9c79;
+}
+
+.responses-page .form-icon.orange{
+    background:#e6a52b;
+}
+
+.responses-page .form-icon.cyan{
+    background:#28aeba;
+}
+
+.responses-page .form-name{
+    flex:1;
+    min-width:0;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.responses-page .form-count{
+    font-weight:bold;
+    font-size:9px;
+}
+
+.responses-page .view-all-link{
+    color:#28a9cc;
+    float:right;
+    font-size:9px;
+    cursor:pointer;
+}
+
+.responses-page .view-all-link:hover{
+    text-decoration:underline;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.responses-page .mobile-menu{
+    display:none;
+    position:fixed;
+    top:18px;
+    left:10px;
+    width:38px;
+    height:38px;
+    border:0;
+    border-radius:6px;
+    background:#073f50;
+    color:#fff;
+    z-index:3000;
+    cursor:pointer;
+    font-size:20px;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.responses-page .toast{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#073f50;
+    color:#fff;
+    padding:11px 17px;
+    border-radius:6px;
+    font-size:11px;
+    opacity:0;
+    transform:translateY(15px);
+    transition:.25s;
+    z-index:5000;
+}
+
+.responses-page .toast.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1200px){
+
+    .responses-page .response-layout{
+        grid-template-columns:minmax(0,1fr) 370px;
+    }
+
+    .responses-page .college-line-one{
+        font-size:17px;
+    }
+
+    .responses-page .college-name{
+        font-size:25px;
+    }
+
+    .responses-page .college-location{
+        font-size:19px;
+    }
+
+    .responses-page .overview-content{
+        gap:8px;
+    }
+
+    .responses-page .donut-wrapper{
+        transform:scale(.92);
+        transform-origin:center;
+        margin-right:-8px;
+    }
+
+    .responses-page .legend{
+        width:135px;
+        flex-basis:135px;
+    }
+
+}
+
+
+@media(max-width:1050px){
+
+    .responses-page .response-layout{
+        grid-template-columns:1fr;
+    }
+
+    .responses-page .right-column{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+
+    .responses-page .right-column .right-card:first-child{
+        grid-column:1 / -1;
+    }
+
+    .responses-page .response-table{
+        min-width:680px;
+    }
+
+}
+
+
+@media(max-width:750px){
+
+    .responses-page .topbar{
+        height:90px;
+        padding:0 18px;
+    }
+
+    .responses-page .sidebar{
+        top:90px;
+        height:calc(100vh - 90px);
+        left:-202px;
+        transition:.25s;
+    }
+
+    .responses-page.menu-open .sidebar{
+        left:0;
+    }
+
+    .responses-page .main{
+        margin-left:0;
+        padding-top:90px;
+    }
+
+    .responses-page .mobile-menu{
+        display:block;
+    }
+
+    .responses-page .header-logo{
+        width:62px;
+        height:62px;
+    }
+
+    .responses-page .college-header{
+        gap:12px;
+    }
+
+    .responses-page .college-line-one{
+        font-size:12px;
+    }
+
+    .responses-page .college-name{
+        font-size:18px;
+    }
+
+    .responses-page .college-location{
+        font-size:14px;
+    }
+
+    .responses-page .admin-name{
+        display:none;
+    }
+
+    .responses-page .admin-avatar{
+        width:42px;
+        height:42px;
+        font-size:18px;
+    }
+
+    .responses-page .page-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+    }
+
+    .responses-page .header-actions{
+        width:100%;
+        justify-content:space-between;
+    }
+
+    .responses-page .summary-cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .responses-page .search-box{
+        width:100%;
+    }
+
+    .responses-page .right-column{
+        grid-template-columns:1fr;
+    }
+
+    .responses-page .right-column .right-card:first-child{
+        grid-column:auto;
+    }
+
+}
+
+
+@media(max-width:560px){
+
+    .responses-page .content{
+        padding:12px 10px 20px;
+    }
+
+    .responses-page .summary-cards{
+        grid-template-columns:1fr;
+    }
+
+    .responses-page .header-actions{
+        flex-wrap:wrap;
+    }
+
+    .responses-page .date-dropdown{
+        flex:1;
+    }
+
+    .responses-page .date-box{
+        width:100%;
+        min-width:0;
+        font-size:9px;
+    }
+
+    .responses-page .month-menu{
+        width:100%;
+        right:0;
+    }
+
+    .responses-page .export-btn{
+        font-size:10px;
+    }
+
+    .responses-page .overview-content{
+        justify-content:center;
+        gap:4px;
+    }
+
+    .responses-page .donut-wrapper{
+        transform:scale(.82);
+        margin-right:-20px;
+    }
+
+    .responses-page .legend{
+        width:120px;
+        flex-basis:120px;
+        font-size:8px;
+    }
+
+}
+
+
+@media(max-width:430px){
+
+    .responses-page .college-info{
+        display:none;
+    }
+
+    .responses-page .admin-profile{
+        margin-left:auto;
+    }
+
+    .responses-page .overview-content{
+        flex-direction:column;
+        min-height:360px;
+    }
+
+    .responses-page .donut-wrapper{
+        transform:scale(1);
+        margin:0;
+    }
+
+    .responses-page .legend{
+        width:210px;
+        flex-basis:auto;
+    }
+
+}
+
+
+
+/* ============================================================
+   SETTING PAGE STYLES
+   Original inline CSS moved here; selectors are page-scoped.
+============================================================ */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.setting-page, .setting-page *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.setting-page, .setting-page{
+    width:100%;
+    min-height:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f6f7;
+    color:#111;
+}
+
+.setting-page{
+    overflow-x:hidden;
+}
+
+
+/* =========================================================
+   MAIN APP
+========================================================= */
+
+.setting-page .app{
+    width:100%;
+    min-height:100vh;
+}
+
+
+/* =========================================================
+   TOP NAVBAR
+========================================================= */
+
+.setting-page .topbar{
+    height:112px;
+    width:100%;
+    background:#06465a;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+    color:white;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+
+/* College branding */
+
+.setting-page .brand{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    min-width:330px;
+}
+
+.setting-page .brand-logo{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+    background:white;
+    flex-shrink:0;
+}
+
+.setting-page .brand-text{
+    line-height:1.2;
+}
+
+.setting-page .brand-small{
+    font-size:13px;
+    margin-bottom:3px;
+    color:#e8f4f7;
+}
+
+.setting-page .brand-name{
+    font-size:20px;
+    font-weight:700;
+    color:white;
+}
+
+.setting-page .brand-location{
+    font-size:13px;
+    margin-top:4px;
+    color:#e5f0f3;
+}
+
+
+/* Admin */
+
+.setting-page .admin-box{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    font-size:16px;
+    font-weight:700;
+}
+
+.setting-page .admin-circle{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:white;
+    color:#06465a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    font-weight:700;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.setting-page .sidebar{
+    position:fixed;
+    top:112px;
+    left:0;
+    bottom:0;
+    width:205px;
+    background:#033441;
+    color:white;
+    z-index:900;
+    display:flex;
+    flex-direction:column;
+    padding-top:25px;
+}
+
+.setting-page .nav{
+    width:100%;
+}
+
+.setting-page .nav-item{
+    height:48px;
+    width:100%;
+    padding:0 18px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    transition:0.2s;
+    border-left:4px solid transparent;
+}
+
+.setting-page .nav-item:hover{
+    background:#07536b;
+}
+
+.setting-page .nav-item.active{
+    background:#116c86;
+    border-left-color:#54b7d5;
+}
+
+.setting-page .nav-icon{
+    width:22px;
+    text-align:center;
+    font-size:18px;
+}
+
+
+/* bottom sidebar */
+
+.setting-page .sidebar-bottom{
+    margin-top:auto;
+    padding-bottom:20px;
+}
+
+.setting-page .bottom-item{
+    height:38px;
+    padding:0 18px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+    font-size:12px;
+    text-decoration:none;
+}
+
+.setting-page .bottom-item:hover{
+    background:#07536b;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.setting-page .main{
+    margin-left:205px;
+    padding-top:112px;
+    min-height:100vh;
+    background:#f5f6f7;
+}
+
+.setting-page .content{
+    width:100%;
+    min-height:calc(100vh - 112px);
+    padding:18px 20px 25px 20px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.setting-page .page-header{
+    margin-bottom:12px;
+}
+
+.setting-page .page-header h1{
+    font-size:28px;
+    margin-bottom:3px;
+}
+
+.setting-page .page-header p{
+    color:#52616a;
+    font-size:13px;
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.setting-page .tabs{
+    width:100%;
+    height:42px;
+    display:flex;
+    border:1px solid #d7e0e4;
+    background:white;
+    margin-bottom:12px;
+    border-radius:3px;
+    overflow:hidden;
+}
+
+.setting-page .tab{
+    flex:1;
+    max-width:180px;
+    border:none;
+    background:white;
+    border-right:1px solid #dce4e7;
+    font-size:12px;
+    font-weight:600;
+    color:#34444b;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+}
+
+.setting-page .tab:last-child{
+    border-right:none;
+}
+
+.setting-page .tab:hover{
+    background:#edf7fa;
+}
+
+.setting-page .tab.active{
+    background:#126b88;
+    color:white;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.setting-page .card{
+    background:white;
+    border:1px solid #d7dfe3;
+    border-radius:3px;
+    box-shadow:0 1px 2px rgba(0,0,0,0.03);
+}
+
+.setting-page .card-header{
+    padding:13px 15px;
+    border-bottom:1px solid #e0e5e7;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.setting-page .card-header-icon{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:#073d4e;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+}
+
+.setting-page .card-title{
+    font-size:14px;
+    font-weight:700;
+}
+
+.setting-page .card-subtitle{
+    font-size:10px;
+    color:#777;
+    margin-top:2px;
+}
+
+.setting-page .card-body{
+    padding:13px 15px;
+}
+
+
+/* =========================================================
+   GENERAL SETTINGS
+========================================================= */
+
+.setting-page .general-card{
+    margin-bottom:12px;
+}
+
+.setting-page .general-layout{
+    display:grid;
+    grid-template-columns:240px 1fr;
+    min-height:145px;
+}
+
+
+/* College box */
+
+.setting-page .college-box{
+    background:#f1f7f9;
+    border-right:1px solid #dce5e8;
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+}
+
+.setting-page .college-info{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:12px;
+}
+
+.setting-page .small-logo{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+    background:white;
+}
+
+.setting-page .college-title{
+    font-size:12px;
+    font-weight:bold;
+}
+
+.setting-page .college-place{
+    font-size:9px;
+    color:#777;
+    margin-top:3px;
+}
+
+.setting-page .edit-btn{
+    border:1px solid #b8d5df;
+    background:white;
+    color:#14627a;
+    padding:6px 9px;
+    border-radius:3px;
+    font-size:10px;
+    cursor:pointer;
+}
+
+.setting-page .edit-btn:hover{
+    background:#eaf5f8;
+}
+
+
+/* Settings form */
+
+.setting-page .settings-form{
+    padding:15px 18px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:30px;
+    row-gap:11px;
+}
+
+.setting-page .form-group{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.setting-page .form-group label{
+    font-size:9px;
+    font-weight:700;
+    color:#58646b;
+}
+
+.setting-page .form-group input, .setting-page .form-group select{
+    height:29px;
+    width:100%;
+    border:1px solid #d4dfe3;
+    border-radius:3px;
+    padding:0 9px;
+    background:white;
+    font-size:10px;
+    color:#263238;
+    outline:none;
+}
+
+.setting-page .form-group input:focus, .setting-page .form-group select:focus{
+    border-color:#19799a;
+}
+
+
+/* =========================================================
+   FEEDBACK SETTINGS
+========================================================= */
+
+.setting-page .feedback-card{
+    margin-bottom:12px;
+}
+
+.setting-page .feedback-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:40px;
+}
+
+.setting-page .setting-row{
+    min-height:42px;
+    margin-bottom:8px;
+}
+
+.setting-page .setting-label{
+    font-size:10px;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.setting-page .setting-description{
+    font-size:8px;
+    color:#8a9397;
+    margin-bottom:5px;
+}
+
+.setting-page .setting-input{
+    height:28px;
+    width:100%;
+    border:1px solid #d5dfe3;
+    border-radius:3px;
+    padding:0 8px;
+    font-size:10px;
+}
+
+
+/* Toggle */
+
+.setting-page .toggle{
+    position:relative;
+    width:36px;
+    height:19px;
+    display:inline-block;
+}
+
+.setting-page .toggle input{
+    opacity:0;
+    width:0;
+    height:0;
+}
+
+.setting-page .slider{
+    position:absolute;
+    cursor:pointer;
+    inset:0;
+    background:#cbd5d9;
+    border-radius:20px;
+    transition:.2s;
+}
+
+.setting-page .slider:before{
+    content:"";
+    position:absolute;
+    width:15px;
+    height:15px;
+    left:2px;
+    top:2px;
+    background:white;
+    border-radius:50%;
+    transition:.2s;
+}
+
+.setting-page .toggle input:checked + .slider{
+    background:#17789a;
+}
+
+.setting-page .toggle input:checked + .slider:before{
+    transform:translateX(17px);
+}
+
+
+/* Textarea */
+
+.setting-page .message-box{
+    width:100%;
+    height:65px;
+    resize:none;
+    border:1px solid #d5dfe3;
+    border-radius:3px;
+    padding:8px;
+    font-size:10px;
+}
+
+
+/* =========================================================
+   LOWER CARDS
+========================================================= */
+
+.setting-page .lower-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-bottom:12px;
+}
+
+.setting-page .backup-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.setting-page .action-btn{
+    flex:1;
+    height:32px;
+    border:1px solid #cddde2;
+    background:white;
+    color:#125f77;
+    border-radius:3px;
+    font-size:10px;
+    cursor:pointer;
+}
+
+.setting-page .action-btn:hover{
+    background:#edf7fa;
+}
+
+
+/* System information */
+
+.setting-page .system-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.setting-page .system-table tr{
+    border-bottom:1px solid #edf0f1;
+}
+
+.setting-page .system-table tr:last-child{
+    border-bottom:none;
+}
+
+.setting-page .system-table td{
+    padding:6px 5px;
+    font-size:9px;
+}
+
+.setting-page .system-table td:first-child{
+    color:#68767c;
+    width:45%;
+}
+
+.setting-page .status{
+    color:#188144;
+    font-weight:bold;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.setting-page .quick-title{
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.setting-page .quick-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+.setting-page .quick-card{
+    min-height:72px;
+    border-radius:4px;
+    padding:12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.setting-page .quick-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+.setting-page .quick-icon{
+    width:31px;
+    height:31px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:14px;
+    flex-shrink:0;
+}
+
+.setting-page .quick-card h4{
+    font-size:10px;
+    margin-bottom:3px;
+}
+
+.setting-page .quick-card p{
+    font-size:8px;
+    color:#68777c;
+    line-height:1.3;
+}
+
+.setting-page .quick-arrow{
+    margin-left:auto;
+    font-size:16px;
+}
+
+.setting-page .q1{
+    background:#f1ebff;
+}
+
+.setting-page .q1 .quick-icon{
+    background:#7251b5;
+}
+
+.setting-page .q2{
+    background:#e6f8f0;
+}
+
+.setting-page .q2 .quick-icon{
+    background:#38a56d;
+}
+
+.setting-page .q3{
+    background:#fff0dc;
+}
+
+.setting-page .q3 .quick-icon{
+    background:#ef962d;
+}
+
+.setting-page .q4{
+    background:#e4f3fa;
+}
+
+.setting-page .q4 .quick-icon{
+    background:#187ca0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+    .setting-page .brand-name{
+        font-size:17px;
+    }
+
+    .setting-page .brand-small{
+        font-size:11px;
+    }
+
+    .setting-page .brand-location{
+        font-size:11px;
+    }
+
+    .setting-page .sidebar{
+        width:185px;
+    }
+
+    .setting-page .main{
+        margin-left:185px;
+    }
+
+    .setting-page .general-layout{
+        grid-template-columns:210px 1fr;
+    }
+
+    .setting-page .quick-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:800px){
+
+    .setting-page .topbar{
+        height:90px;
+        padding:0 15px;
+    }
+
+    .setting-page .brand{
+        gap:10px;
+    }
+
+    .setting-page .brand-logo{
+        width:55px;
+        height:55px;
+    }
+
+    .setting-page .brand-name{
+        font-size:14px;
+    }
+
+    .setting-page .brand-small{
+        font-size:9px;
+    }
+
+    .setting-page .brand-location{
+        font-size:9px;
+    }
+
+    .setting-page .admin-circle{
+        width:36px;
+        height:36px;
+        font-size:16px;
+    }
+
+    .setting-page .admin-box{
+        font-size:12px;
+    }
+
+    .setting-page .sidebar{
+        top:90px;
+        width:65px;
+    }
+
+    .setting-page .nav-item{
+        justify-content:center;
+        padding:0;
+    }
+
+    .setting-page .nav-item span:not(.nav-icon){
+        display:none;
+    }
+
+    .setting-page .nav-icon{
+        font-size:18px;
+    }
+
+    .setting-page .bottom-item{
+        justify-content:center;
+        padding:0;
+    }
+
+    .setting-page .bottom-item span:not(.nav-icon){
+        display:none;
+    }
+
+    .setting-page .main{
+        margin-left:65px;
+        padding-top:90px;
+    }
+
+    .setting-page .content{
+        padding:14px;
+    }
+
+    .setting-page .general-layout{
+        grid-template-columns:1fr;
+    }
+
+    .setting-page .college-box{
+        border-right:none;
+        border-bottom:1px solid #dce5e8;
+    }
+
+    .setting-page .settings-form{
+        grid-template-columns:1fr;
+    }
+
+    .setting-page .feedback-grid{
+        grid-template-columns:1fr;
+    }
+
+    .setting-page .lower-grid{
+        grid-template-columns:1fr;
+    }
+
+    .setting-page .quick-grid{
+        grid-template-columns:1fr;
+    }
+
+    .setting-page .tabs{
+        overflow-x:auto;
+    }
+
+    .setting-page .tab{
+        min-width:130px;
+    }
+}
+
+
+@media(max-width:550px){
+
+    .setting-page .brand-text{
+        display:none;
+    }
+
+    .setting-page .brand{
+        min-width:auto;
+    }
+
+    .setting-page .brand-logo{
+        width:52px;
+        height:52px;
+    }
+
+    .setting-page .sidebar{
+        width:55px;
+    }
+
+    .setting-page .main{
+        margin-left:55px;
+    }
+
+    .setting-page .page-header h1{
+        font-size:23px;
+    }
+
+    .setting-page .content{
+        padding:10px;
+    }
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print{
+
+    .setting-page .topbar, .setting-page .sidebar{
+        display:none;
+    }
+
+    .setting-page .main{
+        margin:0;
+        padding:0;
+    }
+
+    .setting-page .content{
+        padding:10px;
+    }
+}
+
+
+/* ============================================================
+   STUDENTFORM PAGE STYLES
+   Original inline CSS moved here; selectors are page-scoped.
+============================================================ */
+
+
+
+    /* =========================
+       RESET
+    ========================= */
+
+    .studentform-page, .studentform-page *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .studentform-page, .studentform-page{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+
+    /* =========================
+       MAIN DASHBOARD
+    ========================= */
+
+    .studentform-page .dashboard{
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    /* =========================
+       TOP NAVBAR
+    ========================= */
+
+    .studentform-page .navbar{
+      width: 100%;
+      height: 122px;
+      min-height: 122px;
+
+      background: #07566b;
+      color: #ffffff;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 28px;
+
+      margin: 0;
+    }
+
+
+    /* =========================
+       COLLEGE INFORMATION
+    ========================= */
+
+    .studentform-page .college-info{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+
+    /* College Logo */
+
+    .studentform-page .college-logo{
+      width: 72px;
+      height: 72px;
+
+      background: #ffffff;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+
+      flex-shrink: 0;
+    }
+
+    .studentform-page .college-logo img{
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+
+      display: block;
+    }
+
+
+    /* College Name */
+
+    .studentform-page .college-name{
+      color: #ffffff;
+      line-height: 1.35;
+    }
+
+    .studentform-page .college-name .small-name{
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .studentform-page .college-name strong{
+      display: block;
+
+      font-size: 27px;
+      font-weight: 700;
+
+      margin-top: 1px;
+    }
+
+    .studentform-page .college-name .location{
+      font-size: 20px;
+      font-weight: 400;
+
+      margin-top: 1px;
+    }
+
+
+    /* =========================
+       ADMIN
+    ========================= */
+
+    .studentform-page .admin-area{
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+    }
+
+    .studentform-page .admin-circle{
+      width: 54px;
+      height: 54px;
+
+      background: #ffffff;
+      color: #07566b;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .studentform-page .admin-name{
+      color: #ffffff;
+
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       BODY
+    ========================= */
+
+    .studentform-page .body{
+      width: 100%;
+      height: calc(100vh - 122px);
+
+      display: flex;
+
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /* =========================
+       LEFT SIDEBAR
+    ========================= */
+
+    .studentform-page .sidebar{
+      width: 220px;
+      height: 100%;
+
+      background: #063541;
+      color: #ffffff;
+
+      padding: 28px 10px;
+
+      margin: 0;
+
+      flex-shrink: 0;
+    }
+
+    .studentform-page .menu{
+      display: flex;
+      flex-direction: column;
+
+      gap: 6px;
+    }
+
+    .studentform-page .menu-item{
+      width: 100%;
+      height: 42px;
+
+      padding: 0 12px;
+
+      display: flex;
+      align-items: center;
+
+      gap: 14px;
+
+      border-radius: 9px;
+
+      font-size: 14px;
+
+      cursor: pointer;
+    }
+
+    .studentform-page .menu-item:hover{
+      background: #0d596d;
+    }
+
+    .studentform-page .menu-item.active{
+      background: #09566b;
+    }
+
+    .studentform-page .menu-icon{
+      width: 20px;
+
+      text-align: center;
+
+      font-size: 18px;
+
+      flex-shrink: 0;
+    }
+
+
+    /* =========================
+       MAIN CONTENT
+    ========================= */
+
+    .studentform-page .main{
+      position: relative;
+
+      flex: 1;
+
+      height: 100%;
+
+      background: #ffffff;
+
+      padding: 12px 10px 0 10px;
+
+      overflow: hidden;
+    }
+
+
+    /* =========================
+       PAGE TITLE
+    ========================= */
+
+    .studentform-page .page-title{
+      margin: 0 0 6px 10px;
+
+      font-size: 30px;
+      font-weight: 700;
+
+      color: #111111;
+    }
+
+
+    /* =========================
+       MAIN CONTENT WRAPPER
+    ========================= */
+
+    .studentform-page .content-wrapper{
+      width: 100%;
+      height: calc(100% - 45px);
+
+      display: flex;
+
+      gap: 8px;
+    }
+
+
+    /* =========================
+       STUDENTS SECTION
+    ========================= */
+
+    .studentform-page .students-section{
+      flex: 1;
+
+      min-width: 0;
+
+      overflow: hidden;
+    }
+
+
+    /* =========================
+       STAT CARDS
+    ========================= */
+
+    .studentform-page .cards{
+      width: 100%;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 5px;
+
+      margin-bottom: 10px;
+    }
+
+    .studentform-page .card{
+      height: 74px;
+
+      border-radius: 5px;
+
+      padding: 10px;
+
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+    }
+
+    .studentform-page .card:nth-child(1){
+      background: #bdecef;
+    }
+
+    .studentform-page .card:nth-child(2){
+      background: #a9e3a6;
+    }
+
+    .studentform-page .card:nth-child(3){
+      background: #a9a9dc;
+    }
+
+    .studentform-page .card:nth-child(4){
+      background: #edc08d;
+    }
+
+    .studentform-page .card-icon{
+      width: 34px;
+      height: 34px;
+
+      border-radius: 50%;
+
+      background: #075a70;
+      color: #ffffff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-weight: bold;
+
+      flex-shrink: 0;
+    }
+
+    .studentform-page .card:nth-child(2) .card-icon{
+      background: #46ad32;
+    }
+
+    .studentform-page .card:nth-child(3) .card-icon{
+      background: #5960a7;
+    }
+
+    .studentform-page .card:nth-child(4) .card-icon{
+      background: #e8753e;
+    }
+
+    .studentform-page .card-number{
+      font-size: 13px;
+
+      font-weight: bold;
+
+      color: #111111;
+    }
+
+    .studentform-page .card-label{
+      font-size: 11px;
+
+      font-weight: 600;
+
+      color: #111111;
+    }
+
+
+    /* =========================
+       SEARCH
+       ONLY SEARCH BOX REMAINS
+    ========================= */
+
+    .studentform-page .filters{
+      width: 100%;
+
+      display: flex;
+
+      margin-bottom: 8px;
+    }
+
+    .studentform-page .filter{
+      height: 30px;
+
+      border: 1px solid #dddddd;
+
+      border-radius: 4px;
+
+      background: #ffffff;
+
+      padding: 0 10px;
+
+      font-size: 10px;
+    }
+
+    .studentform-page .filter.search{
+      width: 100%;
+
+      max-width: 300px;
+    }
+
+
+    /* =========================
+       STUDENT TABLE BOX
+    ========================= */
+
+    .studentform-page .table-container{
+      width: 100%;
+
+      background: #ffffff;
+
+      border: 1px solid #dddddd;
+
+      border-radius: 6px;
+
+      overflow: hidden;
+
+      margin-top: 5px;
+    }
+
+    .studentform-page .table-heading{
+      font-size: 14px;
+      font-weight: bold;
+
+      color: #111111;
+
+      padding: 12px 10px;
+
+      border-bottom: 1px solid #eeeeee;
+
+      background: #ffffff;
+    }
+
+    .studentform-page table{
+      width: 100%;
+
+      border-collapse: collapse;
+
+      font-size: 11px;
+    }
+
+    .studentform-page th{
+      text-align: left;
+
+      padding: 10px 7px;
+
+      font-weight: bold;
+
+      color: #222222;
+
+      background: #fafafa;
+
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .studentform-page td{
+      padding: 10px 7px;
+
+      border-bottom: 1px solid #eeeeee;
+
+      font-weight: 500;
+
+      color: #111111;
+    }
+
+    .studentform-page tbody tr:last-child td{
+      border-bottom: none;
+    }
+
+    .studentform-page tbody tr:hover{
+      background: #f8fbfc;
+    }
+
+    .studentform-page .eye{
+      font-size: 17px;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================
+       RIGHT PANEL
+    ========================= */
+
+    .studentform-page .right-panel{
+      width: 245px;
+      height: 100%;
+
+      flex-shrink: 0;
+
+      overflow: hidden;
+    }
+
+    .studentform-page .panel{
+      width: 100%;
+
+      border: 1px solid #dddddd;
+
+      border-radius: 4px;
+
+      background: #ffffff;
+
+      margin-bottom: 7px;
+
+      overflow: hidden;
+    }
+
+    .studentform-page .panel-title{
+      font-size: 13px;
+
+      font-weight: bold;
+
+      padding: 10px;
+
+      color: #111111;
+    }
+
+
+    /* =========================
+       STUDENT OVERVIEW
+    ========================= */
+
+    .studentform-page .overview{
+      height: 205px;
+    }
+
+    .studentform-page .overview-content{
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      gap: 15px;
+    }
+
+    .studentform-page .donut-wrapper{
+      width: 105px;
+      height: 105px;
+
+      position: relative;
+
+      flex-shrink: 0;
+    }
+
+    .studentform-page .donut{
+      width: 105px;
+      height: 105px;
+
+      border-radius: 50%;
+
+      background:
+        conic-gradient(
+          #1595b2 0 35%,
+          #4d8fd1 35% 68%,
+          #3ca978 68% 100%
+        );
+
+      position: relative;
+    }
+
+    .studentform-page .donut::after{
+      content: "";
+
+      position: absolute;
+
+      width: 58px;
+      height: 58px;
+
+      background: #ffffff;
+
+      border-radius: 50%;
+
+      top: 23.5px;
+      left: 23.5px;
+    }
+
+
+    /* =========================
+       DONUT CENTER
+    ========================= */
+
+    .studentform-page .donut-center{
+      position: absolute;
+
+      z-index: 2;
+
+      top: 50%;
+
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      width: 75px;
+
+      text-align: center;
+    }
+
+    .studentform-page .donut-total{
+      display: block;
+
+      font-size: 17px;
+
+      font-weight: bold;
+
+      color: #123f50;
+    }
+
+    .studentform-page .donut-text{
+      display: block;
+
+      margin-top: 2px;
+
+      font-size: 7px;
+
+      line-height: 1.2;
+
+      color: #666666;
+    }
+
+
+    /* =========================
+       LEGEND
+    ========================= */
+
+    .studentform-page .legend{
+      font-size: 10px;
+
+      line-height: 24px;
+    }
+
+    .studentform-page .legend div{
+      display: flex;
+
+      align-items: center;
+
+      gap: 7px;
+    }
+
+    .studentform-page .dot{
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      flex-shrink: 0;
+    }
+
+    .studentform-page .dot.bba{
+      background: #1595b2;
+    }
+
+    .studentform-page .dot.bca{
+      background: #4d8fd1;
+    }
+
+    .studentform-page .dot.bcom{
+      background: #3ca978;
+    }
+
+
+    /* =========================
+       RECENT ACTIVITIES
+    ========================= */
+
+    .studentform-page .activity{
+      height: 42px;
+
+      padding: 0 10px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      font-size: 9px;
+    }
+
+    .studentform-page .activity-left{
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+    }
+
+    .studentform-page .activity-icon{
+      width: 24px;
+      height: 24px;
+
+      background: #15562b;
+
+      color: #ffffff;
+
+      border-radius: 5px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+    }
+
+    .studentform-page .time{
+      font-size: 8px;
+
+      color: #777777;
+    }
+
+
+    /* =========================
+       ADD STUDENT BUTTON
+    ========================= */
+
+    .studentform-page .add-student{
+      position: absolute;
+
+      top: 9px;
+      right: 10px;
+
+      height: 24px;
+
+      padding: 0 10px;
+
+      background: #073f4e;
+
+      color: #ffffff;
+
+      border: none;
+
+      border-radius: 4px;
+
+      font-size: 10px;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 1100px) {
+
+      .studentform-page .sidebar{
+        width: 190px;
+      }
+
+      .studentform-page .right-panel{
+        width: 220px;
+      }
+
+      .studentform-page .cards{
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 850px) {
+
+      .studentform-page .right-panel{
+        display: none;
+      }
+
+      .studentform-page .sidebar{
+        width: 190px;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .studentform-page .navbar{
+        height: 90px;
+        min-height: 90px;
+
+        padding: 0 12px;
+      }
+
+      .studentform-page .body{
+        height: calc(100vh - 90px);
+      }
+
+      .studentform-page .college-info{
+        gap: 8px;
+      }
+
+      .studentform-page .college-logo{
+        width: 50px;
+        height: 50px;
+      }
+
+      .studentform-page .college-name .small-name{
+        font-size: 11px;
+      }
+
+      .studentform-page .college-name strong{
+        font-size: 17px;
+      }
+
+      .studentform-page .college-name .location{
+        font-size: 13px;
+      }
+
+      .studentform-page .admin-name{
+        display: none;
+      }
+
+      .studentform-page .admin-circle{
+        width: 44px;
+        height: 44px;
+      }
+
+      .studentform-page .sidebar{
+        width: 60px;
+
+        padding: 15px 5px;
+      }
+
+      .studentform-page .menu-item{
+        justify-content: center;
+
+        padding: 0;
+      }
+
+      .studentform-page .menu-item span:not(.menu-icon){
+        display: none;
+      }
+
+      .studentform-page .main{
+        padding: 10px 5px 0;
+      }
+
+      .studentform-page .cards{
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+      .studentform-page .page-title{
+        font-size: 24px;
+      }
+
+      .studentform-page .filter.search{
+        max-width: 100%;
+      }
+
+      .studentform-page .table-container{
+        overflow-x: auto;
+      }
+
+      .studentform-page table{
+        min-width: 700px;
+      }
+
+    }
+
+  
+
+/* =========================================================
+   COMMON NAVBAR - SAME DESIGN ON EVERY PAGE
+========================================================= */
+.common-navbar{position:fixed;top:0;left:0;right:0;height:122px;min-height:122px;background:#07566b;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:5000;box-shadow:0 3px 12px rgba(0,0,0,.15)}
+.common-college-info{display:flex;align-items:center;gap:16px;min-width:0}
+.common-college-logo{width:72px;height:72px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.common-college-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.common-college-name{color:#fff;line-height:1.35}
+.common-small-name{font-size:16px;font-weight:500}
+.common-college-name strong{display:block;font-size:27px;font-weight:700;margin-top:1px}
+.common-location{font-size:20px;font-weight:400;margin-top:1px}
+.common-admin-area{display:flex;align-items:center;gap:12px}
+.common-admin-circle{width:54px;height:54px;background:#fff;color:#07566b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:bold}
+.common-admin-name{color:#fff;font-size:18px;font-weight:700}
+.common-sidebar{position:fixed;left:0;top:122px;bottom:0;width:220px;background:#063541;color:#fff;padding:28px 10px;z-index:4900;box-sizing:border-box}
+.common-menu{display:flex;flex-direction:column;gap:6px}
+.common-menu-item{width:100%;height:42px;padding:0 12px;display:flex;align-items:center;gap:14px;border-radius:9px;font-size:14px;cursor:pointer;color:#fff;text-decoration:none;box-sizing:border-box}
+.common-menu-item:hover{background:#0d596d}
+.common-menu-item.active{background:#09566b;box-shadow:inset 3px 0 0 #54b7d5}
+.common-menu-icon{width:20px;text-align:center;font-size:18px;flex-shrink:0}
+/* Common page offset so all pages line up with the shared navbar/sidebar */
+.dashboard-page .main,.facultyform-page .main{margin-left:220px;padding-top:142px}
+.feedbackform-page .main,.createform-page .content,.responses-page .main,.analytics-page .main,.setting-page .main{margin-left:220px;padding-top:122px}
+.studentform-page .body{height:calc(100vh - 122px);padding-left:220px;box-sizing:border-box}
+.studentform-page .body > .common-sidebar{display:block}
+.studentform-page .main{margin-left:0;padding-top:12px}
+
+/* Feedback-card palette shared by Dashboard, Students, Faculty and Responses */
+.dashboard-page .stat-card:nth-child(1),.facultyform-page .stat-card:nth-child(1),.studentform-page .card:nth-child(1),.responses-page .summary-card.card-blue{background:#dff4f6!important;border-top:4px solid #168cab!important}
+.dashboard-page .stat-card:nth-child(2),.facultyform-page .stat-card:nth-child(2),.studentform-page .card:nth-child(2),.responses-page .summary-card.card-green{background:#e1f6e7!important;border-top:4px solid #36a875!important}
+.dashboard-page .stat-card:nth-child(3),.facultyform-page .stat-card:nth-child(3),.studentform-page .card:nth-child(3),.responses-page .summary-card.card-purple{background:#e9e9f8!important;border-top:4px solid #6968ad!important}
+.dashboard-page .stat-card:nth-child(4),.facultyform-page .stat-card:nth-child(4),.studentform-page .card:nth-child(4),.responses-page .summary-card.card-orange{background:#fff0dc!important;border-top:4px solid #e0a52f!important}
+.studentform-page .card{height:100px;border-radius:10px;padding:16px;box-shadow:0 4px 12px rgba(20,70,85,.07);border-left:1px solid rgba(0,0,0,.05);border-right:1px solid rgba(0,0,0,.05);border-bottom:1px solid rgba(0,0,0,.05)}
+.studentform-page .card-icon{width:46px;height:46px;border-radius:12px;background:#08728a!important;color:#fff!important}
+.studentform-page .card:nth-child(2) .card-icon{background:#36a875!important}.studentform-page .card:nth-child(3) .card-icon{background:#6968ad!important}.studentform-page .card:nth-child(4) .card-icon{background:#d58b20!important}
+
+/* Add Student modal */
+.add-student-modal{position:fixed;inset:0;background:rgba(0,35,45,.55);display:none;align-items:center;justify-content:center;z-index:7000}
+.add-student-modal.show{display:flex}
+.add-student-dialog{position:relative;width:min(620px,92vw);background:#fff;border-radius:12px;padding:28px;box-shadow:0 18px 50px rgba(0,0,0,.25)}
+.add-student-dialog h2{font-size:24px;color:#123e50;margin-bottom:5px}.modal-subtitle{font-size:13px;color:#66747b;margin-bottom:20px}
+.modal-close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:28px;color:#52616a;cursor:pointer}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.form-grid label{font-size:12px;font-weight:700;color:#34444b;display:flex;flex-direction:column;gap:6px}.form-grid input,.form-grid select{height:40px;border:1px solid #d5dfe3;border-radius:6px;padding:0 10px;font-size:13px;outline:none}.form-grid input:focus,.form-grid select:focus{border-color:#168cab}.modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:22px}.cancel-btn,.save-student-btn{border:0;border-radius:7px;padding:10px 17px;font-weight:700;cursor:pointer}.cancel-btn{background:#edf2f4;color:#40545d}.save-student-btn{background:#07566b;color:#fff}
+@media(max-width:1100px){.facultyform-page .stats{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:700px){.facultyform-page .stats{grid-template-columns:1fr 1fr;}.common-college-name strong{font-size:19px}.common-small-name{font-size:11px}.common-location{font-size:13px}.common-college-logo{width:55px;height:55px}.common-admin-name{display:none}.common-sidebar{width:70px}.common-menu-item{justify-content:center;padding:0}.common-menu-item>span:not(.common-menu-icon){display:none}.dashboard-page .main,.facultyform-page .main,.feedbackform-page .main,.createform-page .content,.responses-page .main,.analytics-page .main,.setting-page .main{margin-left:70px}.studentform-page .body{padding-left:70px}.form-grid{grid-template-columns:1fr}}
+
+/* =========================================================
+   SIDEBAR BOTTOM: SETTINGS + LOGOUT
+========================================================= */
+.common-sidebar{display:flex;flex-direction:column;padding-bottom:16px}
+.common-menu-main{display:flex;flex-direction:column;gap:6px;flex:1}
+.common-menu-bottom{display:flex;flex-direction:column;gap:6px;margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.12)}
+.common-logout{color:#fff}
+.common-logout:hover{background:#0d596d}
+
+/* Analytics cards use the same palette as Feedback Forms cards */
+.analytics-page .summary-card.blue{background:#dff4f6!important;border-top:4px solid #168cab!important}
+.analytics-page .summary-card.green{background:#e1f6e7!important;border-top:4px solid #36a875!important}
+.analytics-page .summary-card.purple{background:#e9e9f8!important;border-top:4px solid #6968ad!important}
+.analytics-page .summary-card.orange{background:#fff0dc!important;border-top:4px solid #e0a52f!important}
+.analytics-page .summary-card{border-radius:10px;box-shadow:0 4px 12px rgba(20,70,85,.07)}
+
+/* =========================================================
+   STUDENTS: DATE/TIME + EXPORT + ADD STUDENT
+========================================================= */
+.studentform-page .student-top-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  width:100%;
+  margin:0 0 12px 0;
+  position:relative;
+  z-index:30;
+}
+.studentform-page .student-page-heading{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  min-width:0;
+}
+.studentform-page .student-page-heading .page-title{margin:0}
+.studentform-page .student-date-time{
+  display:flex;
+  flex-direction:column;
+  color:#66747b;
+  font-size:12px;
+  background:#fff;
+  border:1px solid #dce7eb;
+  border-radius:8px;
+  padding:7px 12px;
+  white-space:nowrap;
+  box-shadow:0 2px 7px rgba(0,0,0,.04);
+}
+.studentform-page .student-date-time strong{font-size:13px;color:#123e50;margin-bottom:2px}
+.studentform-page .student-top-actions{display:flex;align-items:center;gap:10px}
+.studentform-page .student-export-btn{
+  height:38px;
+  padding:0 14px;
+  border:1px solid #0b5365;
+  border-radius:5px;
+  background:#073f50;
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+}
+.studentform-page .student-export-btn:hover{background:#0b6075}
+.studentform-page .add-student{
+  position:relative!important;
+  top:auto!important;
+  right:auto!important;
+  height:38px!important;
+  padding:0 15px!important;
+  background:#07566b!important;
+  color:#fff!important;
+  border:1px solid #0b5365!important;
+  border-radius:5px!important;
+  font-size:13px!important;
+  font-weight:700;
+  cursor:pointer;
+  z-index:50;
+}
+.studentform-page .add-student:hover{background:#0b718a!important}
+
+/* =========================================================
+   FACULTY: ADD FACULTY BUTTON + FORM
+========================================================= */
+.facultyform-page .add-faculty-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  height:38px;
+  padding:0 14px;
+  background:#07566b;
+  color:#fff;
+  border:1px solid #0b5365;
+  border-radius:5px;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 2px 5px rgba(0,0,0,.15);
+  white-space:nowrap;
+}
+.facultyform-page .add-faculty-btn:hover{background:#0b718a;transform:translateY(-1px)}
+.add-faculty-modal{position:fixed;inset:0;background:rgba(0,35,45,.55);display:none;align-items:center;justify-content:center;z-index:7000}
+.add-faculty-modal.show{display:flex}
+.add-faculty-dialog{position:relative;width:min(620px,92vw);background:#fff;border-radius:12px;padding:28px;box-shadow:0 18px 50px rgba(0,0,0,.25)}
+.add-faculty-dialog h2{font-size:24px;color:#123e50;margin-bottom:5px}
+.add-faculty-form .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.add-faculty-form label{font-size:12px;font-weight:700;color:#34444b;display:flex;flex-direction:column;gap:6px}
+.add-faculty-form input,.add-faculty-form select{height:40px;border:1px solid #d5dfe3;border-radius:6px;padding:0 10px;font-size:13px;outline:none}
+.add-faculty-form input:focus,.add-faculty-form select:focus{border-color:#168cab}
+@media(max-width:1100px){.facultyform-page .stats{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:700px){.facultyform-page .stats{grid-template-columns:1fr 1fr;}
+  .studentform-page .student-top-row{align-items:flex-start;flex-direction:column}
+  .studentform-page .student-page-heading{width:100%;justify-content:space-between}
+  .studentform-page .student-top-actions{width:100%;justify-content:flex-end;flex-wrap:wrap}
+  .add-faculty-form .form-grid{grid-template-columns:1fr}
+  .facultyform-page .top-actions{flex-wrap:wrap}
+}
+
+
+/* =========================================================
+   SHARED CARD COLOURS — MATCH FEEDBACK FORMS
+   Applied to Students, Faculty, Responses and Settings cards.
+========================================================= */
+
+.dashboard-page .stat-card:nth-child(1),
+.facultyform-page .stat-card:nth-child(1),
+.studentform-page .card:nth-child(1),
+.responses-page .summary-card.card-blue,
+.setting-page .quick-card:nth-child(1) {
+    background:#dff4f6 !important;
+    border-top:4px solid #168cab !important;
+}
+
+.dashboard-page .stat-card:nth-child(2),
+.facultyform-page .stat-card:nth-child(2),
+.studentform-page .card:nth-child(2),
+.responses-page .summary-card.card-green,
+.setting-page .quick-card:nth-child(2) {
+    background:#e1f6e7 !important;
+    border-top:4px solid #36a875 !important;
+}
+
+.dashboard-page .stat-card:nth-child(3),
+.facultyform-page .stat-card:nth-child(3),
+.studentform-page .card:nth-child(3),
+.responses-page .summary-card.card-purple,
+.setting-page .quick-card:nth-child(3) {
+    background:#e9e9f8 !important;
+    border-top:4px solid #6968ad !important;
+}
+
+.dashboard-page .stat-card:nth-child(4),
+.facultyform-page .stat-card:nth-child(4),
+.studentform-page .card:nth-child(4),
+.responses-page .summary-card.card-orange,
+.setting-page .quick-card:nth-child(4) {
+    background:#fff0dc !important;
+    border-top:4px solid #e0a52f !important;
+}
+
+/* Settings uses these colours for its main cards as well. */
+.setting-page .card:nth-of-type(1) {
+    border-top:4px solid #168cab;
+}
+
+.setting-page .card:nth-of-type(2) {
+    border-top:4px solid #36a875;
+}
+
+.setting-page .card:nth-of-type(3) {
+    border-top:4px solid #6968ad;
+}
+
+.setting-page .card:nth-of-type(4) {
+    border-top:4px solid #e0a52f;
+}
+
+
+/* =========================================================
+   COMPACT COMMON NAVBAR + SIDEBAR
+   Keeps the same design while making the shared navigation
+   slightly smaller and cleaner on every page.
+========================================================= */
+.common-navbar{height:104px;min-height:104px;padding:0 24px;}
+.common-college-info{gap:12px;}
+.common-college-logo{width:62px;height:62px;}
+.common-college-name strong{font-size:23px;}
+.common-small-name{font-size:13px;}
+.common-location{font-size:14px;}
+.common-admin-area{gap:10px;}
+.common-admin-circle{width:48px;height:48px;font-size:20px;}
+.common-admin-name{font-size:16px;}
+.common-sidebar{top:104px;width:202px;padding:20px 9px;}
+.common-menu-item{height:38px;padding:0 10px;gap:11px;border-radius:8px;font-size:13px;}
+.common-menu-icon{font-size:16px;}
+.common-menu-bottom{gap:4px;}
+
+
+/* Edit Faculty Info card */
+.facultyform-page .edit-faculty-card {
+  border: 0;
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.facultyform-page .edit-faculty-card:hover {
+  transform: translateY(-3px);
+}
+.facultyform-page .edit-faculty-card:focus-visible {
+  outline: 3px solid rgba(20, 125, 166, .35);
+  outline-offset: 2px;
+}
+.facultyform-page .edit-faculty-card .stat-icon {
+  font-size: 25px;
+}
+.facultyform-page .edit-faculty-modal {
+  z-index: 1000;
+}
+
+/* Edit Faculty Info card follows the same card colour pattern. */
+.facultyform-page .edit-faculty-card {
+  background:#dff4f6 !important;
+  border:0 !important;
+  border-top:4px solid #168cab !important;
+  color:#173b52;
+}
+.facultyform-page .edit-faculty-card .stat-icon {
+  background:#168cab !important;
+  color:#fff !important;
+}
+
+/* Staff page uses the same visual layout as Faculty. */
+.staffform-page .staff-chart{
+    width:150px;
+    height:150px;
+    position:relative;
+    flex-shrink:0;
+}
+.staffform-page .staff-chart canvas{
+    width:150px !important;
+    height:150px !important;
+}
+@media(max-width:1100px){
+    .staffform-page .stats{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:700px){
+    .staffform-page .stats{grid-template-columns:1fr;}
+    .staffform-page .dashboard-grid{grid-template-columns:1fr;}
+}
+
+/* Faculty/Staff response summary cards */
+.facultyform-page .stats, .staffform-page .stats {
+  grid-template-columns: repeat(4, 1fr);
+}
+.facultyform-page .response-stat-card, .staffform-page .response-stat-card {
+  background:#fff0dc !important;
+  border-top:4px solid #e0a52f !important;
+}
+.facultyform-page .response-stat-card .stat-icon, .staffform-page .response-stat-card .stat-icon {
+  background:#e0a52f !important;
+  color:#fff !important;
+}
+.add-staff-top-btn {
+  margin-left: 8px;
+}
+@media(max-width:1100px){
+  .facultyform-page .stats, .staffform-page .stats { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:700px){
+  .facultyform-page .stats, .staffform-page .stats { grid-template-columns:1fr; }
+}
+
+/* Student cards matched to Faculty card sizing */
+.studentform-page .cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-bottom:23px;
+}
+.studentform-page .card{
+  background:white;
+  border:1px solid #dfe7ea;
+  border-radius:12px;
+  min-height:112px;
+  height:auto;
+  padding:18px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  box-shadow:0 4px 12px rgba(20,70,85,.07);
+  position:relative;
+  overflow:hidden;
+  transition:.25s;
+}
+.studentform-page .card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 7px 18px rgba(20,70,85,.12);
+}
+.studentform-page .card::after{
+  content:"";
+  position:absolute;
+  right:-20px;
+  top:-25px;
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:rgba(13,143,169,.08);
+}
+.studentform-page .card:nth-child(1){border-top:4px solid #168cab;background:#fff;}
+.studentform-page .card:nth-child(2){border-top:4px solid #36a875;background:#fff;}
+.studentform-page .card:nth-child(3){border-top:4px solid #e05b5b;background:#fff;}
+.studentform-page .card:nth-child(4){border-top:4px solid #e0a52f;background:#fff;}
+.studentform-page .card-icon{
+  width:48px; height:48px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:22px; flex-shrink:0;
+}
+.studentform-page .card:nth-child(1) .card-icon{background:#e2f5f8;color:#08728a;}
+.studentform-page .card:nth-child(2) .card-icon{background:#e4f6ed;color:#26865d;}
+.studentform-page .card:nth-child(3) .card-icon{background:#fde8e8;color:#c54d4d;}
+.studentform-page .card:nth-child(4) .card-icon{background:#fff4dc;color:#b57b17;}
+.studentform-page .card-number{font-size:26px;font-weight:700;color:#173d4b;margin-bottom:4px;}
+.studentform-page .card-label{font-size:13px;font-weight:400;color:#748087;}
+@media(max-width:1100px){.studentform-page .cards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:700px){.studentform-page .cards{grid-template-columns:1fr;}}
+
+
+/* =========================================================
+   FINAL UI CONSISTENCY + ANALYTICS/SETTINGS FIXES
+========================================================= */
+
+/* Keep all analytics cards in one row and give every card a distinct palette color. */
+.analytics-page .summary-cards{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+}
+.analytics-page .summary-card:nth-child(1){background:#bde5e7;}
+.analytics-page .summary-card:nth-child(2){background:#a7dda0;}
+.analytics-page .summary-card:nth-child(3){background:#a9a7d6;}
+.analytics-page .summary-card:nth-child(4){background:#ebc08d;}
+.analytics-page .summary-card:nth-child(5){background:#c7dff0;}
+.analytics-page .summary-card:nth-child(5) .summary-icon{background:#4b86b4;}
+
+/* Student right panel starts on the same visual line as the feedback-response box. */
+.studentform-page .right-panel{
+    padding-top:38px;
+    box-sizing:border-box;
+}
+
+/* One consistent heading colour across all pages. */
+.dashboard-page .greeting h2,
+.feedbackform-page .title-row h1,
+.feedbackform-page .college-info h1,
+.responses-page .page-title,
+.studentform-page .page-title,
+.facultyform-page .college-info h1,
+.staffform-page .college-info h1,
+.analytics-page .page-title,
+.setting-page .page-header h1,
+.createform-page .page-title{
+    color:#0b5d78 !important;
+}
+
+/* Settings general area: compact, with no unnecessary empty right column. */
+.setting-page .general-layout{
+    grid-template-columns: 1fr;
+    min-height:0;
+}
+.setting-page .college-box{
+    border-right:0;
+    border-bottom:1px solid #dce5e8;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    box-sizing:border-box;
+}
+.setting-page .settings-form{
+    display:none;
+}
+
+@media (max-width: 900px){
+    .analytics-page .summary-cards{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width: 560px){
+    .analytics-page .summary-cards{grid-template-columns:1fr;}
+}
+/* Final alignment/report action patch */
+.studentform-page .right-panel .overview{margin-top:26px;}
+.studentform-page .right-panel{padding-top:0;}
+.setting-page .general-layout{grid-template-columns:minmax(0,1fr);}
+.setting-page .general-card{max-width:100%;}
+@media(max-width:900px){.studentform-page .right-panel .overview{margin-top:16px;}}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>College Feedback System - Admin Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="style.css" rel="stylesheet"/><link href="admin-patch.css" rel="stylesheet"/>
+</head>
+<body class="dashboard-page"><header class="common-navbar"><div class="common-college-info"><div class="common-college-logo"><img alt="College Logo" src="collegelogo.png"/></div><div class="common-college-name"><div class="common-small-name">SPES's Shri Gopal Gaonkar Memorial</div><strong>Goa Multi Faculty College</strong><div class="common-location">Dharbandhora-Goa</div></div></div><div class="common-admin-area"><div class="common-admin-circle">A</div><div class="common-admin-name">Admin</div></div></header><aside class="common-sidebar"><div class="common-menu-main"><a class="common-menu-item active" href="dashboard.html"><span class="common-menu-icon">⌂</span><span>Dashboard</span></a><a class="common-menu-item" href="feedbackform.html"><span class="common-menu-icon">▣</span><span>Feedback Forms</span></a><a class="common-menu-item" href="createform.html"><span class="common-menu-icon">⊕</span><span>Create Form</span></a><a class="common-menu-item" href="responses.html"><span class="common-menu-icon">▥</span><span>Responses</span></a><a class="common-menu-item" href="studentform.html"><span class="common-menu-icon">♙</span><span>Students</span></a><a class="common-menu-item" href="facultyform.html"><span class="common-menu-icon">♟</span><span>Faculty</span></a><a class="common-menu-item" href="staffform.html"><span class="common-menu-icon">♟</span><span>Staff</span></a><a class="common-menu-item" href="analytics.html"><span class="common-menu-icon">◔</span><span>Analytics</span></a></div><div class="common-menu-bottom"><a class="common-menu-item" href="master.html"><span class="common-menu-icon">☰</span><span>Master Data</span></a><a class="common-menu-item" href="setting.html"><span class="common-menu-icon">⚙</span><span>Settings</span></a><a class="common-menu-item common-logout" href="/login"><span class="common-menu-icon">↪</span><span>Logout</span></a></div></aside>
+<!-- =========================
+     HEADER
+========================= -->
+<!-- =========================
+     SIDEBAR
+========================= -->
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+<main class="main">
+<!-- GREETING -->
+<div class="top-row">
+<div class="greeting">
+<h2>
+                Good Morning, Admin!
+            </h2>
+<p>
+                Welcome back. Here's what's happening with your feedback system.
+            </p>
+</div>
+<div class="date-time">
+<strong id="currentDate">
+                Thursday, October 2, 2026
+            </strong>
+<span id="currentTime">
+                08:58 AM
+            </span>
+</div>
+</div>
+<!-- =========================
+         STAT CARDS
+    ========================= -->
+<div class="stats">
+<div class="stat-card">
+<div class="stat-icon">
+                ▤
+            </div>
+<div>
+<h3>12</h3>
+<p>
+                    Total Feedback Forms
+                </p>
+</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">
+                ♙
+            </div>
+<div>
+<h3>486</h3>
+<p>
+                    Total Students
+                </p>
+</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">
+                ✓
+            </div>
+<div>
+<h3>72%</h3>
+<p>
+                    Response Rate
+                </p>
+</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">
+                ★
+            </div>
+<div>
+<h3>4.2</h3>
+<p>
+                    Average Rating
+                </p>
+</div>
+</div>
+</div>
+<!-- =========================
+         DASHBOARD GRID
+    ========================= -->
+<div class="dashboard-grid">
+<!-- LEFT SIDE -->
+<div>
+<!-- RESPONSE OVERVIEW -->
+<section class="section">
+<div class="section-title">
+                    Responses Overview
+                </div>
+<div class="chart-container">
+<canvas id="responseChart"></canvas>
+</div>
+</section>
+<!-- RECENT FEEDBACK FORMS -->
+<section class="table-section">
+<div class="table-title">
+                    Recent Feedback Forms
+                </div>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Form Name</th>
+<th>Faculty</th>
+<th>Program</th>
+<th>Responses</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+                                    Faculty Feedback - Data Analytics
+                                </td>
+<td>
+                                    Dr. Amit Sharma
+                                </td>
+<td>
+                                    TYBCA
+                                </td>
+<td>
+                                    42 / 50
+                                </td>
+<td>
+<span class="status active">
+                                        Active
+                                    </span>
+</td>
+</tr>
+<tr>
+<td>
+                                    Faculty Feedback - DBMS
+                                </td>
+<td>
+                                    Prof. Neha Patil
+                                </td>
+<td>
+                                    SYBCA
+                                </td>
+<td>
+                                    38 / 45
+                                </td>
+<td>
+<span class="status active">
+                                        Active
+                                    </span>
+</td>
+</tr>
+<tr>
+<td>
+                                    Faculty Feedback - Web Development
+                                </td>
+<td>
+                                    Prof. Rahul Naik
+                                </td>
+<td>
+                                    FYBCA
+                                </td>
+<td>
+                                    31 / 50
+                                </td>
+<td>
+<span class="status pending">
+                                        Pending
+                                    </span>
+</td>
+</tr>
+<tr>
+<td>
+                                    Semester Feedback - TYBCA
+                                </td>
+<td>
+                                    Department
+                                </td>
+<td>
+                                    TYBCA
+                                </td>
+<td>
+                                    65 / 72
+                                </td>
+<td>
+<span class="status active">
+                                        Active
+                                    </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- RIGHT SIDE -->
+<div>
+<!-- RESPONSES BY PROGRAM -->
+<section class="program-section">
+<div class="program-title">Responses by Program</div>
+<div class="program-content">
+<div class="donut"></div>
+<div class="legend">
+<div class="legend-item"><span class="dot one"></span>BCA - 35%</div>
+<div class="legend-item"><span class="dot two"></span>BBA - 29%</div>
+<div class="legend-item"><span class="dot three"></span>BCom - 36%</div>
+</div></div>
+</section>
+<!-- RECENT ACTIVITIES -->
+<section class="activities">
+<div class="activities-title">
+                    Recent Activities
+                </div>
+<div class="activity">
+<div class="activity-icon">
+                        ✓
+                    </div>
+<div class="activity-text">
+<strong>
+                            New feedback submitted
+                        </strong>
+
+                        A student submitted feedback for Data Analytics.
+
+                        <div class="activity-time">
+                            10 minutes ago
+                        </div>
+</div>
+</div>
+<div class="activity">
+<div class="activity-icon">
+                        ＋
+                    </div>
+<div class="activity-text">
+<strong>
+                            New feedback form created
+                        </strong>
+
+                        Faculty feedback form was created for TYBCA.
+
+                        <div class="activity-time">
+                            1 hour ago
+                        </div>
+</div>
+</div>
+<div class="activity">
+<div class="activity-icon">
+                        ★
+                    </div>
+<div class="activity-text">
+<strong>
+                            Report generated
+                        </strong>
+
+                        Semester performance report was generated.
+
+                        <div class="activity-time">
+                            2 hours ago
+                        </div>
+</div>
+</div>
+<div class="activity">
+<div class="activity-icon">
+                        ♙
+                    </div>
+<div class="activity-text">
+<strong>
+                            Student registered
+                        </strong>
+
+                        New student account was added to the system.
+
+                        <div class="activity-time">
+                            Yesterday
+                        </div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="live.js"></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Feedback Forms Dashboard</title>
+<link href="style.css" rel="stylesheet"/><link href="admin-patch.css" rel="stylesheet"/>
+</head>
+<body class="feedbackform-page"><header class="common-navbar"><div class="common-college-info"><div class="common-college-logo"><img alt="College Logo" src="collegelogo.png"/></div><div class="common-college-name"><div class="common-small-name">SPES's Shri Gopal Gaonkar Memorial</div><strong>Goa Multi Faculty College</strong><div class="common-location">Dharbandhora-Goa</div></div></div><div class="common-admin-area"><div class="common-admin-circle">A</div><div class="common-admin-name">Admin</div></div></header><aside class="common-sidebar"><div class="common-menu-main"><a class="common-menu-item" href="dashboard.html"><span class="common-menu-icon">⌂</span><span>Dashboard</span></a><a class="common-menu-item active" href="feedbackform.html"><span class="common-menu-icon">▣</span><span>Feedback Forms</span></a><a class="common-menu-item" href="createform.html"><span class="common-menu-icon">⊕</span><span>Create Form</span></a><a class="common-menu-item" href="responses.html"><span class="common-menu-icon">▥</span><span>Responses</span></a><a class="common-menu-item" href="studentform.html"><span class="common-menu-icon">♙</span><span>Students</span></a><a class="common-menu-item" href="facultyform.html"><span class="common-menu-icon">♟</span><span>Faculty</span></a><a class="common-menu-item" href="staffform.html"><span class="common-menu-icon">♟</span><span>Staff</span></a><a class="common-menu-item" href="analytics.html"><span class="common-menu-icon">◔</span><span>Analytics</span></a></div><div class="common-menu-bottom"><a class="common-menu-item" href="master.html"><span class="common-menu-icon">☰</span><span>Master Data</span></a><a class="common-menu-item" href="setting.html"><span class="common-menu-icon">⚙</span><span>Settings</span></a><a class="common-menu-item common-logout" href="/login"><span class="common-menu-icon">↪</span><span>Logout</span></a></div></aside>
+<!-- =====================================================
+     DASHBOARD
+===================================================== -->
+<div class="dashboard">
+<!-- =================================================
+         SIDEBAR
+    ================================================= -->
+<!-- =================================================
+         MAIN
+    ================================================= -->
+<main class="main">
+<!-- =================================================
+             TOP NAVBAR
+        ================================================= -->
+<header class="top-navbar">
+<!-- COLLEGE LOGO -->
+<div class="logo">
+<img alt="College Logo" src="collegelogo.png"/>
+</div>
+<!-- COLLEGE NAME -->
+<div class="college-info">
+<div class="college-small">
+                    SPES'S Shri Gopal Gaonkar Memorial
+                </div>
+<h1>
+                    Goa Multi Faculty College
+                </h1>
+<div class="location">
+                    Dharbandora-Goa
+                </div>
+</div>
+<!-- ADMIN -->
+<div class="admin-profile">
+<div class="admin-avatar">
+                    A
+                </div>
+<div class="admin-name">
+                    Admin
+                </div>
+</div>
+</header>
+<!-- =================================================
+             CONTENT
+        ================================================= -->
+<section class="content">
+<!-- TITLE -->
+<div class="title-row">
+<h1>
+                    Feedback Forms
+                </h1>
+<button class="create-btn" onclick="window.location.href='createform.html'">
+
+                    + Create New Form
+
+                </button>
+</div>
+<!-- =================================================
+                 STATISTICS
+            ================================================= -->
+<div class="stats">
+<div class="stat-card blue">
+<div class="stat-icon">
+                        ▣
+                    </div>
+<div class="stat-text">
+<strong>5</strong>
+
+                        Total forms<br/>
+
+                        Active 1 | Closed 2
+
+                    </div>
+</div>
+<div class="stat-card green">
+<div class="stat-icon">
+                        ●
+                    </div>
+<div class="stat-text">
+<strong>2,480</strong>
+
+                        Total Responses
+
+                    </div>
+</div>
+<div class="stat-card purple">
+<div class="stat-icon">
+                        ▦
+                    </div>
+<div class="stat-text">
+<strong>3</strong>
+
+                        Active Forms
+
+                    </div>
+</div>
+<div class="stat-card orange">
+<div class="stat-icon">
+                        ★
+                    </div>
+<div class="stat-text">
+<strong>4.2</strong>
+
+                        Avg. Rating
+
+                    </div>
+</div>
+</div>
+<!-- =================================================
+                 LOWER CONTENT
+            ================================================= -->
+<div class="lower">
+<!-- =================================================
+                     FORMS TABLE
+                ================================================= -->
+<section class="forms">
+<div class="section-title">
+                        All Feedback Forms
+                    </div>
+<!-- =================================================
+                         TABLE
+                         ACTION COLUMN REMOVED
+                    ================================================= -->
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Form Title</th>
+<th>Category</th>
+<th>Created on</th>
+<th>Status</th>
+<th>Responses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>
+                                        Faculty Feedback
+                                    </td>
+<td>
+                                        Academic
+                                    </td>
+<td>
+                                        28 Aug 2026
+                                    </td>
+<td>
+                                        Active
+                                    </td>
+<td>
+                                        520
+                                    </td>
+</tr>
+<tr>
+<td>2</td>
+<td>
+                                        Canteen Feedback
+                                    </td>
+<td>
+                                        Facilities
+                                    </td>
+<td>
+                                        29 Aug 2026
+                                    </td>
+<td>
+                                        Active
+                                    </td>
+<td>
+                                        660
+                                    </td>
+</tr>
+<tr>
+<td>3</td>
+<td>
+                                        Library Feedback
+                                    </td>
+<td>
+                                        Facilities
+                                    </td>
+<td>
+                                        20 Sep 2026
+                                    </td>
+<td>
+                                        Closed
+                                    </td>
+<td>
+                                        420
+                                    </td>
+</tr>
+<tr>
+<td>4</td>
+<td>
+                                        Infrastructure Feedback
+                                    </td>
+<td>
+                                        Facilities
+                                    </td>
+<td>
+                                        22 Sept 2026
+                                    </td>
+<td>
+                                        Closed
+                                    </td>
+<td>
+                                        310
+                                    </td>
+</tr>
+<tr>
+<td>5</td>
+<td>
+                                        Facilities Feedback
+                                    </td>
+<td>
+                                        Academic
+                                    </td>
+<td>
+                                        29 Sept 2026
+                                    </td>
+<td>
+                                        Active
+                                    </td>
+<td>
+                                        550
+                                    </td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- =================================================
+                     RIGHT COLUMN
+                ================================================= -->
+<aside class="right-column">
+<!-- =================================================
+                         CATEGORY
+                    ================================================= -->
+<div class="side-card">
+<h2>
+                            Form Categories
+                        </h2>
+<div class="chart-area">
+<div class="donut"></div>
+<div class="legend">
+<div>
+<span class="dot a"></span>
+
+                                    Academic
+
+                                </div>
+<div>
+<span class="dot b"></span>
+
+                                    Facilities
+
+                                </div>
+<div>
+<span class="dot c"></span>
+
+                                    Non-teaching
+
+                                </div>
+<div>
+<span class="dot d"></span>
+
+                                    Others
+
+                                </div>
+<div>
+<span class="dot e"></span>
+
+                                    Library
+
+                                </div>
+</div>
+</div>
+</div>
+<!-- =================================================
+                         RECENT ACTIVITIES
+                    ================================================= -->
+<div class="side-card activity-card">
+<h2>
+
+                            Recent Activities
+
+                            <a class="view-all" href="responses.html">
+                                View All
+                            </a>
+</h2>
+<div class="activity">
+<div class="activity-icon green-icon">
+                                +
+                            </div>
+<div class="activity-text">
+                                New form created
+                            </div>
+<div class="activity-time">
+                                2 hours ago
+                            </div>
+</div>
+<div class="activity">
+<div class="activity-icon blue-icon">
+                                ◉
+                            </div>
+<div class="activity-text">
+                                Form closed
+                            </div>
+<div class="activity-time">
+                                1 day ago
+                            </div>
+</div>
+<div class="activity">
+<div class="activity-icon yellow-icon">
+                                ▣
+                            </div>
+<div class="activity-text">
+                                Form updated
+                            </div>
+<div class="activity-time">
+                                2 days ago
+                            </div>
+</div>
+<div class="activity">
+<div class="activity-icon darkgreen-icon">
+                                ▥
+                            </div>
+<div class="activity-text">
+                                New responses received
+                            </div>
+<div class="activity-time">
+                                3 days ago
+                            </div>
+</div>
+</div>
+</aside>
+</div>
+</section>
+</main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="live.js"></script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Responses - College Feedback System</title>
+<link href="style.css" rel="stylesheet"/><link href="admin-patch.css" rel="stylesheet"/>
+</head>
+<body class="responses-page"><header class="common-navbar"><div class="common-college-info"><div class="common-college-logo"><img alt="College Logo" src="collegelogo.png"/></div><div class="common-college-name"><div class="common-small-name">SPES's Shri Gopal Gaonkar Memorial</div><strong>Goa Multi Faculty College</strong><div class="common-location">Dharbandhora-Goa</div></div></div><div class="common-admin-area"><div class="common-admin-circle">A</div><div class="common-admin-name">Admin</div></div></header><aside class="common-sidebar"><div class="common-menu-main"><a class="common-menu-item" href="dashboard.html"><span class="common-menu-icon">⌂</span><span>Dashboard</span></a><a class="common-menu-item" href="feedbackform.html"><span class="common-menu-icon">▣</span><span>Feedback Forms</span></a><a class="common-menu-item" href="createform.html"><span class="common-menu-icon">⊕</span><span>Create Form</span></a><a class="common-menu-item active" href="responses.html"><span class="common-menu-icon">▥</span><span>Responses</span></a><a class="common-menu-item" href="studentform.html"><span class="common-menu-icon">♙</span><span>Students</span></a><a class="common-menu-item" href="facultyform.html"><span class="common-menu-icon">♟</span><span>Faculty</span></a><a class="common-menu-item" href="staffform.html"><span class="common-menu-icon">♟</span><span>Staff</span></a><a class="common-menu-item" href="analytics.html"><span class="common-menu-icon">◔</span><span>Analytics</span></a></div><div class="common-menu-bottom"><a class="common-menu-item" href="master.html"><span class="common-menu-icon">☰</span><span>Master Data</span></a><a class="common-menu-item" href="setting.html"><span class="common-menu-icon">⚙</span><span>Settings</span></a><a class="common-menu-item common-logout" href="/login"><span class="common-menu-icon">↪</span><span>Logout</span></a></div></aside>
+<!-- =========================================================
+     TOP NAVBAR
+========================================================= -->
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
+<button class="mobile-menu" onclick="toggleMenu()">
+    ☰
+</button>
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+<!-- =========================================================
+     MAIN
+========================================================= -->
+<main class="main">
+<div class="content">
+<!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+<div class="page-header">
+<div>
+<h1 class="page-title">
+                Responses
+            </h1>
+<p class="page-description">
+                View and manage all feedback responses submitted by students.
+            </p>
+</div>
+<div class="header-actions">
+<!-- =================================================
+                 MONTH DROPDOWN
+            ================================================= -->
+<div class="date-dropdown" id="dateDropdown">
+<div class="date-box" onclick="toggleMonthDropdown()">
+<span>▣</span>
+<span id="selectedDate">
+                        1 Aug 2026 – 31 Aug 2026
+                    </span>
+<span class="date-arrow">
+                        ⌄
+                    </span>
+</div>
+<div class="month-menu" id="monthMenu">
+<button class="month-option" onclick="selectMonth(0)">
+                        January 2026
+                    </button>
+<button class="month-option" onclick="selectMonth(1)">
+                        February 2026
+                    </button>
+<button class="month-option" onclick="selectMonth(2)">
+                        March 2026
+                    </button>
+<button class="month-option" onclick="selectMonth(3)">
+                        April 2026
+                    </button>
+<button class="month-option" onclick="selectMonth(4)">
+                        May 2026
+                    </button>
+<button class="month-option" onclick="selectMonth(5)">
+                        June 2026
+                    </button>
+<button class="month-option active" onclick="selectMonth(6)">
+                        July 2026
+                    </button>
+<button class="month-option" onclick="selectMonth(7)">
+                        August 2026
+                    </button>
+<button class="month-option" onclick="selectMonth(8)">
+                        September 2026
+                    </button>
+<button class="month-option" onclick="selectMonth(9)">
+                        October 2026
+                    </button>
+<button class="month-option" onclick="selectMonth(10)">
+                        November 2026
+                    </button>
+<button class="month-option" onclick="selectMonth(11)">
+                        December 2026
+                    </button>
+</div>
+</div>
+<button class="export-btn" onclick="exportReport()">
+                ⇩   Export Report
+            </button>
+</div>
+</div>
+<!-- =====================================================
+         SUMMARY CARDS
+    ====================================================== -->
+<div class="summary-cards">
+<div class="summary-card card-blue">
+<div class="summary-icon">
+                ▣
+            </div>
+<div>
+<div class="summary-number">
+                    1,248
+                </div>
+<div class="summary-label">
+                    Total Responses
+                </div>
+<div class="summary-change green-text">
+                    ↑ 12% vs last month
+                </div>
+</div>
+</div>
+<div class="summary-card card-green">
+<div class="summary-icon">
+                ●
+            </div>
+<div>
+<div class="summary-number">
+                    1,023
+                </div>
+<div class="summary-label">
+                    Completed
+                </div>
+<div class="summary-change green-text">
+                    ↑ 15% vs last month
+                </div>
+</div>
+</div>
+<div class="summary-card card-purple">
+<div class="summary-icon">
+                ◷
+            </div>
+<div>
+<div class="summary-number">
+                    124
+                </div>
+<div class="summary-label">
+                    In Progress
+                </div>
+<div class="summary-change orange-text">
+                    ↑ 5% vs last month
+                </div>
+</div>
+</div>
+<div class="summary-card card-orange">
+<div class="summary-icon">
+                ×
+            </div>
+<div>
+<div class="summary-number">
+                    101
+                </div>
+<div class="summary-label">
+                    Not Submitted
+                </div>
+<div class="summary-change red-text">
+                    ↓ 8% vs last month
+                </div>
+</div>
+</div>
+</div>
+<!-- =====================================================
+         RESPONSE LAYOUT
+    ====================================================== -->
+<div class="response-layout">
+<!-- LEFT -->
+<div class="left-content">
+<div class="filter-bar">
+<div class="search-box">
+<span>⌕</span>
+<input id="searchInput" placeholder="Search by form title, student..." type="text"/>
+</div>
+</div>
+<div class="response-box">
+<div class="response-heading">
+                    Student Responses List
+                </div>
+<div class="table-wrapper">
+<table class="response-table" id="responseTable">
+<thead>
+<tr>
+<th>#</th>
+<th>Form Title</th>
+<th>Category</th>
+<th>Submitted By</th>
+<th>Submitted On</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Faculty Feedback</td>
+<td>
+<span class="category academic">
+                                    Academic
+                                </span>
+</td>
+<td>Rahul Sharma (Student)</td>
+<td>28 Aug 2026, 10:24 AM</td>
+<td>
+<span class="status completed">
+                                    Completed
+                                </span>
+</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Canteen Feedback</td>
+<td>
+<span class="category facilities">
+                                    Facilities
+                                </span>
+</td>
+<td>Sneha Naik (Student)</td>
+<td>27 Aug 2026, 04:12 PM</td>
+<td>
+<span class="status completed">
+                                    Completed
+                                </span>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Library Feedback</td>
+<td>
+<span class="category facilities">
+                                    Facilities
+                                </span>
+</td>
+<td>Aman Verma (Student)</td>
+<td>26 Aug 2026, 11:03 AM</td>
+<td>
+<span class="status completed">
+                                    Completed
+                                </span>
+</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Infrastructure Feedback</td>
+<td>
+<span class="category facilities">
+                                    Facilities
+                                </span>
+</td>
+<td>Priya Fernandes (Student)</td>
+<td>25 Aug 2026, 02:45 PM</td>
+<td>
+<span class="status progress">
+                                    In Progress
+                                </span>
+</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Student Satisfaction Survey</td>
+<td>
+<span class="category academic">
+                                    Academic
+                                </span>
+</td>
+<td>Rohit Desai (Student)</td>
+<td>24 Aug 2026, 09:17 AM</td>
+<td>
+<span class="status completed">
+                                    Completed
+                                </span>
+</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Library Feedback</td>
+<td>
+<span class="category facilities">
+                                    Facilities
+                                </span>
+</td>
+<td>Neha Kamat (Student)</td>
+<td>22 Aug 2026, 04:32 PM</td>
+<td>
+<span class="status not-submitted">
+                                    Not Submitted
+                                </span>
+</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Faculty Feedback</td>
+<td>
+<span class="category academic">
+                                    Academic
+                                </span>
+</td>
+<td>Sandeep Patil (Student)</td>
+<td>20 Aug 2026, 11:20 AM</td>
+<td>
+<span class="status completed">
+                                    Completed
+                                </span>
+</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Canteen Feedback</td>
+<td>
+<span class="category facilities">
+                                    Facilities
+                                </span>
+</td>
+<td>Anjali Shetty (Student)</td>
+<td>18 Aug 2026, 03:05 PM</td>
+<td>
+<span class="status completed">
+                                    Completed
+                                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- RIGHT -->
+<div class="right-column">
+<div class="right-card">
+<div class="right-card-title">
+                    Response Overview
+                </div>
+<div class="overview-content">
+<div class="donut-wrapper">
+<div class="donut"></div>
+<div class="donut-center">
+
+                            1,248
+
+                            <span>
+                                Total<br/>
+                                Responses
+                            </span>
+</div>
+</div>
+<div class="legend">
+<div class="legend-item">
+<span class="legend-dot legend-purple-dark"></span>
+<span>Academic</span>
+<span class="legend-value">40%</span>
+</div>
+<div class="legend-item">
+<span class="legend-dot legend-purple"></span>
+<span>Facilities</span>
+<span class="legend-value">30%</span>
+</div>
+<div class="legend-item">
+<span class="legend-dot legend-light-purple"></span>
+<span>Administration</span>
+<span class="legend-value">6%</span>
+</div>
+<div class="legend-item">
+<span class="legend-dot legend-orange"></span>
+<span>Others</span>
+<span class="legend-value">14%</span>
+</div>
+<div class="legend-item">
+<span class="legend-dot legend-yellow"></span>
+<span>Other</span>
+<span class="legend-value">10%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="right-card">
+<div class="right-card-title">
+                    Response Status
+                </div>
+<div class="status-row">
+<div class="status-name">
+                        Completed
+                    </div>
+<div class="status-progress">
+<div class="status-fill fill-green" style="width:82%;"></div>
+</div>
+<div class="status-value">
+                        1,023  82%
+                    </div>
+</div>
+<div class="status-row">
+<div class="status-name">
+                        In Progress
+                    </div>
+<div class="status-progress">
+<div class="status-fill fill-orange" style="width:10%;"></div>
+</div>
+<div class="status-value">
+                        124  10%
+                    </div>
+</div>
+<div class="status-row">
+<div class="status-name">
+                        Not Submitted
+                    </div>
+<div class="status-progress">
+<div class="status-fill fill-red" style="width:8%;"></div>
+</div>
+<div class="status-value">
+                        101  8%
+                    </div>
+</div>
+</div>
+<div class="right-card">
+<div class="right-card-title">
+
+                    Form Wise Response Count
+
+                    <span class="view-all-link" onclick="showAllForms()">
+                        View All
+                    </span>
+</div>
+<div class="form-item">
+<div class="form-icon blue">
+                        ▣
+                    </div>
+<div class="form-name">
+                        Faculty Feedback
+                    </div>
+<div class="form-count">
+                        520
+                    </div>
+</div>
+<div class="form-item">
+<div class="form-icon purple">
+                        ▣
+                    </div>
+<div class="form-name">
+                        Canteen Feedback
+                    </div>
+<div class="form-count">
+                        318
+                    </div>
+</div>
+<div class="form-item">
+<div class="form-icon green">
+                        ▣
+                    </div>
+<div class="form-name">
+                        Library Feedback
+                    </div>
+<div class="form-count">
+                        246
+                    </div>
+</div>
+<div class="form-item">
+<div class="form-icon orange">
+                        ▣
+                    </div>
+<div class="form-name">
+                        Infrastructure Feedback
+                    </div>
+<div class="form-count">
+                        164
+                    </div>
+</div>
+<div class="form-item">
+<div class="form-icon cyan">
+                        ▣
+                    </div>
+<div class="form-name">
+                        Student Satisfaction Survey
+                    </div>
+<div class="form-count">
+                        1,248
+                    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="live.js"></script>
+</body>
+</html>

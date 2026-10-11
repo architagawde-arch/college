@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Feedback Form - College Feedback System</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/><link href="admin-patch.css" rel="stylesheet"/>
+</head>
+<body class="createform-page"><header class="common-navbar"><div class="common-college-info"><div class="common-college-logo"><img alt="College Logo" src="collegelogo.png"/></div><div class="common-college-name"><div class="common-small-name">SPES's Shri Gopal Gaonkar Memorial</div><strong>Goa Multi Faculty College</strong><div class="common-location">Dharbandhora-Goa</div></div></div><div class="common-admin-area"><div class="common-admin-circle">A</div><div class="common-admin-name">Admin</div></div></header><aside class="common-sidebar"><div class="common-menu-main"><a class="common-menu-item" href="dashboard.html"><span class="common-menu-icon">⌂</span><span>Dashboard</span></a><a class="common-menu-item" href="feedbackform.html"><span class="common-menu-icon">▣</span><span>Feedback Forms</span></a><a class="common-menu-item active" href="createform.html"><span class="common-menu-icon">⊕</span><span>Create Form</span></a><a class="common-menu-item" href="responses.html"><span class="common-menu-icon">▥</span><span>Responses</span></a><a class="common-menu-item" href="studentform.html"><span class="common-menu-icon">♙</span><span>Students</span></a><a class="common-menu-item" href="facultyform.html"><span class="common-menu-icon">♟</span><span>Faculty</span></a><a class="common-menu-item" href="staffform.html"><span class="common-menu-icon">♟</span><span>Staff</span></a><a class="common-menu-item" href="analytics.html"><span class="common-menu-icon">◔</span><span>Analytics</span></a></div><div class="common-menu-bottom"><a class="common-menu-item" href="master.html"><span class="common-menu-icon">☰</span><span>Master Data</span></a><a class="common-menu-item" href="setting.html"><span class="common-menu-icon">⚙</span><span>Settings</span></a><a class="common-menu-item common-logout" href="/login"><span class="common-menu-icon">↪</span><span>Logout</span></a></div></aside>
+<div class="dashboard">
+<!-- =========================
+     HEADER / NAVBAR
+========================= -->
+<header class="header">
+<div class="header-left">
+<div class="college-logo">
+<img alt="Shri Gopal Gaonkar Memorial Goa Multi-Faculty College Logo" src="collegelogo.png"/>
+</div>
+<!-- COLLEGE NAME IS NOW TO THE RIGHT OF LOGO
+             LIKE THE PROVIDED IMAGE -->
+<div class="college-info">
+<div class="college-line-one">
+                SPES'S Shri Gopal Gaonkar Memorial
+            </div>
+<div class="college-line-two">
+                Goa Multi Faculty College
+            </div>
+<div class="location">
+                Dharbandora-Goa
+            </div>
+</div>
+</div>
+<div class="admin-profile" onclick="showToast('Admin Profile')">
+<div class="admin-avatar">
+            A
+        </div>
+<div class="admin-name">
+            Admin
+        </div>
+</div>
+</header>
+<!-- =========================
+     SIDEBAR
+========================= -->
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+<main class="content">
+<!-- DATE AND TIME ONLY
+         GOOD MORNING ADMIN REMOVED -->
+<div class="page-top">
+<div class="date-time">
+<div class="time" id="currentTime">
+                00:00:00 AM
+            </div>
+<div class="date" id="currentDate">
+                Loading date...
+            </div>
+</div>
+</div>
+<!-- FORM INTRO -->
+<div class="form-intro">
+<h2>
+            Create Feedback Form
+        </h2>
+<p>
+            Create a professional feedback form by adding
+            basic information and questions for students.
+        </p>
+</div>
+<!-- BASIC INFORMATION -->
+<div class="card">
+<div class="card-header">
+<div class="card-title">
+<div class="icon">
+<i class="fa-solid fa-list-check"></i>
+</div>
+<div>
+<h3>
+                        Basic Information
+                    </h3>
+<p>
+                        Enter the details of your feedback form
+                    </p>
+</div>
+</div>
+</div>
+<div class="card-body">
+<div class="form-grid">
+<div class="form-group">
+<label>
+                        Feedback Title
+                        <span class="required">*</span>
+</label>
+<input id="feedbackTitle" placeholder="e.g. Faculty Teaching Feedback" type="text"/>
+</div>
+<div class="form-group">
+<label>
+                        Feedback Type
+                        <span class="required">*</span>
+</label>
+<select id="feedbackType">
+<option value="">
+                            Select feedback type
+                        </option>
+<option value="Course">
+                            Course
+                        </option>
+<option value="Non-Teaching">
+                            Non-Teaching
+                        </option>
+<option value="Teaching">
+                            Teaching
+                        </option>
+<option value="Sports">
+                            Sports
+                        </option>
+<option value="Facility">
+                            Facility
+                        </option>
+<option value="Counselling">
+                            Counselling
+                        </option>
+<option value="Library">
+                            Library
+                        </option>
+</select>
+</div>
+<div class="form-group full">
+<label>
+                        Description
+                    </label>
+<textarea id="description" placeholder="Describe the purpose of this feedback form..."></textarea>
+</div>
+<div class="form-group">
+<label>
+                        Start Date
+                        <span class="required">*</span>
+</label>
+<input id="startDate" type="date"/>
+<div class="date-help">
+                        Date when students can start submitting feedback.
+                    </div>
+</div>
+<div class="form-group"><label>Deadline <span class="required">*</span></label><input id="deadline" type="datetime-local"/><div class="date-help">Students/faculty cannot submit after this date and time. The form closes automatically.</div></div><div class="form-group">
+<label>
+                        Target Audience
+                        <span class="required">*</span>
+</label>
+<div class="target-audience-box">
+<label class="audience-option">
+<input name="targetAudience" type="checkbox" value="Student"/>
+<span>Students</span>
+</label>
+<label class="audience-option">
+<input name="targetAudience" type="checkbox" value="Faculty"/>
+<span>Faculty</span>
+</label>
+
+</div>
+</div>
+<div class="form-group" id="facilityGroup" style="display:none;">
+<label>
+                        Facility
+                    </label>
+<select id="facility">
+<option value="">
+                            Select facility
+                        </option>
+<option value="Canteen">
+                            Canteen
+                        </option>
+<option value="Transport">
+                            Transport
+                        </option>
+<option value="Infrastructure">
+                            Infrastructure
+                        </option>
+<option value="Labs">
+                            Labs
+                        </option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- QUESTIONS -->
+<div class="card">
+<div class="card-header">
+<div class="card-title">
+<div class="icon">
+<i class="fa-solid fa-circle-question"></i>
+</div>
+<div>
+<h3>
+                        Questions
+                    </h3>
+<p>
+                        Add questions students will answer
+                    </p>
+</div>
+</div>
+<span id="questionCount" style="font-size:12px;color:#71818a;">
+                2 Questions
+            </span>
+</div>
+<div class="card-body">
+<div class="question-list" id="questionList">
+<!-- QUESTION 1 -->
+<div class="question-card">
+<div class="question-top">
+<div class="question-number">
+<span class="q-badge">
+                                Q1
+                            </span>
+<span>
+                                Question 1
+                            </span>
+</div>
+<button class="delete-question" onclick="deleteQuestion(this)" type="button">
+<i class="fa-solid fa-trash"></i>
+                            Delete
+
+                        </button>
+</div>
+<div class="question-body">
+<div class="question-grid">
+<div class="form-group">
+<label>
+                                    Question
+                                    <span class="required">*</span>
+</label>
+<input class="question-text" placeholder="Enter your question" type="text" value="How would you rate the teaching?"/>
+</div>
+<div class="form-group">
+<label>
+                                    Question Type
+                                </label>
+<select class="question-type" onchange="changeQuestionType(this)">
+<option selected="" value="short">Short Answer</option>
+<option value="multiple">Multiple Choice</option>
+</select>
+</div>
+</div>
+<div class="answer-preview">
+<div class="answer-preview-title">
+                                Rating Preview
+                            </div>
+<div style="
+                                display:flex;
+                                gap:8px;
+                                flex-wrap:wrap;
+                            ">
+<span class="rating-box">1</span>
+<span class="rating-box">2</span>
+<span class="rating-box">3</span>
+<span class="rating-box">4</span>
+<span class="rating-box">5</span>
+</div>
+</div>
+</div>
+</div>
+<!-- QUESTION 2 -->
+<div class="question-card">
+<div class="question-top">
+<div class="question-number">
+<span class="q-badge">
+                                Q2
+                            </span>
+<span>
+                                Question 2
+                            </span>
+</div>
+<button class="delete-question" onclick="deleteQuestion(this)" type="button">
+<i class="fa-solid fa-trash"></i>
+                            Delete
+
+                        </button>
+</div>
+<div class="question-body">
+<div class="question-grid">
+<div class="form-group">
+<label>
+                                    Question
+                                    <span class="required">*</span>
+</label>
+<input class="question-text" placeholder="Enter your question" type="text" value="What can be improved?"/>
+</div>
+<div class="form-group">
+<label>
+                                    Question Type
+                                </label>
+<select class="question-type" onchange="changeQuestionType(this)">
+<option selected="" value="short">Short Answer</option>
+<option value="multiple">Multiple Choice</option>
+</select>
+</div>
+</div>
+<div class="answer-preview">
+<div class="answer-preview-title">
+                                Short Answer Preview
+                            </div>
+<div class="short-preview"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="add-question-wrapper">
+<button class="add-question" onclick="addQuestion()" type="button">
+<i class="fa-solid fa-plus"></i>
+                    Add Question
+
+                </button>
+</div>
+</div>
+</div>
+<!-- ACTIONS -->
+<div class="form-actions">
+<button class="btn btn-cancel" onclick="cancelForm()" type="button">
+            Cancel
+        </button>
+<button class="btn btn-create" onclick="createForm()" type="button">
+<i class="fa-solid fa-check"></i>
+            Create Form
+
+        </button>
+</div>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="live.js"></script>
+</body>
+</html>

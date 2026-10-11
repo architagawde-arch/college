@@ -1,0 +1,73 @@
+/* Responsive + live-data additions for the admin pages (loaded after style.css) */
+html{-webkit-text-size-adjust:100%}img{max-width:100%}
+.menu-btn{display:none;align-items:center;justify-content:center;width:42px;height:42px;margin-right:8px;border:0;border-radius:10px;background:rgba(255,255,255,.15);color:#fff;font-size:22px;cursor:pointer;flex:none}
+#navShade{display:none}
+.status{display:inline-block;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700}
+.status.active,.status.completed{background:#dff5e6;color:#17803d}.status.inactive,.status.not-submitted{background:#fde4e4;color:#b42318}.status.pending,.status.progress{background:#fff1d6;color:#a15c00}
+.empty-row{text-align:center;color:#6b7a80;padding:22px 8px!important}td small{color:#6b7a80}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.row-actions{white-space:nowrap}.mini{border:0;border-radius:7px;padding:6px 10px;margin:2px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;background:#e3f1f5;color:#0a5c73}.mini.ok{background:#dff5e6;color:#17803d}.mini.bad{background:#fde4e4;color:#b42318}.mini:hover{filter:brightness(.95)}
+#toast{position:fixed;right:18px;bottom:18px;max-width:min(92vw,380px);padding:12px 16px;border-radius:10px;background:#0b3d4c;color:#fff;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;transform:translateY(12px);pointer-events:none;transition:.25s;z-index:9000}#toast.show{opacity:1;transform:none}#toast.bad{background:#b42318}
+.add-faculty-dialog.wide{width:min(860px,94vw);max-height:90vh;overflow:auto}.add-faculty-dialog .tabs{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}.add-faculty-dialog .tab,.setting-page .tabs .tab{padding:8px 14px;border:1px solid #d5dfe3;background:#f3f7f8;border-radius:8px;cursor:pointer;font:inherit}.add-faculty-dialog .tab.active,.setting-page .tabs .tab.active{background:#07566b;color:#fff;border-color:#07566b}
+.form-error{color:#b42318;font-size:13px;min-height:18px;margin-top:8px}.modal-subtitle{color:#6b7a80;margin:2px 0 14px}
+.mt-wrap{overflow-x:auto;max-height:60vh}.mt-table{width:100%;border-collapse:collapse;font-size:14px}.mt-table th{background:#eaf3f6;text-align:left;padding:10px;position:sticky;top:0}.mt-table td{padding:10px;border-bottom:1px solid #e3ecef}
+.setting-page .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.mt-form{padding:4px 0}.setting-page .card{margin-bottom:16px}
+.question-card .form-group.q-options{margin-top:10px}.rating-box{cursor:default}
+@media (max-width:900px){
+ .dashboard-grid,.response-layout,.content-wrapper,.analytics-grid,.lower{grid-template-columns:minmax(0,1fr)!important}.dashboard-grid>*,.response-layout>*,.content-wrapper>*,.lower>*{min-width:0;max-width:100%}
+ .menu-btn{display:inline-flex}
+ .common-navbar{height:64px!important;min-height:64px!important;padding:0 12px!important}
+ .common-small-name,.common-location,.top-navbar{display:none!important}
+ .common-college-name strong{font-size:14px!important;line-height:1.2}.common-college-logo img{height:38px;width:auto}
+ .common-admin-name{display:none}
+ .common-sidebar{width:250px!important;top:64px!important;transform:translateX(-105%);transition:transform .25s;z-index:6000!important;overflow-y:auto}
+ body.nav-open .common-sidebar{transform:none}
+ body.nav-open #navShade{display:block;position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.45);z-index:5500}
+ .common-menu-item{justify-content:flex-start!important;padding:0 12px!important}.common-menu-item span:not(.common-menu-icon){display:inline!important}
+ body main,body .main{margin-left:0!important;padding:84px 12px 28px!important;width:auto!important;max-width:100%!important;box-sizing:border-box}
+ body main .content,body .main .content{margin:0!important;padding:0!important;width:auto!important}
+ .stats,.summary-cards,.cards{grid-template-columns:repeat(2,1fr)!important;gap:10px!important}
+ .dashboard-grid,.response-layout,.content-wrapper,.analytics-grid,.lower,.general-layout,.feedback-grid,.form-grid,.question-grid,.settings-form{grid-template-columns:1fr!important;grid-template-rows:auto!important;display:grid!important;margin-left:0!important;margin-right:0!important}
+ .analytics-grid>*{grid-column:auto!important;grid-row:auto!important}
+ .right-column,.right-panel,.left-content,.students-section{width:auto!important;max-width:100%!important;min-width:0}
+ .top-row,.page-header,.title-row,.student-top-row,.header-actions,.top-actions,.student-top-actions,.page-top{flex-wrap:wrap!important;height:auto!important;gap:10px}
+ .table-wrapper,.table-container,.response-box,.forms{overflow-x:auto!important;max-width:100%}.table-wrapper table,.table-container table{min-width:620px}
+ .chart-container{height:260px!important}.chart-card,.department-card,.category-card,.feedback-card,.recent-card,.analytics-grid section{height:auto!important;min-height:190px}.chart-card{height:220px!important}
+ .category-content,.program-content,.overview-content{flex-wrap:wrap;gap:14px}
+ .stat-card,.summary-card,.card{min-width:0}.greeting h2,.page-title,h1{font-size:22px!important}
+ .form-actions{flex-wrap:wrap}.search-box,.filters .filter{width:100%!important;max-width:100%!important}
+}
+@media (max-width:480px){.stats,.summary-cards,.cards{grid-template-columns:1fr!important}.table-wrapper table,.table-container table{font-size:12px}.add-faculty-dialog{padding:18px!important}.add-faculty-form .form-grid{grid-template-columns:1fr!important}#toast{left:12px;right:12px}}
+
+button[onclick*="toggleMenu"]{display:none!important}
+@media (max-width:900px){.header-actions .export-btn,.top-actions .export-btn,.student-top-actions .export-btn{flex:1 1 auto}}
+
+/* "Add" button (Students / Faculty / Staff): same size and shape as Export Report, with a brighter accent colour */
+#addBtn{display:inline-flex!important;align-items:center;justify-content:center;gap:7px;height:38px;padding:0 16px;margin-left:10px;background:#168cab!important;color:#fff!important;border:1px solid #127a96!important;border-radius:5px;font:700 13px Arial,Helvetica,sans-serif;cursor:pointer;white-space:nowrap;box-shadow:0 2px 6px rgba(22,140,171,.3);transition:background .15s,transform .1s}
+#addBtn:hover{background:#0f7894!important}#addBtn:active{transform:translateY(1px)}
+#addBtn .download-icon{font-size:16px;line-height:1}
+.student-top-actions,.top-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+@media (max-width:900px){#addBtn{margin-left:0;flex:1 1 auto}}
+
+/* ---------- Master Data page layout ---------- */
+.master-page .content{max-width:1280px}
+.master-page .page-header{margin-bottom:16px}.master-page .page-header h1{font-size:28px;color:#0a5c73;margin:0 0 4px}.master-page .page-header p{color:#5b6b72;font-size:14px;margin:0}
+.master-page .tabs{display:flex!important;flex-wrap:wrap;gap:8px;width:100%;height:auto!important;border:0!important;background:transparent!important;border-radius:0;overflow:visible!important;margin:0 0 16px!important;padding:0}
+.master-page .tabs .tab{flex:0 0 auto!important;max-width:none!important;height:auto;min-height:40px;padding:9px 18px;white-space:nowrap;border:1px solid #cfdde2!important;border-radius:999px;background:#fff;color:#0a5c73;font-size:14px;font-weight:600;transition:background .15s,color .15s,box-shadow .15s}
+.master-page .tabs .tab:hover{background:#e6f3f7}
+.master-page .tabs .tab.active{background:#07566b;color:#fff;border-color:#07566b!important;box-shadow:0 3px 8px rgba(7,86,107,.28)}
+.master-page .card{background:#fff;border:1px solid #d7e3e7;border-radius:12px;box-shadow:0 2px 8px rgba(7,63,80,.06);margin-bottom:16px;overflow:hidden}
+.mt-head{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 20px;border-top:4px solid #168cab;flex-wrap:wrap}
+.mt-title{display:flex;align-items:center;gap:12px}.mt-title .card-header-icon{width:40px;height:40px;font-size:18px;flex:none}
+.mt-title .card-title{font-size:20px;font-weight:700;color:#123e50}.mt-title .card-subtitle{font-size:13px;color:#6b7a80}
+.mt-add{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 22px;border:0;border-radius:8px;background:#168cab;color:#fff;font:700 14px Arial,Helvetica,sans-serif;cursor:pointer;box-shadow:0 3px 8px rgba(22,140,171,.35);transition:background .15s,transform .1s}
+.mt-add:hover{background:#0f7894}.mt-add:active{transform:translateY(1px)}
+.master-page .mt-wrap{max-height:none;overflow-x:auto}
+.master-page .mt-table{font-size:14px;color:#1f2d33}.master-page .mt-table th{background:#eaf3f6;color:#123e50;font-size:13px;text-transform:uppercase;letter-spacing:.3px;padding:12px 16px;white-space:nowrap}
+.master-page .mt-table td{padding:12px 16px;vertical-align:middle}.master-page .mt-table tbody tr:hover{background:#f5fafb}
+.master-page .mt-table td:first-child,.master-page .mt-table th:first-child{width:70px;color:#6b7a80}.master-page .mt-table td:last-child,.master-page .mt-table th:last-child{width:110px;text-align:right}
+@media (max-width:900px){.master-page .tabs{flex-wrap:nowrap;overflow-x:auto!important;padding-bottom:6px;-webkit-overflow-scrolling:touch}.master-page .tabs .tab{padding:8px 14px;font-size:13px}.mt-head{padding:14px}.mt-add{width:100%;justify-content:center}}
+
+/* dashboard stat cards: clickable with detail line */
+.dashboard-page .stat-card{cursor:pointer;transition:transform .15s,box-shadow .15s}.dashboard-page .stat-card:hover,.dashboard-page .stat-card:focus-visible{transform:translateY(-3px);box-shadow:0 8px 18px rgba(7,63,80,.14);outline:none}
+.dashboard-page .stat-card p small{display:block;margin-top:4px;font-size:12px;font-weight:400;opacity:.75}

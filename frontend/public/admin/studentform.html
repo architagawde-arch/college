@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Students Dashboard</title>
+<link href="style.css" rel="stylesheet"/><link href="admin-patch.css" rel="stylesheet"/>
+</head>
+<body class="studentform-page"><header class="common-navbar"><div class="common-college-info"><div class="common-college-logo"><img alt="College Logo" src="collegelogo.png"/></div><div class="common-college-name"><div class="common-small-name">SPES's Shri Gopal Gaonkar Memorial</div><strong>Goa Multi Faculty College</strong><div class="common-location">Dharbandhora-Goa</div></div></div><div class="common-admin-area"><div class="common-admin-circle">A</div><div class="common-admin-name">Admin</div></div></header><aside class="common-sidebar"><div class="common-menu-main"><a class="common-menu-item" href="dashboard.html"><span class="common-menu-icon">⌂</span><span>Dashboard</span></a><a class="common-menu-item" href="feedbackform.html"><span class="common-menu-icon">▣</span><span>Feedback Forms</span></a><a class="common-menu-item" href="createform.html"><span class="common-menu-icon">⊕</span><span>Create Form</span></a><a class="common-menu-item" href="responses.html"><span class="common-menu-icon">▥</span><span>Responses</span></a><a class="common-menu-item active" href="studentform.html"><span class="common-menu-icon">♙</span><span>Students</span></a><a class="common-menu-item" href="facultyform.html"><span class="common-menu-icon">♟</span><span>Faculty</span></a><a class="common-menu-item" href="staffform.html"><span class="common-menu-icon">♟</span><span>Staff</span></a><a class="common-menu-item" href="analytics.html"><span class="common-menu-icon">◔</span><span>Analytics</span></a></div><div class="common-menu-bottom"><a class="common-menu-item" href="master.html"><span class="common-menu-icon">☰</span><span>Master Data</span></a><a class="common-menu-item" href="setting.html"><span class="common-menu-icon">⚙</span><span>Settings</span></a><a class="common-menu-item common-logout" href="/login"><span class="common-menu-icon">↪</span><span>Logout</span></a></div></aside>
+<div class="dashboard">
+<!-- =========================
+       TOP NAVBAR
+  ========================== -->
+<header class="navbar">
+<!-- LEFT SIDE: LOGO + COLLEGE NAME -->
+<div class="college-info">
+<!-- COLLEGE LOGO -->
+<div class="college-logo">
+<img alt="College Logo" src="collegelogo.png"/>
+</div>
+<!-- COLLEGE NAME -->
+<div class="college-name">
+<div class="small-name">
+          SPES's Shri Gopal Gaonkar Memorial
+        </div>
+<strong>
+          Goa Multi Faculty College
+        </strong>
+<div class="location">
+          Dharbandhora-Goa
+        </div>
+</div>
+</div>
+<!-- ADMIN -->
+<div class="admin-area">
+<div class="admin-circle">
+        A
+      </div>
+<div class="admin-name">
+        Admin
+      </div>
+</div>
+</header>
+<!-- =========================
+       BODY
+  ========================== -->
+<div class="body">
+<!-- =========================
+         LEFT SIDEBAR
+    ========================== -->
+<!-- =========================
+         MAIN CONTENT
+    ========================== -->
+<main class="main">
+<div class="student-top-row">
+<div class="student-page-heading">
+<h1 class="page-title">Students</h1>
+
+</div>
+<div class="student-top-actions">
+  <div class="student-date-time"><strong id="studentCurrentDate"></strong><span id="studentCurrentTime"></span></div>
+<button class="export-btn student-export-btn" onclick="exportReport()" type="button"><span class="download-icon">↓</span> Export Report</button>
+</div>
+</div>
+<div class="content-wrapper">
+<!-- =========================
+             STUDENT CONTENT
+        ========================= -->
+<section class="students-section">
+<!-- =========================
+               STAT CARDS
+          ========================= -->
+<div class="cards">
+<div class="card">
+<div class="card-icon">
+                ▣
+              </div>
+<div>
+<div class="card-number">
+                  1248
+                </div>
+<div class="card-label">
+                  Total Students
+                </div>
+</div>
+</div>
+<div class="card">
+<div class="card-icon">
+                ●
+              </div>
+<div>
+<div class="card-number">
+                  2,480
+                </div>
+<div class="card-label">
+                  Active students
+                </div>
+</div>
+</div>
+<div class="card">
+<div class="card-icon">
+                ▣
+              </div>
+<div>
+<div class="card-number">
+                  98
+                </div>
+<div class="card-label">
+                  Inactive students
+                </div>
+</div>
+</div>
+<div class="card">
+<div class="card-icon">
+                ★
+              </div>
+<div>
+<div class="card-number">
+                  30
+                </div>
+<div class="card-label">
+                  Total Student Response
+                </div>
+</div>
+</div>
+</div>
+<!-- =========================
+               SEARCH ONLY
+          ========================== -->
+<div class="filters">
+<input class="filter search" placeholder=" 🔍   Search forms, responses, students..." type="text"/>
+</div>
+<!-- =========================
+               STUDENTS FEEDBACK TABLE BOX
+          ========================== -->
+<div class="table-container">
+<div class="table-heading">
+              Students Feedback Responses
+            </div>
+<table>
+<thead>
+<tr>
+<th>Sr.No.</th>
+<th>Name</th>
+<th>Rollno</th>
+<th>Enrollment No.</th>
+<th>Program</th>
+<th>Year</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Aarav naik</td>
+<td>5</td>
+<td>2025002365</td>
+<td>BCA</td>
+<td>TYBCA</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Siya Gaonkar</td>
+<td>21</td>
+<td>2025002365</td>
+<td>BBA</td>
+<td>TYBBA</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rahul Khan</td>
+<td>31</td>
+<td>2025002365</td>
+<td>BCOM</td>
+<td>TYBCOM</td>
+<td>Inactive</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Vikram Teli</td>
+<td>11</td>
+<td>2025002455</td>
+<td>BCA</td>
+<td>SYBCA</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Saniya Rane</td>
+<td>25</td>
+<td>2025002345</td>
+<td>BBA</td>
+<td>FYBBA</td>
+<td>Inactive</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Om Dessai</td>
+<td>12</td>
+<td>2025002375</td>
+<td>BCOM</td>
+<td>FYBCOM</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Brijesh Naik</td>
+<td>34</td>
+<td>2025002325</td>
+<td>BCA</td>
+<td>FYBCA</td>
+<td>Active</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- =========================
+             RIGHT PANEL
+        ========================== -->
+<aside class="right-panel">
+<!-- =========================
+               STUDENT OVERVIEW
+          ========================== -->
+<div class="panel overview">
+<div class="panel-title">
+              Student Overview
+            </div>
+<div class="overview-content">
+<div class="donut-wrapper">
+<div class="donut"></div>
+<div class="donut-center">
+<span class="donut-total">
+                    1,115
+                  </span>
+<span class="donut-text">
+                    Total Students<br/>
+                    Responses
+                  </span>
+</div>
+</div>
+<div class="legend">
+<div>
+<span class="dot bba"></span>
+
+                  BBA - 35%
+
+                </div>
+<div>
+<span class="dot bca"></span>
+
+                  BCA - 33%
+
+                </div>
+<div>
+<span class="dot bcom"></span>
+
+                  B.COM - 32%
+
+                </div>
+</div>
+</div>
+</div>
+<!-- =========================
+               RECENT ACTIVITIES
+          ========================== -->
+<div class="panel">
+<div class="panel-title">
+              Recent Activities
+            </div>
+<div class="activity">
+<div class="activity-left">
+<div class="activity-icon">
+                  ▣
+                </div>
+<span>
+                  New responses submitted
+                </span>
+</div>
+<span class="time">
+                2 hours ago
+              </span>
+</div>
+<div class="activity">
+<div class="activity-left">
+<div class="activity-icon">
+                  ▣
+                </div>
+<span>
+                  New form created
+                </span>
+</div>
+<span class="time">
+                4 hours ago
+              </span>
+</div>
+<div class="activity">
+<div class="activity-left">
+<div class="activity-icon">
+                  ▣
+                </div>
+<span>
+                  Form closed
+                </span>
+</div>
+<span class="time">
+                4 hours ago
+              </span>
+</div>
+<div class="activity">
+<div class="activity-left">
+<div class="activity-icon">
+                  ▣
+                </div>
+<span>
+                  New student registered
+                </span>
+</div>
+<span class="time">
+                4 hours ago
+              </span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="live.js"></script>
+</body>
+</html>

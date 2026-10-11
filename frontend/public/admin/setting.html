@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - College Feedback System</title>
+<link href="style.css" rel="stylesheet"/><link href="admin-patch.css" rel="stylesheet"/>
+</head>
+<body class="setting-page"><header class="common-navbar"><div class="common-college-info"><div class="common-college-logo"><img alt="College Logo" src="collegelogo.png"/></div><div class="common-college-name"><div class="common-small-name">SPES's Shri Gopal Gaonkar Memorial</div><strong>Goa Multi Faculty College</strong><div class="common-location">Dharbandhora-Goa</div></div></div><div class="common-admin-area"><div class="common-admin-circle">A</div><div class="common-admin-name">Admin</div></div></header><aside class="common-sidebar"><div class="common-menu-main"><a class="common-menu-item" href="dashboard.html"><span class="common-menu-icon">⌂</span><span>Dashboard</span></a><a class="common-menu-item" href="feedbackform.html"><span class="common-menu-icon">▣</span><span>Feedback Forms</span></a><a class="common-menu-item" href="createform.html"><span class="common-menu-icon">⊕</span><span>Create Form</span></a><a class="common-menu-item" href="responses.html"><span class="common-menu-icon">▥</span><span>Responses</span></a><a class="common-menu-item" href="studentform.html"><span class="common-menu-icon">♙</span><span>Students</span></a><a class="common-menu-item" href="facultyform.html"><span class="common-menu-icon">♟</span><span>Faculty</span></a><a class="common-menu-item" href="staffform.html"><span class="common-menu-icon">♟</span><span>Staff</span></a><a class="common-menu-item" href="analytics.html"><span class="common-menu-icon">◔</span><span>Analytics</span></a></div><div class="common-menu-bottom"><a class="common-menu-item" href="master.html"><span class="common-menu-icon">☰</span><span>Master Data</span></a><a class="common-menu-item active" href="setting.html"><span class="common-menu-icon">⚙</span><span>Settings</span></a><a class="common-menu-item common-logout" href="/login"><span class="common-menu-icon">↪</span><span>Logout</span></a></div></aside>
+<div class="app">
+<!-- =====================================================
+         TOP NAVBAR
+    ====================================================== -->
+<header class="topbar">
+<!-- COLLEGE BRAND -->
+<div class="brand">
+<!-- Use your existing logo file -->
+<img alt="College Logo" class="brand-logo" src="collegelogo.png"/>
+<div class="brand-text">
+<div class="brand-small">
+                    SPES'S   Shri Gopal Gaonkar Memorial
+                </div>
+<div class="brand-name">
+                    Goa Multi-Faculty College
+                </div>
+<div class="brand-location">
+                    Dharbandora-Goa
+                </div>
+</div>
+</div>
+<!-- ADMIN -->
+<div class="admin-box">
+<div class="admin-circle">
+                A
+            </div>
+<span>Admin</span>
+</div>
+</header>
+<!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+<!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+<main class="main">
+<div class="content">
+<!-- PAGE HEADER -->
+<div class="page-header">
+<h1>Settings</h1>
+<p>
+                    Manage your application settings, users, and preferences.
+                </p>
+</div>
+<!-- =================================================
+                 SETTINGS TABS
+            ================================================== -->
+<div class="tabs">
+<button class="tab active" onclick="showTab('general', this)">
+                    ⚙ General
+                </button>
+</div>
+<!-- =================================================
+                 GENERAL TAB
+            ================================================== -->
+<div class="tab-content" id="general">
+<!-- GENERAL SETTINGS -->
+<section class="card general-card">
+<div class="card-header">
+<div class="card-header-icon">
+                            ⚙
+                        </div>
+<div>
+<div class="card-title">
+                                General Settings
+                            </div>
+<div class="card-subtitle">
+                                Update application details and college information.
+                            </div>
+</div>
+</div>
+<div class="general-layout">
+<!-- COLLEGE -->
+<div class="college-box">
+<div class="college-info">
+<img alt="College Logo" class="small-logo" src="collegelogo.png"/>
+<div>
+<div class="college-title">
+                                        Goa Multi-Faculty College
+                                    </div>
+<div class="college-place">
+                                        Dharbandora-Goa
+                                    </div>
+</div>
+</div>
+<button class="edit-btn" onclick="editCollege()">
+                                ✎ Edit College Info
+                            </button>
+</div>
+<!-- FORM -->
+<div class="settings-form">
+<div class="form-group">
+<label>Application Name</label>
+<input type="text" value="Feedback System"/>
+</div>
+<div class="form-group">
+<label>Academic Year</label>
+<select>
+<option>2026 - 2027</option>
+<option>2025 - 2026</option>
+<option>2027 - 2028</option>
+</select>
+</div>
+</div>
+<button class="action-btn settings-save-btn" id="saveAllSettings" type="button">✓ Save Settings</button>
+</div>
+</section>
+<!-- =================================================
+                     FEEDBACK SETTINGS
+                ================================================== -->
+<section class="card feedback-card">
+<div class="card-header">
+<div class="card-header-icon">
+                            ▣
+                        </div>
+<div>
+<div class="card-title">
+                                Feedback Settings
+                            </div>
+<div class="card-subtitle">
+                                Configure form and response-related settings.
+                            </div>
+</div>
+</div>
+<div class="card-body">
+<div class="feedback-grid">
+<!-- LEFT COLUMN -->
+<div>
+<div class="setting-row">
+<div class="setting-label">
+                                        Allow Anonymous Feedback
+                                    </div>
+<div class="setting-description">
+                                        Students can submit feedback without revealing their identity.
+                                    </div>
+<label class="toggle">
+<input checked="" onchange="saveSetting('anonymous', this.checked)" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="setting-row">
+<div class="setting-label">
+                                        Auto-close Forms
+                                    </div>
+<div class="setting-description">
+                                        Automatically close forms after the deadline.
+                                    </div>
+<label class="toggle">
+<input checked="" onchange="saveSetting('autoclose', this.checked)" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="setting-row">
+<div class="setting-label">
+                                        Response Limit
+                                    </div>
+<div class="setting-description">
+                                        Maximum number of responses per form.
+                                    </div>
+<input class="setting-input" type="number" value="1000"/>
+</div>
+</div>
+<!-- RIGHT COLUMN -->
+<div>
+<div class="setting-row">
+<div class="setting-label">
+                                        Default Thank You Message
+                                    </div>
+<textarea class="message-box">Thank you for your valuable feedback!
+Your opinion helps us improve.</textarea>
+</div>
+
+<div class="setting-row">
+<div class="setting-label">
+                                        Admin Email
+                                    </div>
+<input class="setting-input" type="email" value="admin@gmfcollege.edu"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =================================================
+                     BACKUP + SYSTEM
+                ================================================== -->
+<div class="lower-grid">
+<!-- BACKUP -->
+<section class="card">
+<div class="card-header">
+<div class="card-header-icon">
+                                ▤
+                            </div>
+<div>
+<div class="card-title">
+                                    Backup &amp; Restore
+                                </div>
+<div class="card-subtitle">
+                                    Manage your data backup and restore options.
+                                </div>
+</div>
+</div>
+<div class="card-body">
+<div class="backup-buttons">
+<button class="action-btn" onclick="downloadBackup()">
+                                    ⇩   Download Backup
+                                </button>
+<button class="action-btn" onclick="restoreData()">
+                                    ☁   Restore Data
+                                </button>
+</div>
+</div>
+</section>
+<!-- SYSTEM -->
+
+</div>
+<!-- =================================================
+                     QUICK ACTIONS
+                ================================================== -->
+<div class="quick-title">
+                    Quick Actions
+                </div>
+<div class="quick-grid">
+<!-- NEW USER -->
+<!-- CATEGORY -->
+<!-- NOTIFICATION -->
+<!-- REPORT -->
+<div class="quick-card q4" onclick="generateReport()">
+<div class="quick-icon">
+                            ▣
+                        </div>
+<div>
+<h4>
+                                Generate Report
+                            </h4>
+<p>
+                                Download feedback
+                                reports in PDF/CSV.
+                            </p>
+</div>
+<div class="quick-arrow">
+                            ›
+                        </div>
+</div>
+</div>
+</div>
+<!-- =================================================
+                 OTHER TABS
+            ================================================== -->
+</div>
+</main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="live.js"></script>
+</body>
+</html>

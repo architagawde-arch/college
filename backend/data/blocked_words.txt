@@ -1,0 +1,48 @@
+# CATEGORY B - NOT VALID. A text answer containing any of these is discarded and cannot be submitted.
+# One word or phrase per line. Lines starting with # are ignored. Add more words (any language) at the end.
+# --- English ---
+fuck
+fucker
+fucking
+motherfucker
+shit
+bullshit
+bitch
+bastard
+asshole
+dickhead
+cunt
+pussy
+slut
+whore
+retard
+faggot
+wanker
+kill you
+kill yourself
+go die
+rape
+rapist
+# --- Hinglish / Hindi / Marathi / Konkani (Roman script) ---
+madarchod
+behenchod
+bhenchod
+chutiya
+chutiye
+gandu
+gaandu
+randi
+harami
+haramkhor
+bhosdike
+bhosdi
+lavde
+lauda
+saala kutta
+# --- Devanagari ---
+मादरचोद
+बहनचोद
+चूतिया
+गांडू
+हरामी
+रंडी

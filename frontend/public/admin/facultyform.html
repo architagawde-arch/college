@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>College Feedback System - Admin Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="style.css" rel="stylesheet"/><link href="admin-patch.css" rel="stylesheet"/>
+</head>
+<body class="facultyform-page"><header class="common-navbar"><div class="common-college-info"><div class="common-college-logo"><img alt="College Logo" src="collegelogo.png"/></div><div class="common-college-name"><div class="common-small-name">SPES's Shri Gopal Gaonkar Memorial</div><strong>Goa Multi Faculty College</strong><div class="common-location">Dharbandhora-Goa</div></div></div><div class="common-admin-area"><div class="common-admin-circle">A</div><div class="common-admin-name">Admin</div></div></header><aside class="common-sidebar"><div class="common-menu-main"><a class="common-menu-item" href="dashboard.html"><span class="common-menu-icon">⌂</span><span>Dashboard</span></a><a class="common-menu-item" href="feedbackform.html"><span class="common-menu-icon">▣</span><span>Feedback Forms</span></a><a class="common-menu-item" href="createform.html"><span class="common-menu-icon">⊕</span><span>Create Form</span></a><a class="common-menu-item" href="responses.html"><span class="common-menu-icon">▥</span><span>Responses</span></a><a class="common-menu-item" href="studentform.html"><span class="common-menu-icon">♙</span><span>Students</span></a><a class="common-menu-item active" href="facultyform.html"><span class="common-menu-icon">♟</span><span>Faculty</span></a><a class="common-menu-item" href="staffform.html"><span class="common-menu-icon">♟</span><span>Staff</span></a><a class="common-menu-item" href="analytics.html"><span class="common-menu-icon">◔</span><span>Analytics</span></a></div><div class="common-menu-bottom"><a class="common-menu-item" href="master.html"><span class="common-menu-icon">☰</span><span>Master Data</span></a><a class="common-menu-item" href="setting.html"><span class="common-menu-icon">⚙</span><span>Settings</span></a><a class="common-menu-item common-logout" href="/login"><span class="common-menu-icon">↪</span><span>Logout</span></a></div></aside>
+<!-- =========================
+     HEADER
+========================= -->
+<!-- =========================
+     SIDEBAR
+========================= -->
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+<main class="main">
+<!-- =========================
+         PAGE TITLE + ACTIONS
+    ========================= -->
+<div class="top-row">
+<!-- LEFT -->
+<div class="greeting">
+<h2>
+                Faculty 
+            </h2>
+<p>
+                Manage and monitor faculty feedback forms.
+            </p>
+</div>
+<!-- RIGHT -->
+<div class="top-actions">
+<!-- DATE AND TIME -->
+<div class="date-time">
+<strong id="currentDate">
+                    Friday, October 2, 2026
+                </strong>
+<span id="currentTime">
+                    12:16 PM
+                </span>
+</div>
+<!-- EXPORT REPORT -->
+<button class="export-btn" onclick="exportReport()" type="button">
+<span class="download-icon">
+                    ↓
+                </span>
+
+                Export Report
+
+            </button>
+</div>
+</div>
+<!-- =========================
+         FACULTY STAT CARDS
+    ========================= -->
+<div class="stats">
+<!-- TOTAL FACULTY -->
+<div class="stat-card">
+<div class="stat-icon">
+                ♟
+            </div>
+<div>
+<h3>86</h3>
+<p>
+                    Total Faculty
+                </p>
+</div>
+</div>
+<!-- ACTIVE FACULTY -->
+<div class="stat-card">
+<div class="stat-icon">
+                ✓
+            </div>
+<div>
+<h3>78</h3>
+<p>
+                    Active Faculty
+                </p>
+</div>
+</div>
+<!-- INACTIVE FACULTY -->
+<div class="stat-card">
+<div class="stat-icon">
+                ×
+            </div>
+<div>
+<h3>8</h3>
+<p>
+                    Inactive Faculty
+                </p>
+</div>
+</div>
+<!-- TOTAL FACULTY RESPONSE -->
+<div class="stat-card response-stat-card">
+<div class="stat-icon">
+                ★
+            </div>
+<div>
+<h3>100%</h3>
+<p>
+                    Total Faculty Response
+                </p>
+</div>
+</div>
+</div>
+<!-- =========================
+         DASHBOARD GRID
+    ========================= -->
+<div class="dashboard-grid">
+<!-- =========================
+             LEFT COLUMN
+        ========================= -->
+<div>
+<!-- =========================
+                 FACULTY FEEDBACK FORM
+            ========================= -->
+<section class="table-section">
+<div class="table-title">
+                    Faculty Feedback Responses
+                </div>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>
+                                    Sr. No.
+                                </th>
+<th>
+                                    Faculty Name
+                                </th>
+<th>
+                                    Department
+                                </th>
+<th>
+                                    Designation
+                                </th>
+<th>
+                                    Email
+                                </th>
+<th>
+                                    Status
+                                </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+                                    1
+                                </td>
+<td>
+                                    Amit Sharma
+                                </td>
+<td>
+                                    Computer Applications
+                                </td>
+<td>
+                                    Assistant Professor
+                                </td>
+<td>
+                                    amit.sharma@example.com
+                                </td>
+<td>
+<span class="status active">
+                                        Active
+                                    </span>
+</td>
+</tr>
+<tr>
+<td>
+                                    2
+                                </td>
+<td>
+                                    Neha Patil
+                                </td>
+<td>
+                                    Commerce
+                                </td>
+<td>
+                                    Associate Professor
+                                </td>
+<td>
+                                    neha.patil@example.com
+                                </td>
+<td>
+<span class="status active">
+                                        Active
+                                    </span>
+</td>
+</tr>
+<tr>
+<td>
+                                    3
+                                </td>
+<td>
+                                    Rahul Naik
+                                </td>
+<td>
+                                    Business Administration
+                                </td>
+<td>
+                                    Assistant Professor
+                                </td>
+<td>
+                                    rahul.naik@example.com
+                                </td>
+<td>
+<span class="status pending">
+                                        Pending
+                                    </span>
+</td>
+</tr>
+<tr>
+<td>
+                                    4
+                                </td>
+<td>
+                                    Priya Desai
+                                </td>
+<td>
+                                    Computer Applications
+                                </td>
+<td>
+                                    Professor
+                                </td>
+<td>
+                                    priya.desai@example.com
+                                </td>
+<td>
+<span class="status active">
+                                        Active
+                                    </span>
+</td>
+</tr>
+<tr>
+<td>
+                                    5
+                                </td>
+<td>
+                                    Rohit Kamat
+                                </td>
+<td>
+                                    Commerce
+                                </td>
+<td>
+                                    Assistant Professor
+                                </td>
+<td>
+                                    rohit.kamat@example.com
+                                </td>
+<td>
+<span class="status inactive">
+                                        Inactive
+                                    </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- =========================
+             RIGHT COLUMN
+        ========================= -->
+<div>
+<!-- =========================
+                 FACULTY OVERVIEW
+            ========================= -->
+<section class="program-section">
+<div class="program-title">
+                    Faculty Overview
+                </div>
+<div class="program-content">
+<!-- DONUT CHART -->
+<div class="faculty-chart">
+<canvas id="facultyChart"></canvas>
+<div class="chart-center">
+<strong>100%</strong>
+<span>
+                                Total Faculty<br/>
+                                Response
+                            </span>
+</div>
+</div>
+<!-- LEGEND -->
+<div class="legend">
+<div class="legend-item">
+<div class="legend-left">
+<span class="dot bba"></span>
+<span>
+                                    BBA
+                                </span>
+</div>
+<span class="percentage">
+                                35%
+                            </span>
+</div>
+<div class="legend-item">
+<div class="legend-left">
+<span class="dot bca"></span>
+<span>
+                                    BCA
+                                </span>
+</div>
+<span class="percentage">
+                                40%
+                            </span>
+</div>
+<div class="legend-item">
+<div class="legend-left">
+<span class="dot bcom"></span>
+<span>
+                                    BCom
+                                </span>
+</div>
+<span class="percentage">
+                                25%
+                            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================
+                 RECENT ACTIVITIES
+            ========================= -->
+<section class="activities">
+<div class="activities-title">
+                    Recent Activities
+                </div>
+<div class="activity">
+<div class="activity-icon">
+                        ✓
+                    </div>
+<div class="activity-text">
+<strong>
+                            New feedback submitted
+                        </strong>
+
+                        A faculty feedback form was submitted.
+
+                        <div class="activity-time">
+                            10 minutes ago
+                        </div>
+</div>
+</div>
+<div class="activity">
+<div class="activity-icon">
+                        ＋
+                    </div>
+<div class="activity-text">
+<strong>
+                            New feedback form created
+                        </strong>
+
+                        A new faculty feedback form was created.
+
+                        <div class="activity-time">
+                            1 hour ago
+                        </div>
+</div>
+</div>
+<div class="activity">
+<div class="activity-icon">
+                        ★
+                    </div>
+<div class="activity-text">
+<strong>
+                            Report generated
+                        </strong>
+
+                        Faculty performance report was generated.
+
+                        <div class="activity-time">
+                            2 hours ago
+                        </div>
+</div>
+</div>
+<div class="activity">
+<div class="activity-icon">
+                        ♙
+                    </div>
+<div class="activity-text">
+<strong>
+                            New faculty joined
+                        </strong>
+
+                        A new faculty member was added to the system.
+
+                        <div class="activity-time">
+                            Yesterday
+                        </div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="live.js"></script>
+</body>
+</html>
